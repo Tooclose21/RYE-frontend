@@ -43,22 +43,29 @@ welcome {
 .message--text {
     color: #88CAFC;
     background-color: #FDFEFF;
-    width: 460px;
-    height: 125px;
-    margin-left: 800px;
+    width: 650px;
+    height: 160px;
+    margin-left: 700px;
     margin-top: 75px;
     border-radius: 120px;
 }
 
 .message--text1 {
     align-items: center;
-    padding: 20px 10px 0 35px;
+    padding: 25px 10px 0 60px;
 /*    top, right, bottom, left*/
 
 }
 
 .message--text2 {
-    padding: 0 40px 10px 35px;
+    padding: 0 40px 10px 60px;
+}
+
+.welcome--img {
+    margin-left: 200px;
+    margin-bottom: 100px;
+    width: 500px;
+    height: 450px;
 }
 
 
