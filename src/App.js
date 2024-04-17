@@ -1,10 +1,15 @@
 import logo from './images/logo.svg';
 import './styles.css';
 import Navbar from "./components/Navbar";
+import WelcomeMessage from "./components/WelcomeMessage";
 
 function App() {
   return (
-      Navbar()
+      <div>
+        <Navbar />
+        <WelcomeMessage />
+      </div>
+  );
     // <div className="App">
     //   <header className="App-header">
     //     <img src={logo} className="App-logo" alt="logo" />
@@ -21,7 +26,6 @@ function App() {
     //     </a>
     //   </header>
     // </div>
-  );
 }
 
 export default App;
