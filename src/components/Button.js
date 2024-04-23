@@ -1,8 +1,15 @@
 import React from 'react';
 
-const Button = ({ children, loc }) => {
+const Button = ({ children, loc, color }) => {
+    const buttonStyle = {
+        ...loc,
+        backgroundColor: color
+    };
+
     return (
-        <button className="btn btn-primary blue-button" style={loc}>{children}</button>
+        <button className="btn btn-primary button" style={buttonStyle}>
+            {children}
+        </button>
     );
 };
 

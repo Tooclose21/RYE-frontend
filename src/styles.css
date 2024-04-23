@@ -6,80 +6,48 @@ body {
 
 
 nav {
-    background-color: #88CAFC;
-    height: 70px;
-    padding: 0 15px;
+    height: 10%;
+    margin-top: 0;
     display: flex;
     align-items: center;
 }
 
 .nav--img {
-    padding-top: 5px;
-    margin-right: 5px;
-    padding-bottom: 10px;
+    width:5%;
+    height:5%;
+    margin-right: 0.5%;
 }
-
-.nav--text {
-    display: flex;
-    flex-direction: column;
-    padding-top: 5px;
-    padding-bottom: 10px;
-}
-
 .nav--text1 {
-    padding: 0 0;
-    margin-bottom: 0;
-    color: #FFEEC0;
+    font-size: 1vw;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
 }
 
 .nav--text2 {
-    margin-top: 0;
-    padding: 0 0;
-    color: #FDFEFF;
-}
-
-welcome {
-
-}
-.message--text {
-    color: #88CAFC;
-    background-color: #FDFEFF;
-    width: 650px;
-    height: 160px;
-    margin-left: 700px;
-    margin-top: 75px;
-    border-radius: 120px;
-}
-
-.message--text1 {
-    align-items: center;
-    padding: 25px 10px 0 60px;
-/*    top, right, bottom, left*/
-
-}
-
-.message--text2 {
-    padding: 0 40px 10px 60px;
+    font-size: 1.2vw;
+    margin-bottom: 0;
 }
 
 
 .welcome--img {
-    margin-left: 200px;
-    margin-bottom: 100px;
-    width: 500px;
-    height: 450px;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -25%);
+    width: 40%;
+    height: auto;
 }
-.blue-button {
-    background-color: #88CAFC;
+.button {
     color: #FFF;
     border: none;
     border-radius: 10px;
     height: 9%;
-    width: 12%; /* Adjust as needed */
+    width: 12%;
     cursor: pointer;
     margin-top: 2%;
     margin-bottom: 2%;
 }
+
 .login--text {
     color: #88CAFC;
     position: absolute;
@@ -92,11 +60,12 @@ welcome {
 
 .login--text2{
     color: #88CAFC;
-    position: fixed;
-    top: 50%;
+    position: absolute;
+    top: 53%;
     left:  59%;
     font-Size: 2.5vw;
     margin-bottom: 2%;
+    margin-top: 2%;
 }
 
 
