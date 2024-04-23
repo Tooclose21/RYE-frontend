@@ -4,6 +4,7 @@ body {
     background-color: #FFEEC0;
 }
 
+
 nav {
     background-color: #88CAFC;
     height: 70px;
@@ -61,12 +62,43 @@ welcome {
     padding: 0 40px 10px 60px;
 }
 
+
 .welcome--img {
     margin-left: 200px;
     margin-bottom: 100px;
     width: 500px;
     height: 450px;
 }
+.blue-button {
+    background-color: #88CAFC;
+    color: #FFF;
+    border: none;
+    border-radius: 10px;
+    height: 9%;
+    width: 12%; /* Adjust as needed */
+    cursor: pointer;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.login--text {
+    color: #88CAFC;
+    position: absolute;
+    top: 20%;
+    left: 59%;
+    font-Size: 2.5vw;
+    margin-top: 2%;
+
+}
+
+.login--text2{
+    color: #88CAFC;
+    position: fixed;
+    top: 50%;
+    left:  59%;
+    font-Size: 2.5vw;
+    margin-bottom: 2%;
+}
+
 
 
 
