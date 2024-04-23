@@ -2,13 +2,18 @@ import logo from './images/logo.svg';
 import './styles.css';
 import Navbar from "./components/Navbar";
 import WelcomeMessage from "./components/WelcomeMessage";
+import {WindowContext, WindowContextProvider} from "./components/Resize";
+import React from "react";
 
 function App() {
+    const { clientHeight, clientWidth } = React.useContext(WindowContext);
   return (
+      <WindowContextProvider>
       <div>
         <Navbar />
         <WelcomeMessage />
       </div>
+          </WindowContextProvider>
   );
     // <div className="App">
     //   <header className="App-header">
