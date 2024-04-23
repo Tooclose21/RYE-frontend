@@ -2,7 +2,7 @@
 
 body {
     height: 100vh;
-    overflow: hidden;
+    //overflow: hidden;
     background-color: #FFEEC0;
 }
 
@@ -57,7 +57,6 @@ welcome {
     align-items: center;
     padding: 5% 10% 0 10%;
 /*    top, right, bottom, left*/
-
 }
 
 .message--text2 {
@@ -65,9 +64,7 @@ welcome {
 }
 
 .welcome--img {
-    margin-left: 16%;
-    margin-bottom: 30%;
-    margin-right: 80%;
+    margin: 1% 80% 60% 16%;
     width: 30%;
     height: 45%;
 }

@@ -1,7 +1,7 @@
 import blueGhost from '../images/blueGhost.png';
 import '../styles.css';
 import React from "react"
-import logo from "../images/logo.svg";
+
 
 export default function WelcomeMessage() {
 
