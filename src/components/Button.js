@@ -1,9 +1,10 @@
 import React from 'react';
 
-const Button = ({ children, loc, color }) => {
+const Button = ({ children, loc, color, textColor}) => {
     const buttonStyle = {
         ...loc,
-        backgroundColor: color
+        backgroundColor: color,
+        color: textColor
     };
 
     return (

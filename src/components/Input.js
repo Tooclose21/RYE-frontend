@@ -3,7 +3,8 @@ import React from 'react';
 const Input = ({ value, placeholder, onChange, error, style, loc }) => {
     const inputStyle = {
         ...style,
-        ...loc
+        ...loc,
+        borderRadius: '10px'
     };
     const labelStyle = {
         color: style?.color || '#FFF' // Default color if not provided
