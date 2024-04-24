@@ -1,44 +1,9 @@
 * {box-sizing: border-box;}
 
 body {
-    /*width: 100vw; !* Set width to 100% of the viewport width *!*/
-    /*height: 100vh;*/
-    //overflow: hidden;
-    background-color: #FFEEC0;
+    overflow: hidden;
+    /*background-color: #FFEEC0;*/
 }
-
-/*nav {*/
-/*    background-color: #88CAFC;*/
-/*    height: 70px;*/
-/*    padding: 0 15px;*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*}*/
-
-/*.nav--img {*/
-/*    padding-top: 5px;*/
-/*    margin-right: 5px;*/
-/*    padding-bottom: 10px;*/
-/*}*/
-
-/*.nav--text {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    padding-top: 5px;*/
-/*    padding-bottom: 10px;*/
-/*}*/
-
-/*.nav--text1 {*/
-/*    padding: 0 0;*/
-/*    margin-bottom: 0;*/
-/*    color: #FFEEC0;*/
-/*}*/
-
-/*.nav--text2 {*/
-/*    margin-top: 0;*/
-/*    padding: 0 0;*/
-/*    color: #FDFEFF;*/
-/*}*/
 
 nav {
     height: 10%;
@@ -71,7 +36,6 @@ nav {
 }
 
 welcome {
-
 }
 .message--text {
     color: #88CAFC;
@@ -79,7 +43,7 @@ welcome {
     width: 43%;
     height: 20%;
     margin-left: 45%;
-    margin-top: 5%;
+    margin-top: 4%;
     margin-bottom: 1%;
     border-radius: 100px;
     font-size: 1vw;
@@ -95,14 +59,32 @@ welcome {
     padding: 0 10% 5% 10%;
 }
 
-.welcome--img {
-    margin: 1% 80% 60% 10%;
+/*.welcome--img {*/
+/*    margin: 1% 80% 60% 10%;*/
+/*    width: 30%;*/
+/*    height: 45%;*/
+/*}*/
+
+blueGhost {
+
+}
+.bghost--img {
+    margin: 0 80% 60% 10%;
     width: 30%;
     height: 45%;
 }
 
-
-
+.button {
+    color: #FFF;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5vw;
+    height: 9%;
+    width: 15%;
+    cursor: pointer;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
 
 
 
