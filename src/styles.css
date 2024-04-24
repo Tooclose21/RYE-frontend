@@ -3,6 +3,12 @@
 body {
     background-color: #FFEEC0;
 }
+.ParentLoginPage {
+    background-color: #FFFDEE;
+}
+.LoginPage{
+    background-color: #B0C5DA;
+}
 
 
 nav {
@@ -41,6 +47,7 @@ nav {
     color: #FFF;
     border: none;
     border-radius: 10px;
+    font-size: 1.5vw;
     height: 9%;
     width: 12%;
     cursor: pointer;
@@ -67,6 +74,7 @@ nav {
     margin-bottom: 2%;
     margin-top: 2%;
 }
+
 
 
 

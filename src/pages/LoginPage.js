@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./components/Navbar.js";
 import Button from "./components/Button";
 import blueGhost from "./images/blueGhost.png";
+import { useNavigate } from 'react-router-dom'
 
 function LoginPage() {
     return (

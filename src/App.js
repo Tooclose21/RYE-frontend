@@ -1,18 +1,41 @@
-import React from "react";
+import './styles.css';
 import Navbar from "./components/Navbar.js";
 import Button from "./components/Button";
+import React, { useState } from "react";
 import blueGhost from "./images/blueGhost.png";
+import Input from "./components/Input";
 
-function App() {
+const App = (props) => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [emailError, setEmailError] = useState('');
+    const [passwordError, setPasswordError] = useState('');
+
     return (
         <div>
-            <Navbar style={{ backgroundColor: "#88CAFC" }} textColor="#FFEEC0"/>
-            <h1 className={"login--text"}> Log in as</h1>
-            <Button loc={{position: 'absolute', top: '30%', left: '59%'}} color="#88CAFC">Parent</Button>
-            <Button loc={{position: 'absolute', top: '40%', left: '59%'}} color="#88CAFC">Child</Button>
-            <h1 className={"login--text2"}> Don't have an account yet?</h1>
-            <Button loc={{position: 'absolute', top: '63%', left: '59%'}} color="#88CAFC">Sign up here</Button>
-            <img src={blueGhost} className="welcome--img" alt="Blue ghost"/>
+            <Navbar style={{backgroundColor: "#B0C5DA"}} textColor="#FFFFFF"/>
+            <h1 className="login--text" style={{color: '#FFFFFF', left:"41%"}}> Log in as PARENT</h1>
+            <Input
+                loc={{position: 'absolute', top: '30%', left: '41%'}}
+                style={{ color: "#FFFFFF",  backgroundColor: "#CBD8E5", borderColor: "#CBD8E5",
+                    width:'20%', height:'5%', marginTop:'2%'  }}
+                value={email}
+                placeholder="Email"
+                onChange={(ev) => setEmail(ev.target.value)}
+                error={emailError}
+            />
+            <br/>
+            <Input
+                loc={{position: 'absolute', top: '40%', left: '41%'}}
+                style={{ color: "#FFFFFF", backgroundColor: "#CBD8E5",borderColor: "#CBD8E5",
+                    width:'20%', height:'5%', marginTop:'2%' }}
+                value={password}
+                placeholder="Password"
+                onChange={(ev) => setPassword(ev.target.value)}
+                error={passwordError}
+            />
+            <Button loc={{position: 'absolute', top: '50%', left: '45%'}} color="#CBD8E5">Log in</Button>
+            <img src={blueGhost} className="welcome--img" alt="Blue ghost" style={{transform: 'translate(-50%, 5%)', left:'15%'}}/>
         </div>
     );
 }
