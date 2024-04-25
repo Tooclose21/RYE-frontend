@@ -1,18 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import ChildWelcomePage from './pages/ChildWelcomePage';
+import ChildWelcomePage from './pages/ChildPages/ChildWelcomePage';
 import reportWebVitals from './reportWebVitals';
-import ChooseGameMode from "./pages/ChooseGameMode";
+import ChooseGameMode from "./pages/ChildPages/ChooseGameMode";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ChooseGameTimeRfP from "./pages/ChooseGameTimeRfP";
-import ChooseGameTimeMfP from "./pages/ChooseGameTimeMfP";
-import ChooseGameTimeMfN from "./pages/ChooseGameTimeMfN";
-import CharacterCustomization from "./pages/CharacterCustomization";
-import MimicFromName from "./pages/MimicFromName";
-import MimicFromPicture from "./pages/MimicFromPicture";
-import RecognizeFromPicture from "./pages/RecognizeFromPicture";
-import DailyChallenge from "./pages/DailyChallenge";
+import ChooseGameTimeRfP from "./pages/ChildPages/ChooseGameTimeRfP";
+import ChooseGameTimeMfP from "./pages/ChildPages/ChooseGameTimeMfP";
+import ChooseGameTimeMfN from "./pages/ChildPages/ChooseGameTimeMfN";
+import CharacterCustomization from "./pages/ChildPages/CharacterCustomization";
+import MimicFromName from "./pages/ChildPages/MimicFromName";
+import MimicFromPicture from "./pages/ChildPages/MimicFromPicture";
+import RecognizeFromPicture from "./pages/ChildPages/RecognizeFromPicture";
+import DailyChallenge from "./pages/ChildPages/DailyChallenge";
+import FinishedGame from "./pages/ChildPages/FinishedGame";
 
 const rootElement = document.getElementById("root");
     ReactDOM.render(
@@ -28,6 +29,7 @@ const rootElement = document.getElementById("root");
             <Route path="MimicFromPicture" element={<MimicFromPicture/>}/>
             <Route path="RecognizeFromPicture" element={<RecognizeFromPicture/>}/>
             <Route path="DailyChallenge" element={<DailyChallenge/>}/>
+            <Route path="FinishedGame" element={<FinishedGame/>}/>
         </Routes>
     </BrowserRouter>,
         rootElement

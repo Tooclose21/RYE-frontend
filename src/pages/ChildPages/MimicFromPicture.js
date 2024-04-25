@@ -1,9 +1,9 @@
-import '../styles.css';
-import Navbar from "../components/Navbar";
+import '../../styles.css';
+import Navbar from "../../components/Navbar";
 import React from "react";
-import Button from "../components/Buttons";
+import Button from "../../components/Buttons";
 import {Link } from 'react-router-dom'
-import emotion from "../images/emotion.png";
+import emotion from "../../images/emotion.png";
 
 function MimicFromPicture() {
     return (
@@ -13,8 +13,8 @@ function MimicFromPicture() {
             <img src={emotion} className="emotion--img" alt="Face with emotion to mimic"/>
             <Button loc={{position: 'absolute', top: '80%', left: '43%', width: '15%', height: '8%', color: '#F8A365'}}
                     color="#FEE8AA">Take a picture</Button>
-            <Button loc={{position: 'absolute', top: '80%', left: '75%', width: '10%', height: '8%', color: '#F8A365'}}
-                    color="#FEE8AA">Finish</Button>
+            <Link to="/FinishedGame"><Button loc={{position: 'absolute', top: '80%', left: '75%', width: '10%', height: '8%', color: '#F8A365'}}
+                                               color="#FEE8AA">Finish</Button></Link>
             <h1 className="counter--text--mfp">1/5</h1>
         </div>
     );

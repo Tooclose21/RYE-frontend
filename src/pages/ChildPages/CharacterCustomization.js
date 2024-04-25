@@ -1,10 +1,10 @@
 
-import '../styles.css';
-import Navbar from "../components/Navbar";
+import '../../styles.css';
+import Navbar from "../../components/Navbar";
 import React from "react";
-import Button from "../components/Buttons";
+import Button from "../../components/Buttons";
 import {Link } from 'react-router-dom'
-import blueGhost from "../images/blueGhost.png";
+import blueGhost from "../../images/blueGhost.png";
 
 function CharacterCustomization() {
     return (

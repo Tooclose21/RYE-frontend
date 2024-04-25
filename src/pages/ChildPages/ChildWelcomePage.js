@@ -1,10 +1,10 @@
 
-import '../styles.css';
-import Navbar from "../components/Navbar";
-import WelcomeMessage from "../components/WelcomeMessage";
+import '../../styles.css';
+import Navbar from "../../components/Navbar";
+import WelcomeMessage from "../../components/WelcomeMessage";
 import React from "react";
-import BlueGhost from "../components/BlueGhost";
-import Button from "../components/Buttons";
+import BlueGhost from "../../components/BlueGhost";
+import Button from "../../components/Buttons";
 import {Link } from 'react-router-dom'
 
 function ChildWelcomePage() {
