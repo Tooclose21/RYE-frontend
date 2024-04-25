@@ -10,6 +10,7 @@ import ChooseGameTimeMfP from "./pages/ChooseGameTimeMfP";
 import ChooseGameTimeMfN from "./pages/ChooseGameTimeMfN";
 import CharacterCustomization from "./pages/CharacterCustomization";
 import MimicFromName from "./pages/MimicFromName";
+import MimicFromPicture from "./pages/MimicFromPicture";
 
 const rootElement = document.getElementById("root");
     ReactDOM.render(
@@ -22,6 +23,7 @@ const rootElement = document.getElementById("root");
             <Route path="/ChooseGameTimeMfN" element={<ChooseGameTimeMfN/>}/>
             <Route path="/CharacterCustomization" element={<CharacterCustomization/>}/>
             <Route path="MimicFromName" element={<MimicFromName/>}/>
+            <Route path="MimicFromPicture" element={<MimicFromPicture/>}/>
         </Routes>
     </BrowserRouter>,
         rootElement
