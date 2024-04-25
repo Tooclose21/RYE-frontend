@@ -1,14 +1,17 @@
 import React from 'react';
 import './index.css';
-import LoginPage from './pages/LoginPage';
+import LoginPage from './pages/ParentPages/LoginPage';
 import reportWebVitals from './reportWebVitals';
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ParentLoginPage from "./pages/ParentLoginPage.js";
-import ChildLoginPage from "./pages/ChildLoginPage";
-import RegisterPage from "./pages/RegisterPage";
-import AddAccount from "./pages/AddAccount";
-import CreateChildAccountPage from "./pages/CreateChildAccountPage";
+import ParentLoginPage from "./pages/ParentPages/ParentLoginPage.js";
+import ChildLoginPage from "./pages/ParentPages/ChildLoginPage";
+import RegisterPage from "./pages/ParentPages/RegisterPage";
+import AddAccount from "./pages/ParentPages/AddAccount";
+import CreateChildAccountPage from "./pages/ParentPages/CreateChildAccountPage";
+import ParentHomePage from "./pages/ParentPages/ParentHomePage";
+import GoalsPage from "./pages/ParentPages/GoalsPage";
+import ParentUserProfile from "./pages/ParentPages/ParentUserProfile";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,6 +23,9 @@ root.render(
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/add-sub-account" element={<AddAccount />} />
             <Route path="/create-sub-account" element={<CreateChildAccountPage />} />
+            <Route path="/main-page" element={<ParentHomePage />} />
+            <Route path="/goals" element={<GoalsPage/>}/>
+            <Route path="/parent-profile" element={<ParentUserProfile />} />
         </Routes>
     </BrowserRouter>,
     root

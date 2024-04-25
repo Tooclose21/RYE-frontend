@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import '../styles.css';
-import Navbar from "../components/Navbar.js";
-import Button from "../components/Button";
-import blueGhost from "../images/blueGhost.png";
-import Input from "../components/Input";
-
+import '../../styles.css';
+import Navbar from "../../components/Navbar.js";
+import Button from "../../components/Button";
+import blueGhost from "../../images/blueGhost.png";
+import Input from "../../components/Input";
+import {Link } from "react-router-dom";
 
 // import './styles.css';
 // import Navbar from "./components/Navbar.js";
@@ -12,6 +12,7 @@ import Input from "../components/Input";
 // import React, { useState } from "react";
 // import blueGhost from "./images/blueGhost.png";
 // import Input from "./components/Input";
+
 
 const ParentLoginPage = (props) => {
     const [email, setEmail] = useState('');
@@ -50,7 +51,9 @@ const ParentLoginPage = (props) => {
                 onChange={(ev) => setPassword(ev.target.value)}
                 error={passwordError}
             />
-            <Button loc={{position: 'absolute', top: '50%', left: '45%'}} color="#CBD8E5">Log in</Button>
+            <Link to="/main-page">
+                <Button loc={{position: 'absolute', top: '50%', left: '45%'}} color="#CBD8E5">Log in</Button>
+            </Link>
             <img src={blueGhost} className="welcome--img" alt="Blue ghost"
                  style={{transform: 'translate(-50%, 5%)', left: '15%'}}/>
         </div>
