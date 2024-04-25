@@ -148,6 +148,56 @@ blueGhost {
     color: #F0BE5E;
     font-size: 3vw;
     margin-left: 92%;
+    margin-top: 3%;
+    margin-bottom: 1%;
+}
+
+.rfp--headline {
+    color: #E27A37;
+    width: 70%;
+    margin-left: 31%;
     margin-top: 1%;
     margin-bottom: 1%;
+    font-size: 3.5vw;
+}
+
+.emotion--img--recognize {
+    margin-top: 1%;
+    margin-left: 35%;
+    background-color: #FFFDEE;
+    width: 30%;
+    height:45%;
+}
+
+.counter--text--rfp {
+    color: #F0BE5E;
+    font-size: 3vw;
+    margin-left: 92%;
+    margin-top: 6%;
+    margin-bottom: 3%;
+}
+
+.name--emotion--rfp {
+    color: #F8A365;
+    width: 70%;
+    margin-left: 31%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-size: 2vw;;
+}
+
+.dailyChallenge--text1 {
+    color: #E27A37;
+    width: 70%;
+    margin-left: 31%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.dailyChallenge--text2 {
+    color: #E27A37;
+    width: 70%;
+    margin-left: 31%;
+    margin-top: 0;
+    margin-bottom: 0;
 }
