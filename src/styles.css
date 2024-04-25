@@ -58,13 +58,6 @@ welcome {
 .message--text2 {
     padding: 0 10% 5% 10%;
 }
-
-/*.welcome--img {*/
-/*    margin: 1% 80% 60% 10%;*/
-/*    width: 30%;*/
-/*    height: 45%;*/
-/*}*/
-
 blueGhost {
 
 }
@@ -96,4 +89,41 @@ blueGhost {
     font-size: 4vw;
 }
 
+.bghost--img--customize {
+    margin: 10% 80% 60% 12%;
+    width: 30%;
+    height: 45%;
+}
+
+.mfm--headline {
+    color: #F8A365;
+    width: 70%;
+    margin-left: 27%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-size: 3.5vw;
+}
+
+.emotion--name {
+    color: #E27A37;
+    margin-left: 30%;
+    margin-top: 12%;
+    margin-bottom: 1%;
+    background: #FFFFF7;
+    border-radius: 100px;
+    font-size: 3.5vw;
+    width: 40%;
+    height: 14%;
+    padding-top: 0.5%;
+    padding-left: 15%;
+}
+
+.counter--text {
+    color: #F0BE5E;
+    font-size: 3vw;
+    margin-left: 92%;
+    margin-top: 12%;
+    margin-bottom: 1%;
+
+}
 
