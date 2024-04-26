@@ -109,7 +109,7 @@ const RegisterPage = (props) => {
                 onChange={(ev) => setPasswordRepeat(ev.target.value)}
                 // error={passwordError}
             />
-            <Link to="/add-sub-account">
+            <Link to="/">
                 <Button loc={{position: 'absolute', top: '60%', left: '59%'}} color="#88CAFC" textColor={"#FFFDEE"}>Sign up</Button>
             </Link>
             <img src={blueGhost} className="welcome--img" alt="Blue ghost"

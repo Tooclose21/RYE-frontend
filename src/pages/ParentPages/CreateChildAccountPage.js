@@ -67,6 +67,19 @@ function CreateChildAccountPage() {
                 <img src={blueGhost} className="welcome--img" alt="Blue ghost"
                      style={{width: "25vw", height: "19vw", transform: "translate(-105%,20%)"}}/>
             </div>
+            <Link to="/add-sub-account">
+
+            <Button loc={{
+                position: 'absolute',
+                top: '70%',
+                left: '58%',
+                width: "15%",
+                height: "7%",
+                fontWeight: 'bold',
+                fontSize: "1.5vw"
+            }}
+                    color="#FBFFEA" textColor={"#88CAFC"}>Create account</Button>
+            </Link>
         </div>
     );
 }

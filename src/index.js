@@ -13,6 +13,7 @@ import ParentHomePage from "./pages/ParentPages/ParentHomePage";
 import GoalsPage from "./pages/ParentPages/GoalsPage";
 import ParentUserProfile from "./pages/ParentPages/ParentUserProfile";
 import NotificationsPage from "./pages/ParentPages/NotificationsPage";
+import ParentStatisticsPage from "./pages/ParentPages/ParentStatisticsPage";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -28,6 +29,7 @@ root.render(
             <Route path="/goals" element={<GoalsPage/>}/>
             <Route path="/parent-profile" element={<ParentUserProfile />} />
             <Route path="/set-notifications" element={<NotificationsPage />} />
+            <Route path="/parent-statistics" element={<ParentStatisticsPage />} />
         </Routes>
     </BrowserRouter>,
     root

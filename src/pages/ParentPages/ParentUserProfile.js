@@ -77,8 +77,10 @@ function ParentUserProfile() {
             <img src={WhiteStar} alt="Star"
                  style={{width: "60vw", height: "60vw", transform: "translate(-25%,-5%)"}}/>
             <h1 className={"login--text2"} style={{color: "#3A3A72", top: "50%",left:"5%"}}> Manage children <br/>accounts:</h1>
+            <Link to="/add-sub-account">
             <Button loc={{position: 'absolute', top: '70%', left: '5%', width: "15%"}} color="#3A3A72">Children
                 accounts</Button>
+            </Link>
         </div>
     );
 }

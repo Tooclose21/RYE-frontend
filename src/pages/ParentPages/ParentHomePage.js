@@ -20,7 +20,7 @@ function ParentHomePage() {
                 <Button loc={{position: 'absolute', top: '40%', left: '42%', width:"15%"}} color="#3A3A72">Goals</Button>
             </Link>
 
-            <Link to="/">
+            <Link to="/parent-statistics">
                 <Button loc={{position: 'absolute', top: '50%', left: '42%', width:"15%"}} color="#3A3A72">Statistics</Button>
             </Link>
             <Link to="/parent-profile">

@@ -100,18 +100,7 @@ function GoalsPage() {
                 fontSize: "1.5vw"
             }}
                     color="#3A3A72" textColor={"#FFFDEE"}>Set notifications</Button>
-            <Link to="/set-notifications">
-                <Button loc={{
-                    position: 'absolute',
-                    top: '85%',
-                    left: '78%',
-                    width: "19%",
-                    height: "7%",
-                    fontWeight: 'bold',
-                    fontSize: "1.5vw"
-                }}
-                        color="#3A3A72" textColor={"#FFFDEE"}>Set notifications</Button>
-            </Link>
+
         </div>);
 
 }
