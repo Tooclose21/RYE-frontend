@@ -1,6 +1,8 @@
+
 import logo from '../images/logo.svg';
 import '../styles.css';
 import React from "react";
+
 
 const Navbar = ({ style, textColor }) => {
     const textStyle1 = { marginBottom: '-0.3rem', marginTop: '0.3rem', color: textColor };

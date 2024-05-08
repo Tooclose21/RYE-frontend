@@ -1,10 +1,8 @@
 * {box-sizing: border-box;}
 
 body {
-    background-color: #FFEEC0;}
-
-::placeholder {
-    color: #FFF;
+    overflow: hidden;
+    /*background-color: #FFEEC0;*/
 }
 
 nav {
@@ -76,6 +74,12 @@ nav {
 
 .login--text {
     color: #88CAFC;
+    background-color: #FDFEFF;
+    width: 43%;
+    height: 20%;
+    margin-left: 45%;
+    margin-bottom: 1%;
+    border-radius: 100px;
     position: absolute;
     top: 19%;
     left: 59%;
@@ -111,6 +115,8 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 5% 10% 0 10%;
+/*    top, right, bottom, left*/
     position: absolute;
     top: 50%;
     left: 45%;
@@ -119,6 +125,8 @@ nav {
     cursor: pointer;
 }
 
+.message--text2 {
+    padding: 0 10% 5% 10%;
 .plus-button:hover {
     background-color: #FFFDEE;
     color: #88CAFC;
@@ -128,10 +136,175 @@ nav {
     font-weight: bold;
     color: #3A3A72;
 }
+blueGhost {
 
+}
+.bghost--img {
+    margin: 0 80% 60% 10%;
+    width: 30%;
+    height: 45%;
+}
 
+.button {
+    color: #FFF;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5vw;
+    height: 9%;
+    width: 15%;
+    cursor: pointer;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
 
+.choose--game--text {
+    color: #F8A365;
+    width: 43%;
+    height: 20%;
+    margin-left: 34%;
+    margin-top: 4%;
+    margin-bottom: 1%;
+    font-size: 4vw;
+}
 
+.bghost--img--customize {
+    margin: 10% 80% 60% 12%;
+    width: 30%;
+    height: 45%;
+}
 
+.mfm--headline {
+    color: #F8A365;
+    width: 70%;
+    margin-left: 27%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-size: 3.5vw;
+}
 
+.emotion--name {
+    color: #E27A37;
+    margin-left: 30%;
+    margin-top: 12%;
+    margin-bottom: 1%;
+    background: #FFFFF7;
+    border-radius: 100px;
+    font-size: 3.5vw;
+    width: 40%;
+    height: 14%;
+    padding-top: 0.5%;
+    padding-left: 15%;
+}
 
+.counter--text {
+    color: #F0BE5E;
+    font-size: 3vw;
+    margin-left: 92%;
+    margin-top: 12%;
+    margin-bottom: 1%;
+
+}
+
+.mfp--headline {
+    color: #F8A365;
+    width: 70%;
+    margin-left: 35%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-size: 3.5vw;
+}
+
+.emotion--img {
+    margin-top: 1%;
+    margin-left: 32%;
+    background-color: #FFFDEE;
+    width: 38%;
+    height:55%;
+}
+
+.counter--text--mfp {
+    color: #F0BE5E;
+    font-size: 3vw;
+    margin-left: 92%;
+    margin-top: 3%;
+    margin-bottom: 1%;
+}
+
+.rfp--headline {
+    color: #E27A37;
+    width: 70%;
+    margin-left: 31%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-size: 3.5vw;
+}
+
+.emotion--img--recognize {
+    margin-top: 1%;
+    margin-left: 35%;
+    background-color: #FFFDEE;
+    width: 30%;
+    height:45%;
+}
+
+.counter--text--rfp {
+    color: #F0BE5E;
+    font-size: 3vw;
+    margin-left: 92%;
+    margin-top: 6%;
+    margin-bottom: 3%;
+}
+
+.name--emotion--rfp {
+    color: #F8A365;
+    width: 70%;
+    margin-left: 31%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-size: 2vw;;
+}
+
+.dailyChallenge--text1 {
+    color: #E27A37;
+    width: 70%;
+    margin-left: 31%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.dailyChallenge--text2 {
+    color: #E27A37;
+    width: 70%;
+    margin-left: 31%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.finished--game--text1 {
+    color: #E27A37;
+    width: 15%;
+    margin-left: 50%;
+    margin-top: 5%;
+    margin-bottom: 0;
+}
+
+.finished--game--text2 {
+    color: #E27A37;
+    width: 30%;
+    margin-left: 50%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.score--text {
+    color: #F0BE5E;
+    font-size: 2vw;
+    margin-left: 60%;
+    margin-top: 10%;
+}
+.bghost--score{
+    display: flex;
+    margin: 0 1% 50% 12%;
+    width: 30%;
+    height: 45%;
+}
