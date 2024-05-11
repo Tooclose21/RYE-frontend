@@ -3,7 +3,7 @@ import './index.css';
 import LoginPage from './pages/ParentPages/LoginPage';
 import ChildWelcomePage from './pages/ChildPages/ChildWelcomePage';
 import reportWebVitals from './reportWebVitals';
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import ParentLoginPage from "./pages/ParentPages/ParentLoginPage.js";
 import ChildLoginPage from "./pages/ParentPages/ChildLoginPage";
@@ -16,7 +16,6 @@ import ParentUserProfile from "./pages/ParentPages/ParentUserProfile";
 import NotificationsPage from "./pages/ParentPages/NotificationsPage";
 import ParentStatisticsPage from "./pages/ParentPages/ParentStatisticsPage";
 import ChooseGameMode from "./pages/ChildPages/ChooseGameMode";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
 import ChooseGameTimeRfP from "./pages/ChildPages/ChooseGameTimeRfP";
 import ChooseGameTimeMfP from "./pages/ChildPages/ChooseGameTimeMfP";
 import ChooseGameTimeMfN from "./pages/ChildPages/ChooseGameTimeMfN";
@@ -42,7 +41,7 @@ root.render(
             <Route path="/parent-profile" element={<ParentUserProfile/>}/>
             <Route path="/set-notifications" element={<NotificationsPage/>}/>
             <Route path="/parent-statistics" element={<ParentStatisticsPage/>}/>
-            <Route exact path="/" element={<ChildWelcomePage/>}/>
+            <Route exact path="/child-welcome" element={<ChildWelcomePage/>}/>
             <Route path="/ChooseGameMode" element={<ChooseGameMode/>}/>
             <Route path="/ChooseGameTimeRfP" element={<ChooseGameTimeRfP/>}/>
             <Route path="/ChooseGameTimeMfP" element={<ChooseGameTimeMfP/>}/>
@@ -55,8 +54,7 @@ root.render(
             <Route path="FinishedGame" element={<FinishedGame/>}/>
 
         </Routes>
-    </BrowserRouter>,
-    root
+    </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
