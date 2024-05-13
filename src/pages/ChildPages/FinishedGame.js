@@ -12,6 +12,7 @@ function FinishedGame() {
     const navigate = useNavigate();
     const quests = location.state ? location.state.quests : 0;
     const gameMode = location.state ? location.state.gameMode : '';
+    const images = location.state.images;
     const handleClick = () => {
         if(clickCount === quests){
             navigate("/ChooseGameMode", {state:{quests:quests}})
@@ -21,7 +22,7 @@ function FinishedGame() {
             if (gameMode === 'mimicFromName') {
                 navigate(`/MimicFromName?quests=${quests}`, { state: { clickCount: clickCount, quests: quests } });
             } else if (gameMode === 'mimicFromPicture') {
-                navigate(`/MimicFromPicture?quests=${quests}`, { state: { clickCount: clickCount, quests: quests } });
+                navigate(`/MimicFromPicture?quests=${quests}`, { state: { clickCount: clickCount, quests: quests, images: images} });
             }
     }}
     useEffect(() => {

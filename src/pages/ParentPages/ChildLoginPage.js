@@ -19,37 +19,40 @@ const ChildLoginPage = (props) => {
 
     const navigate = useNavigate();
 
-    const onEmailChange = e => {
-        setEmail(e.target.value)
-    }
 
     const login = useCallback(() => {
         console.log(email)
         console.log(password)
-        axios.post(callUrl,
-            {
-                "login": email,
-                "password": password,
-            }).then(response => {
-            console.log("Success: ", response.data);
+        axios.post(callUrl, {
+            "login": email, "password": password,
+        }).then(response => {
             navigate("/child-welcome")
         }).catch(error => {
-            console.log("Error: ", error);
             setEmailError("Incorrect credentials")
             setPasswordError("Incorrect credentials")
         })
-    }, [email, password])
+    }, [email, password, callUrl, navigate])
 
-    return (
-        <div className="ParentLoginPage"
-             style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#93D7FF'}}>
+    return (<div className="ParentLoginPage"
+                 style={{
+                     position: 'fixed',
+                     top: 0,
+                     left: 0,
+                     width: '100%',
+                     height: '100%',
+                     backgroundColor: '#93D7FF'
+                 }}>
             <Navbar style={{backgroundColor: "#93D7FF"}} textColor="#FBFFEA"/>
             <h1 className="login--text" style={{color: '#FBFFEA', left: "41%"}}> Log in as CHILD</h1>
             <Input
                 loc={{position: 'absolute', top: '30%', left: '41%'}}
                 style={{
-                    color: "#B0C5DA", backgroundColor: "#FBFFEA", borderColor: "#FBFFEA",
-                    width: '20%', height: '5%', marginTop: '2%'
+                    color: "#B0C5DA",
+                    backgroundColor: "#FBFFEA",
+                    borderColor: "#FBFFEA",
+                    width: '20%',
+                    height: '5%',
+                    marginTop: '2%'
                 }}
                 value={email}
                 placeholder="Email"
@@ -60,8 +63,12 @@ const ChildLoginPage = (props) => {
             <Input
                 loc={{position: 'absolute', top: '40%', left: '41%'}}
                 style={{
-                    color: "#B0C5DA", backgroundColor: "#FBFFEA", borderColor: "#FBFFEA",
-                    width: '20%', height: '5%', marginTop: '2%'
+                    color: "#B0C5DA",
+                    backgroundColor: "#FBFFEA",
+                    borderColor: "#FBFFEA",
+                    width: '20%',
+                    height: '5%',
+                    marginTop: '2%'
                 }}
                 value={password}
                 placeholder="Password"
@@ -73,8 +80,7 @@ const ChildLoginPage = (props) => {
                 in</Button>
             <img src={blueGhost} className="welcome--img" alt="Blue ghost"
                  style={{transform: 'translate(-50%, 5%)', left: '15%'}}/>
-        </div>
-    );
+        </div>);
 }
 
 export default ChildLoginPage;

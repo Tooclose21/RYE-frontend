@@ -52,7 +52,6 @@ root.render(
             <Route path="RecognizeFromPicture" element={<RecognizeFromPicture/>}/>
             <Route path="DailyChallenge" element={<DailyChallenge/>}/>
             <Route path="FinishedGame" element={<FinishedGame/>}/>
-
         </Routes>
     </BrowserRouter>
 );

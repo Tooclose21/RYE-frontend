@@ -11,6 +11,9 @@ function MimicFromPicture() {
     const navigate = useNavigate();
     const searchParams = new URLSearchParams(location.search);
     const quests = parseInt(searchParams.get('quests')) || 0;
+    const questImageUrl = location.state.images[0].url || "";
+    const [, ...images] = location.state.images
+    console.log(images)
 
     const [clickCount, setClickCount] = useState(0);
     const [imageSrc, setImageSrc] = useState(null);
@@ -28,7 +31,7 @@ function MimicFromPicture() {
         const newClickCount = clickCount + 1;
         setClickCount(newClickCount);
         console.log("Button clicked", newClickCount, "times");
-        navigate("/FinishedGame", { state: { clickCount: newClickCount, quests: quests, gameMode: 'mimicFromPicture' } });
+        navigate("/FinishedGame", { state: { clickCount: newClickCount, quests: quests, gameMode: 'mimicFromPicture', images: images} });
 
         setImageSrc(null);
     };
@@ -55,7 +58,7 @@ function MimicFromPicture() {
         <div style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#F2EFE3'}}>
             <Navbar style={{backgroundColor: "#F0BE5E"}} textColor="#FDFEFF"/>
             <h1 className="mfm--headline">Mimic from picture</h1>
-            {imageSrc ? null : <img src={emotion} className="emotion--img" alt="Face with emotion to mimic"/>}
+            {imageSrc ? null : <img src={questImageUrl} className="emotion--img" alt="Face with emotion to mimic"/>}
             {showCamera ? (
                 <Picture onCapture={handleCapture} onHideCamera={handleHideCamera}/>
             ) : (

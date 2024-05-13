@@ -3,10 +3,10 @@ import '../../styles.css';
 import Navbar from "../../components/Navbar";
 import React from "react";
 import Button from "../../components/Buttons";
-import {Link } from 'react-router-dom'
+import {Link, useNavigate, useNavigation} from 'react-router-dom'
 
 function ChooseGameTimeMfN() {
-
+    const navigation = useNavigate();
     return (
         <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#B2F1FF' }}>
             <Navbar style={{backgroundColor: "#F0BE5E"}} textColor="#FDFEFF"/>

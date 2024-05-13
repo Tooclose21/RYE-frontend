@@ -1,8 +1,10 @@
 import React from 'react';
+import "../styles.css"
 
 const Input = ({value, placeholder, onChange, error, style, loc}) => {
     const inputStyle = {
         ...style,
+        color: "#06066a", // TODO: Refactor in stylesheet
         ...loc,
         borderRadius: '10px'
     };
