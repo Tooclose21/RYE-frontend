@@ -29,7 +29,7 @@ const ParentLoginPage = (props) => {
             <Input
                 loc={{position: 'absolute', top: '30%', left: '41%'}}
                 style={{
-                    color: "#FFFFFF", backgroundColor: "#CBD8E5", borderColor: "#CBD8E5",
+                    color: "#3A3A72", backgroundColor: "#CBD8E5", borderColor: "#CBD8E5",
                     width: '20%', height: '5%', marginTop: '2%'
                 }}
                 value={email}
@@ -43,7 +43,7 @@ const ParentLoginPage = (props) => {
             <Input
                 loc={{position: 'absolute', top: '40%', left: '41%'}}
                 style={{
-                    color: "#FFFFFF", backgroundColor: "#CBD8E5", borderColor: "#CBD8E5",
+                    color: "#3A3A72", backgroundColor: "#CBD8E5", borderColor: "#CBD8E5",
                     width: '20%', height: '5%', marginTop: '2%'
                 }}
                 value={password}

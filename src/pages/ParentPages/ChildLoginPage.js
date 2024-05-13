@@ -46,14 +46,8 @@ const ChildLoginPage = (props) => {
             <h1 className="login--text" style={{color: '#FBFFEA', left: "41%"}}> Log in as CHILD</h1>
             <Input
                 loc={{position: 'absolute', top: '30%', left: '41%'}}
-                style={{
-                    color: "#B0C5DA",
-                    backgroundColor: "#FBFFEA",
-                    borderColor: "#FBFFEA",
-                    width: '20%',
-                    height: '5%',
-                    marginTop: '2%'
-                }}
+                style={{ color: "#B0C5DA",  backgroundColor: "#FBFFEA", borderColor: "#FBFFEA",
+                    width:'20%', height:'5%', marginTop:'2%'  }}
                 value={email}
                 placeholder="Email"
                 onChange={e => setEmail(e.target.value)}
@@ -62,14 +56,8 @@ const ChildLoginPage = (props) => {
             <br/>
             <Input
                 loc={{position: 'absolute', top: '40%', left: '41%'}}
-                style={{
-                    color: "#B0C5DA",
-                    backgroundColor: "#FBFFEA",
-                    borderColor: "#FBFFEA",
-                    width: '20%',
-                    height: '5%',
-                    marginTop: '2%'
-                }}
+                style={{ color: "#3A3A72", backgroundColor: "#FBFFEA",borderColor: "#FBFFEA",
+                    width:'20%', height:'5%', marginTop:'2%' }}
                 value={password}
                 placeholder="Password"
                 onChange={(ev) => setPassword(ev.target.value)}
