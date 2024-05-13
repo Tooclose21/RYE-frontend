@@ -5,35 +5,58 @@ import Button from "../../components/Buttons";
 import Picture from "../../components/Picture";
 import {Link, useLocation, useNavigate} from 'react-router-dom';
 import sendImage from "../../game-handle/PictureHandle"
+import fetchPicture from "../../game-handle/PictureFetch";
 
 function MimicFromName() {
     const location = useLocation();
     const navigate = useNavigate();
-    const searchParams = new URLSearchParams(location.search);
-    const quests = parseInt(searchParams.get('quests')) || 0;
-    const initialClickCount = location.state ? location.state.clickCount : 0;
 
-    const [clickCount, setClickCount] = useState(initialClickCount);
+    // const searchParams = new URLSearchParams(location.search);
+    // const quests = parseInt(searchParams.get('quests')) || 0;
+    // const initialClickCount = location.state ? location.state.clickCount : 0;
+
+    const questData = location.state.images[0];
+    const results = location.state.results;
+
+    const [, ...images] = location.state.images
+
+    // const [clickCount, setClickCount] = useState(initialClickCount);
     const [imageSrc, setImageSrc] = useState(null);
     const [showCamera, setShowCamera] = useState(false);
 
-    useEffect(() => {
-        console.log("Quests:", quests);
-    }, [quests]);
+    // useEffect(() => {
+    //     console.log("Quests:", quests);
+    // }, [quests]);
 
     const handleClick = () => {
         if (!imageSrc) {
             return;
         }
 
-        sendImage(imageSrc, "").then(msg => {
-            const newClickCount = clickCount + 1;
-            setClickCount(newClickCount);
-            console.log("Button clicked", newClickCount, "times");
-            navigate("/FinishedGame", {state: {clickCount: newClickCount, quests: quests, gameMode: 'mimicFromName'}});
+         sendImage(imageSrc, questData).then(rate => {
+            results.push(rate.score)
 
-            setImageSrc(null);
-        });
+            let destination;
+            if (!location.state.infty) {
+                destination = images.length === 0 ? "/FinishedGame" : "/MimicFromName"
+                navigate(destination, {
+                    state: {
+                        images: images, results: results
+                    }
+                });
+            } else {
+                fetchPicture(1).then(response => {
+
+                    destination = rate.score === 1 ? "/MimicFromName" : "/FinishedGame"
+                    navigate(destination, {
+                        state: {
+                            images: response.data, results: results, infty: location.state.infty
+                        }
+                    })
+                });
+            }
+        }).catch(err => console.log(err));
+        setImageSrc(null);
     };
 
     const handleCapture = (image) => {
@@ -55,11 +78,13 @@ function MimicFromName() {
         setImageSrc(null);
     };
 
+    const total = location.state.infty ? "\u221e" : images.length + results.length + 1;
+
     return (
         <div style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#F2EFE3'}}>
             <Navbar style={{backgroundColor: "#F0BE5E"}} textColor="#FDFEFF"/>
             <h1 className="mfm--headline">Mimic from emotion name</h1>
-            {imageSrc ? null : <h1 className="emotion--name">Angry</h1>}
+            {imageSrc ? null : <h1 className="emotion--name">{questData}</h1>}
             {showCamera ? (<Picture onCapture={handleCapture} onHideCamera={handleHideCamera}/>) : (<div>
                 {imageSrc && (<div style={{textAlign: 'center'}}>
                     <img src={imageSrc} alt="Captured"
@@ -76,8 +101,8 @@ function MimicFromName() {
             {!showCamera && (<Button onClick={handleClick} loc={{
                 position: 'absolute', top: '80%', left: '73%', width: '10%', height: '8%', color: '#F8A365'
             }} color="#FEE8AA">Finish</Button>)}
-            <h1 className="counter--text">{clickCount + 1}/5</h1>
-            <p style={{position: "absolute", top: "55%", color: "black"}}>Button clicked {clickCount} times</p>
+            <h1 className="counter--text">{results.length + 1}/{total}</h1>
+            {/*<p style={{position: "absolute", top: "55%", color: "black"}}>Button clicked {clickCount} times</p>*/}
         </div>);
 }
 
