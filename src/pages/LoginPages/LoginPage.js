@@ -4,7 +4,7 @@ import Navbar from '../../navbars/Navbar';
 import Button from '../../components/Button';
 import blueGhost from '../../images/blueGhost.png';
 import '../../styles.css';
-import LightBlueNavbar from "../../navbars/LighBlueNavbar";
+import LightBlueNavbar from "../../navbars/LightBlueNavbar";
 
 function LoginPage() {
     const navigate = useNavigate();

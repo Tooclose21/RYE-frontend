@@ -1,6 +1,6 @@
 import React, {useCallback, useEffect, useState} from "react";
 import '../../styles.css';
-import Navbar from "../../navbars/Navbar.js";
+import LightBlueNavbar from "../../navbars/LightBlueNavbar";
 import Button from "../../components/Button";
 import blueGhost from "../../images/blueGhost.png";
 import axios from "axios";
@@ -43,7 +43,7 @@ const ChildLoginPage = (props) => {
                      height: '100%',
                      backgroundColor: '#93D7FF'
                  }}>
-            <Navbar style={{backgroundColor: "#93D7FF"}} textColor="#FBFFEA"/>
+            <LightBlueNavbar/>
             <h1 className="login--text" style={{color: '#FBFFEA', left: "41%"}}> Log in as CHILD</h1>
             <Input
                 loc={{position: 'absolute', top: '30%', left: '41%'}}

@@ -1,6 +1,6 @@
 
 import '../../../styles.css';
-import Navbar from "../../../navbars/Navbar";
+import OrangeNavbar from "../../../navbars/OrangeNavbar";
 import React from "react";
 import Button from "../../../components/Buttons";
 import {Link } from 'react-router-dom'
@@ -8,7 +8,7 @@ import {Link } from 'react-router-dom'
 function ChooseGameMode() {
     return (
         <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#B2F1FF' }}>
-            <Navbar style={{backgroundColor: "#F0BE5E"}} textColor="#FDFEFF"/>
+            <OrangeNavbar />
             <h1 className={"choose--game--text"}>Choose game mode</h1>
             <Link to="/DailyChallenge"><Button loc={{position: 'absolute', top: '35%', left: '35%',
                 width: '35%', height: '8%', color: '#F8A365'}} color="#FEE8AA">Daily challenge</Button></Link>

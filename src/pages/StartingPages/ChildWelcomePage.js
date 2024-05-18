@@ -1,5 +1,5 @@
 import '../../styles.css';
-import Navbar from "../../navbars/Navbar";
+import LightBlueNavbar from "../../navbars/LightBlueNavbar";
 import WelcomeMessage from "../../components/WelcomeMessage";
 import React from "react";
 import BlueGhost from "../../components/BlueGhost";
@@ -9,7 +9,7 @@ import {Link} from 'react-router-dom'
 function ChildWelcomePage() {
     return (
         <div style={{backgroundColor: '#FFEEC0'}}>
-            <Navbar/>
+            <LightBlueNavbar/>
             <WelcomeMessage/>
             <BlueGhost/>
             <Link to="/ChooseGameMode"><Button loc={{position: 'absolute', top: '45%', left: '60%'}}

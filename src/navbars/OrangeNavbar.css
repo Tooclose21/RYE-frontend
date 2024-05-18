@@ -1,0 +1,31 @@
+.nav--orange {
+    height: 10%;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    background-color: #F0BE5E;
+}
+
+.nav--img--orange {
+    width: 5%;
+    height: 100%;
+    margin-right: 0.5%;
+}
+
+.nav--text--orange {
+    padding-top: 0; /* Reduced padding to decrease gap */
+    padding-bottom: 0.75%;
+}
+
+.nav--text1--orange {
+    font-size: 1.4vw;
+    color: #FFEEC0;
+    margin-bottom: 0; /* Ensure no margin bottom */
+}
+
+.nav--text2--orange {
+    font-size: 1.2vw;
+    color: #FDFEFF;
+    margin-top: 0; /* Ensure no margin top */
+    margin-bottom: 0; /* Ensure no margin bottom */
+}

@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import Navbar from "../../navbars/LighBlueNavbar.js";
+import Navbar from "../../navbars/LightBlueNavbar.js";
 import Button from "../../components/Button";
 import blueGhost from "../../images/blueGhost.png";
 import {Link, useNavigate} from "react-router-dom";

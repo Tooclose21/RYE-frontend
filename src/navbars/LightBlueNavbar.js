@@ -7,13 +7,13 @@ import '../navbars/LightBlueNavbar.css';
 const LightBlueNavbar = ({ className }) => {
     return (
         <Link to='/' className={className}>
-            <nav>
-                <img src={logo} className="nav--img" alt="logo"/>
-                <div className="nav--text">
-                    <h1 className="nav--text1">RYE</h1>
-                    <h3 className="nav--text2">Recognize your emotions</h3>
+            <nav--light>
+                <img src={logo} className="nav--img--light" alt="logo--light"/>
+                <div className="nav--text--light">
+                    <h1 className="nav--text1--light">RYE</h1>
+                    <h3 className="nav--text2--light">Recognize your emotions</h3>
                 </div>
-            </nav>
+            </nav--light>
         </Link>
     );
 };
