@@ -1,4 +1,4 @@
-nav2 {
+nav--dark {
     height: 10%;
     margin-top: 0;
     display: flex;
@@ -6,23 +6,23 @@ nav2 {
     background-color: #3A3A72;
 }
 
-.nav--img2 {
+.nav--img--dark {
     width:5%;
     height:100%;
     margin-right: 0.5%;
 }
-.nav--text2 {
+.nav--text--dark {
     padding-top: 0.5%;
     padding-bottom: 0.25%;
 }
 
-.nav--text12 {
+.nav--text1--dark {
     font-size: 1.4vw;
     color: #FFFDEE;
     margin-bottom: 0;
 }
 
-.nav--text22 {
+.nav--text2--dark {
     font-size: 1.2vw;
     color: #FFFDEE;
     margin-top: 0;
