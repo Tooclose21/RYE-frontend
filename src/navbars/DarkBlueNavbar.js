@@ -7,13 +7,13 @@ import '../navbars/DarkBlueNavbar.css';
 const DarkBlueNavbar = ({ className }) => {
     return (
         <Link to='/' className={className}>
-            <nav>
-                <img src={logo} className="nav--img" alt="logo"/>
-                <div className="nav--text">
-                    <h1 className="nav--text1">RYE</h1>
-                    <h3 className="nav--text2">Recognize your emotions</h3>
+            <nav2>
+                <img src={logo} className="nav--img2" alt="logo"/>
+                <div className="nav--text2">
+                    <h1 className="nav--text12">RYE</h1>
+                    <h3 className="nav--text22">Recognize your emotions</h3>
                 </div>
-            </nav>
+            </nav2>
         </Link>
     );
 };

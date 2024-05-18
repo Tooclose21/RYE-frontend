@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import Navbar from "../../navbars/Navbar.js";
 import Button from "../../components/Button";
 import blueGhost from "../../images/blueGhost.png";
-import {Link, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import BlueStar from "../../images/BlueStar.svg";
 import WhiteStar from "../../images/WhiteStar.svg";
 import Input from "../../components/Input";
@@ -68,9 +68,9 @@ function CreateChildAccountPage() {
                 <img src={blueGhost} className="welcome--img" alt="Blue ghost"
                      style={{width: "25vw", height: "19vw", transform: "translate(-105%,20%)"}}/>
             </div>
-            <Link to="/add-sub-account">
 
-            <Button loc={{
+
+            <Button onClick={() => navigate('/add-sub-account')} loc={{
                 position: 'absolute',
                 top: '70%',
                 left: '58%',
@@ -80,7 +80,7 @@ function CreateChildAccountPage() {
                 fontSize: "1.5vw"
             }}
                     color="#FBFFEA" textColor={"#88CAFC"}>Create account</Button>
-            </Link>
+
         </div>
     );
 }

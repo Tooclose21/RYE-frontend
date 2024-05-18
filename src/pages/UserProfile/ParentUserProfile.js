@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import Navbar from "../../navbars/Navbar.js";
+import Navbar from "../../navbars/DarkBlueNavbar";
 import Button from "../../components/Button";
 import blueGhost from "../../images/blueGhost.png";
 import {Link } from "react-router-dom";
@@ -17,7 +17,7 @@ function ParentUserProfile() {
     const [passwordRepeat, setPasswordRepeat] = useState('');
     return (
         <div style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#3A3A72'}}>
-            <Navbar style={{backgroundColor: "#3A3A72"}} textColor="#FBFFEA"/>
+            <Navbar />
             <h1 className={"login--text"} style={{color: "#FBFFEA", top: "25%"}}> User profile</h1>
             <h1 className="small--text"
                 style={{color: '#FBFFEA', left: "59%", top: "39.5%", position: 'absolute'}}> change username:</h1>

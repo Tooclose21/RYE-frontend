@@ -4,7 +4,7 @@ import Navbar from "../../navbars/Navbar.js";
 import Button from "../../components/Button";
 import blueGhost from "../../images/blueGhost.png";
 import Input from "../../components/Input";
-import {Link} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 
 const RegisterPage = (props) => {
@@ -16,6 +16,7 @@ const RegisterPage = (props) => {
     const [username, setUsername] = useState('');
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
+    const navigate = useNavigate();
 
     return (
         <div style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#FFFDEE'}}>
@@ -109,9 +110,8 @@ const RegisterPage = (props) => {
                 onChange={(ev) => setPasswordRepeat(ev.target.value)}
                 // error={passwordError}
             />
-            <Link to="/">
-                <Button loc={{position: 'absolute', top: '60%', left: '59%'}} color="#88CAFC" textColor={"#FFFDEE"}>Sign up</Button>
-            </Link>
+
+                <Button loc={{position: 'absolute', top: '60%', left: '59%'}} color="#88CAFC" textColor={"#FFFDEE"} onClick={() => navigate('/add-sub-account')}>Sign up</Button>
             <img src={blueGhost} className="welcome--img" alt="Blue ghost"
                  style={{transform: 'translate(-40%, -30%)', left: '15%'}}/>
         </div>
