@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../../../components/Navbar.js";
+import Navbar from "../../../navbars/Navbar.js";
 import '../../../styles.css';
 import Button from "../../../components/Button";
 import blueGhost from "../../../images/blueGhost.png";

@@ -1,6 +1,6 @@
 import React, {useCallback, useEffect, useState} from "react";
 import '../../styles.css';
-import Navbar from "../../components/Navbar.js";
+import Navbar from "../../navbars/Navbar.js";
 import Button from "../../components/Button";
 import blueGhost from "../../images/blueGhost.png";
 import axios from "axios";
@@ -23,14 +23,15 @@ const ChildLoginPage = (props) => {
     const login = useCallback(() => {
         console.log(email)
         console.log(password)
-        axios.post(callUrl, {
-            "login": email, "password": password,
-        }).then(response => {
-            navigate("/child-welcome")
-        }).catch(error => {
-            setEmailError("Incorrect credentials")
-            setPasswordError("Incorrect credentials")
-        })
+        navigate("/child-welcome")
+        // axios.post(callUrl, {
+        //     "login": email, "password": password,
+        // }).then(response => {
+        //     navigate("/child-welcome")
+        // }).catch(error => {
+        //     setEmailError("Incorrect credentials")
+        //     setPasswordError("Incorrect credentials")
+        // })
     }, [email, password, callUrl, navigate])
 
     return (<div className="ParentLoginPage"

@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import '../../styles.css';
-import Navbar from "../../components/Navbar.js";
+import Navbar from "../../navbars/Navbar.js";
 import Button from "../../components/Button";
 import blueGhost from "../../images/blueGhost.png";
 import Input from "../../components/Input";
-import {Link } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
+import LightBlueNavbar from "../../navbars/LighBlueNavbar";
 
 // import './styles.css';
 // import Navbar from "./components/Navbar.js";
@@ -20,9 +21,11 @@ const ParentLoginPage = (props) => {
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
 
+    const navigate = useNavigate();
+
     return (
         <div style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#B0C5DA'}}>
-            <Navbar style={{backgroundColor: "#B0C5DA"}} textColor="#FFFFFF"/>
+            <LightBlueNavbar/>
             <h1 className="login--text" style={{color: '#FFFFFF', left: "41%"}}> Log in as PARENT</h1>
             <h1 className="small--text"
                 style={{color: '#FFFFFF', left: "41%", top: "29.5%", position: 'absolute'}}> username:</h1>
@@ -51,9 +54,7 @@ const ParentLoginPage = (props) => {
                 onChange={(ev) => setPassword(ev.target.value)}
                 error={passwordError}
             />
-            <Link to="/main-page">
-                <Button loc={{position: 'absolute', top: '50%', left: '45%'}} color="#CBD8E5">Log in</Button>
-            </Link>
+                <Button loc={{position: 'absolute', top: '50%', left: '45%'}} color="#CBD8E5" onClick={() => navigate('/main-page')}>Log in</Button>
             <img src={blueGhost} className="welcome--img" alt="Blue ghost"
                  style={{transform: 'translate(-50%, 5%)', left: '15%'}}/>
         </div>

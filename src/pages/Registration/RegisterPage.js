@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import '../../styles.css';
-import Navbar from "../../components/Navbar.js";
+import Navbar from "../../navbars/Navbar.js";
 import Button from "../../components/Button";
 import blueGhost from "../../images/blueGhost.png";
 import Input from "../../components/Input";

@@ -1,5 +1,5 @@
 import '../../styles.css';
-import Navbar from "../../components/Navbar";
+import Navbar from "../../navbars/Navbar";
 import WelcomeMessage from "../../components/WelcomeMessage";
 import React from "react";
 import BlueGhost from "../../components/BlueGhost";

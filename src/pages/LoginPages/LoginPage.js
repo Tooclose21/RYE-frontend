@@ -1,29 +1,41 @@
-import React from "react";
-import Navbar from "../../components/Navbar.js";
-import Button from "../../components/Button";
-import blueGhost from "../../images/blueGhost.png";
-import {Link } from "react-router-dom";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import Navbar from '../../navbars/Navbar';
+import Button from '../../components/Button';
+import blueGhost from '../../images/blueGhost.png';
 import '../../styles.css';
-
+import LightBlueNavbar from "../../navbars/LighBlueNavbar";
 
 function LoginPage() {
+    const navigate = useNavigate();
+
     return (
-        <div>
-            <Navbar style={{ backgroundColor: "#88CAFC" }} textColor="#FFEEC0"/>
-            <h1 className={"login--text"}> Log in as</h1>
-            <Link to="/parent-login">
-            <Button loc={{position: 'absolute', top: '30%', left: '59%'}} color="#88CAFC">Parent</Button>
-            </Link>
-
-            <Link to="/child-login">
-                <Button loc={{position: 'absolute', top: '40%', left: '59%'}} color="#88CAFC">Child</Button>
-            </Link>
-
-            <h1 className={"login--text2"}> Don't have an account yet?</h1>
-            <Link to="/register">
-                <Button loc={{position: 'absolute', top: '63%', left: '59%'}} color="#88CAFC">Sign up here</Button>
-            </Link>
-            <img src={blueGhost} className="welcome--img" alt="Blue ghost"/>
+        <div style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#fffdee'}}>
+            <LightBlueNavbar/>
+            <h1 className="login--text">Log in as</h1>
+            <Button
+                loc={{ position: 'absolute', top: '30%', left: '59%' }}
+                color="#88CAFC"
+                onClick={() => navigate('/parent-login')}
+            >
+                Parent
+            </Button>
+            <Button
+                loc={{ position: 'absolute', top: '40%', left: '59%' }}
+                color="#88CAFC"
+                onClick={() => navigate('/child-login')}
+            >
+                Child
+            </Button>
+            <h1 className="login--text2">Don't have an account yet?</h1>
+            <Button
+                loc={{ position: 'absolute', top: '63%', left: '59%' }}
+                color="#88CAFC"
+                onClick={() => navigate('/register')}
+            >
+                Sign up here
+            </Button>
+            <img src={blueGhost} className="welcome--img" alt="Blue ghost" />
         </div>
     );
 }

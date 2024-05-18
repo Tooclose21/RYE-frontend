@@ -1,9 +1,9 @@
 import '../../../styles.css';
-import Navbar from "../../../components/Navbar";
+import Navbar from "../../../navbars/Navbar";
 import React, {useEffect, useState} from "react";
 import Button from "../../../components/Buttons";
 import Picture from "../../../components/Picture";
-import {Link, useLocation, useNavigate} from 'react-router-dom';
+import {useLocation, useNavigate} from 'react-router-dom';
 import sendImage from "../../../game-handle/PictureHandle"
 import fetchPicture from "../../../game-handle/PictureFetch";
 

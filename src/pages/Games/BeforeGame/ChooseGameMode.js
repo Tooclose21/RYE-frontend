@@ -1,6 +1,6 @@
 
 import '../../../styles.css';
-import Navbar from "../../../components/Navbar";
+import Navbar from "../../../navbars/Navbar";
 import React from "react";
 import Button from "../../../components/Buttons";
 import {Link } from 'react-router-dom'

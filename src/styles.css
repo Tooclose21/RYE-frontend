@@ -5,35 +5,35 @@ body {
     /*background-color: #FFEEC0;*/
 }
 
-nav {
-    height: 10%;
-    margin-top: 0;
-    display: flex;
-    align-items: center;
-    background-color: #88CAFC;
-}
+/*nav {*/
+/*    height: 10%;*/
+/*    margin-top: 0;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    background-color: #88CAFC;*/
+/*}*/
 
-.nav--img {
-    width:5%;
-    height:100%;
-    margin-right: 0.5%;
-}
+/*.nav--img {*/
+/*    width:5%;*/
+/*    height:100%;*/
+/*    margin-right: 0.5%;*/
+/*}*/
 
-.nav--text {
-    /*flex-direction: column;*/
-    padding-top: 0.5%;
-    padding-bottom: 1%;
-}
+/*.nav--text {*/
+/*    !*flex-direction: column;*!*/
+/*    padding-top: 0.5%;*/
+/*    padding-bottom: 1%;*/
+/*}*/
 
-.nav--text1 {
-    font-size: 1.4vw;
-    color: #FFEEC0;
-}
+/*.nav--text1 {*/
+/*    font-size: 1.4vw;*/
+/*    color: #FFEEC0;*/
+/*}*/
 
-.nav--text2 {
-    font-size: 1.2vw;
-    color: #FDFEFF;
-}
+/*.nav--text2 {*/
+/*    font-size: 1.2vw;*/
+/*    color: #FDFEFF;*/
+/*}*/
 .message{
     width: 58%;
     height: 17%;

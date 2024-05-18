@@ -1,0 +1,29 @@
+nav {
+    height: 10%;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    background-color: #88CAFC;
+}
+
+.nav--img {
+    width:5%;
+    height:100%;
+    margin-right: 0.5%;
+}
+.nav--text {
+    padding-top: 0.5%;
+    padding-bottom: 0.25%;
+}
+
+.nav--text1 {
+    font-size: 1.4vw;
+    color: #FFEEC0;
+    margin-bottom: 0;
+}
+
+.nav--text2 {
+    font-size: 1.2vw;
+    color: #FDFEFF;
+    margin-top: 0;
+}
