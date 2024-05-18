@@ -1,11 +1,11 @@
 import React from "react";
-import Navbar from "../../components/Navbar.js";
-import Button from "../../components/Button";
-import blueGhost from "../../images/blueGhost.png";
+import Navbar from "../../../components/Navbar.js";
+import Button from "../../../components/Button";
+import blueGhost from "../../../images/blueGhost.png";
 import {Link } from "react-router-dom";
-import '../../styles.css';
-import ComboBox from "../../components/ComboBox";
-import Rectangle from "../../components/Rectangle";
+import '../../../styles.css';
+import ComboBox from "../../../components/ComboBox";
+import Rectangle from "../../../components/Rectangle";
 
 
 function ParentStatisticsPage() {

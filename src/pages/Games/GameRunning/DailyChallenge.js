@@ -1,9 +1,9 @@
-import '../../styles.css';
-import Navbar from "../../components/Navbar";
+import '../../../styles.css';
+import Navbar from "../../../components/Navbar";
 import React from "react";
-import Button from "../../components/Buttons";
+import Button from "../../../components/Buttons";
 import {Link } from 'react-router-dom'
-import emotion from "../../images/emotion.png";
+import emotion from "../../../images/emotion.png";
 
 function DailyChallenge() {
     return (

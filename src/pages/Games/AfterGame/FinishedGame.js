@@ -1,9 +1,9 @@
-import '../../styles.css';
-import Navbar from "../../components/Navbar";
+import '../../../styles.css';
+import Navbar from "../../../components/Navbar";
 import React, {useEffect} from "react";
-import Button from "../../components/Buttons";
+import Button from "../../../components/Buttons";
 import {Link, useLocation, useNavigate} from 'react-router-dom'
-import blueGhost from "../../images/blueGhost.png";
+import blueGhost from "../../../images/blueGhost.png";
 
 function FinishedGame() {
     const location = useLocation();

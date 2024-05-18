@@ -1,12 +1,12 @@
-import '../../styles.css';
-import Navbar from "../../components/Navbar";
+import '../../../styles.css';
+import Navbar from "../../../components/Navbar";
 import React, {useEffect, useState} from "react";
-import Button from "../../components/Buttons";
-import Picture from "../../components/Picture";
+import Button from "../../../components/Buttons";
+import Picture from "../../../components/Picture";
 import {Link, useLocation, useNavigate} from 'react-router-dom';
-import emotion from "../../images/emotion.png";
-import sendImage from "../../game-handle/PictureHandle";
-import fetchPicture from "../../game-handle/PictureFetch";
+import emotion from "../../../images/emotion.png";
+import sendImage from "../../../game-handle/PictureHandle";
+import fetchPicture from "../../../game-handle/PictureFetch";
 
 function MimicFromPicture() {
     const location = useLocation();

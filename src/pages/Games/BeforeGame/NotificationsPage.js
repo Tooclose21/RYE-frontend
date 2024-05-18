@@ -1,9 +1,9 @@
 import React from "react";
-import Navbar from "../../components/Navbar.js";
-import Button from "../../components/Button";
+import Navbar from "../../../components/Navbar.js";
+import Button from "../../../components/Button";
 import { useState } from 'react';
-import '../../styles.css';
-import Rectangle from "../../components/Rectangle";
+import '../../../styles.css';
+import Rectangle from "../../../components/Rectangle";
 
 const NotificationsPage = () => {
     const [showComponent, setShowComponent] = useState(false);

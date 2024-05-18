@@ -1,20 +1,18 @@
-import '../../styles.css';
-import Navbar from "../../components/Navbar";
+import '../../../styles.css';
+import Navbar from "../../../components/Navbar";
 import React from "react";
-import Button from "../../components/Buttons";
+import Button from "../../../components/Buttons";
 import {Link, useNavigate, useNavigation} from 'react-router-dom'
-import fetchPicture from "../../game-handle/PictureFetch";
-import fetchEmotions from "../../game-handle/FetchEmotions";
+import fetchPicture from "../../../game-handle/PictureFetch";
 
-function ChooseGameTimeMfN() {
+// mimic from picture
+function ChooseGameTimeMfP() {
     const navigate = useNavigate();
 
-    // TODO: Merge all choose game times into one component
-
     const startGame = (quantity, infty = false) => {
-        fetchEmotions(quantity).then(response => {
+        fetchPicture(quantity).then(response => {
             console.log(response)
-            navigate("/MimicFromName", {
+            navigate("/MimicFromPicture", {
                 state: {
                     quests: quantity, images: response.data, results: [], infty: infty
                 }
@@ -42,4 +40,4 @@ function ChooseGameTimeMfN() {
         </div>);
 }
 
-export default ChooseGameTimeMfN;
+export default ChooseGameTimeMfP;
