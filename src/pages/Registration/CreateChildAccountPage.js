@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import Navbar from "../../navbars/Navbar.js";
 import Button from "../../components/Button";
 import blueGhost from "../../images/blueGhost.png";
-import {Link } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import BlueStar from "../../images/BlueStar.svg";
 import WhiteStar from "../../images/WhiteStar.svg";
 import Input from "../../components/Input";
@@ -14,6 +14,7 @@ function CreateChildAccountPage() {
     const [username, setUsername] = useState('');
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
+    const navigate = useNavigate();
     return (
         <div style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#88CAFC'}}>
             <Navbar style={{backgroundColor: "#88CAFC"}} textColor="#FBFFEA"/>

@@ -4,7 +4,7 @@ import Navbar from "../../navbars/Navbar.js";
 import Button from "../../components/Button";
 import blueGhost from "../../images/blueGhost.png";
 import Input from "../../components/Input";
-import {Link, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import LightBlueNavbar from "../../navbars/LighBlueNavbar";
 
 // import './styles.css';
