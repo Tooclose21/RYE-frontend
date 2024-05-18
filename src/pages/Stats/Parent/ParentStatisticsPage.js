@@ -2,7 +2,6 @@ import React from "react";
 import Navbar from "../../../navbars/Navbar.js";
 import Button from "../../../components/Button";
 import blueGhost from "../../../images/blueGhost.png";
-import {Link } from "react-router-dom";
 import '../../../styles.css';
 import ComboBox from "../../../components/ComboBox";
 import Rectangle from "../../../components/Rectangle";
