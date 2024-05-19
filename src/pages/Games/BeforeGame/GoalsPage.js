@@ -1,5 +1,5 @@
 import React from "react";
-import OrangeNavbar from "../../../navbars/OrangeNavbar.js";
+import YellowNavbar from "../../../navbars/YellowNavbar";
 import '../../../styles.css';
 import Button from "../../../components/Button";
 import blueGhost from "../../../images/blueGhost.png";
@@ -11,7 +11,7 @@ function GoalsPage() {
     const AmountOptions = Array.from({ length: 5 }, (_, index) => index + 1);
     return (
         <div style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#88CAFC'}}>
-            <OrangeNavbar />
+            <YellowNavbar />
             <div className={"message"} style={{backgroundColor: "#FFFDEE"}}>
 
                 <h1 className={"medium--text"} style={{marginLeft: "30%", color: "#3A3A72"}}>

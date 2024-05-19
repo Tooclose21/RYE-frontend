@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../../../navbars/Navbar.js";
+import LightBlueNavbar from "../../../navbars/LightBlueNavbar.js";
 import Button from "../../../components/Button";
 import blueGhost from "../../../images/blueGhost.png";
 import '../../../styles.css';
@@ -11,7 +11,7 @@ function ParentStatisticsPage() {
     const AmountOptions = Array.from({ length: 5 }, (_, index) => index + 1);
     return (
         <div style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#D2EBFF'}}>
-            <Navbar style={{backgroundColor: "#88CAFC"}} textColor="#FFF7CF"/>
+            <LightBlueNavbar/>
             <div className={"message"} style={{backgroundColor: "#FFFDEE", width: "55%"}}>
                 <h1 className={"medium--text"} style={{marginLeft: "30%", color: "#3A3A72"}}>
                     <span style={{fontSize: "2vw"}}>Welcome to Statistics!</span> <br/>

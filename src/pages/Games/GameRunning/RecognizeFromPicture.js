@@ -1,5 +1,5 @@
 import '../../../styles.css';
-import Navbar from "../../../navbars/Navbar";
+import OrangeNavbar from "../../../navbars/OrangeNavbar";
 import React from "react";
 import Button from "../../../components/Buttons";
 import emotion from "../../../images/emotion.png";
@@ -7,7 +7,7 @@ import emotion from "../../../images/emotion.png";
 function RecognizeFromPicture() {
     return (
         <div style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#F2EFE3'}}>
-            <Navbar style={{backgroundColor: "#F0BE5E"}} textColor="#FDFEFF"/>
+            <OrangeNavbar/>
             <h1 className="rfp--headline">Recognize from picture</h1>
             <img src={emotion} className="emotion--img--recognize" alt="Face with emotion to mimic"/>
             <h2 className={"name--emotion--rfp"}>Name emotion:</h2>

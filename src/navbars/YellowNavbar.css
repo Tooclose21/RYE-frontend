@@ -1,0 +1,31 @@
+.nav--yellow {
+    height: 10%;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    background-color: #FFFDEE;
+}
+
+.nav--img--yellow {
+    width: 5%;
+    height: 100%;
+    margin-right: 0.5%;
+}
+
+.nav--text--yellow {
+    padding-top: 0; /* Reduced padding to decrease gap */
+    padding-bottom: 0.75%;
+}
+
+.nav--text1--yellow {
+    font-size: 1.4vw;
+    color: #88CAFC;
+    margin-bottom: 0; /* Ensure no margin bottom */
+}
+
+.nav--text2--yellow {
+    font-size: 1.2vw;
+    color: #88CAFC;
+    margin-top: 0; /* Ensure no margin top */
+    margin-bottom: 0; /* Ensure no margin bottom */
+}

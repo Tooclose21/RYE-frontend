@@ -1,5 +1,5 @@
 import '../../../styles.css';
-import Navbar from "../../../navbars/Navbar";
+import OrangeNavbar from "../../../navbars/OrangeNavbar";
 import React, {useEffect, useState} from "react";
 import Button from "../../../components/Buttons";
 import Picture from "../../../components/Picture";
@@ -82,7 +82,7 @@ function MimicFromName() {
 
     return (
         <div style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#F2EFE3'}}>
-            <Navbar style={{backgroundColor: "#F0BE5E"}} textColor="#FDFEFF"/>
+            <OrangeNavbar />
             <h1 className="mfm--headline">Mimic from emotion name</h1>
             {imageSrc ? null : <h1 className="emotion--name">{questData}</h1>}
             {showCamera ? (<Picture onCapture={handleCapture} onHideCamera={handleHideCamera}/>) : (<div>

@@ -25,6 +25,7 @@ import MimicFromPicture from "./pages/Games/GameRunning/MimicFromPicture";
 import RecognizeFromPicture from "./pages/Games/GameRunning/RecognizeFromPicture";
 import DailyChallenge from "./pages/Games/GameRunning/DailyChallenge";
 import FinishedGame from "./pages/Games/AfterGame/FinishedGame";
+import StatsForChild from "./pages/Stats/Child/StatsForChild";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -52,6 +53,7 @@ root.render(
             <Route path="RecognizeFromPicture" element={<RecognizeFromPicture/>}/>
             <Route path="DailyChallenge" element={<DailyChallenge/>}/>
             <Route path="FinishedGame" element={<FinishedGame/>}/>
+            <Route path="StatsForChild" element={<StatsForChild/>}></Route>
         </Routes>
     </BrowserRouter>
 );

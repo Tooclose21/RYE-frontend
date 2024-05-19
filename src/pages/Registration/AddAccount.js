@@ -1,7 +1,7 @@
 // AddAccount.js
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../../navbars/Navbar";
+import LightBlueNavbar from "../../navbars/LightBlueNavbar";
 import blueGhost from "../../images/blueGhost.png";
 import '../../styles.css';
 
@@ -14,7 +14,7 @@ function AddAccount() {
 
     return (
         <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#88CAFC' }}>
-            <Navbar style={{ backgroundColor: "#FFFDEE" }} textColor="#88CAFC" />
+            <LightBlueNavbar />
             <div className="message" style={{ backgroundColor: "#3A3A72" }}>
                 <h1 className="medium--text" style={{ marginLeft: "30%", color: "#88CAFC" }}>
                     Great! Thanks for registering.

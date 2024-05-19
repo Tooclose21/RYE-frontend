@@ -1,10 +1,9 @@
 import '../../../styles.css';
-import Navbar from "../../../navbars/Navbar";
+import OrangeNavbar from "../../../navbars/OrangeNavbar";
 import React, {useEffect, useState} from "react";
 import Button from "../../../components/Buttons";
 import Picture from "../../../components/Picture";
 import {useLocation, useNavigate} from 'react-router-dom';
-import emotion from "../../../images/emotion.png";
 import sendImage from "../../../game-handle/PictureHandle";
 import fetchPicture from "../../../game-handle/PictureFetch";
 
@@ -77,7 +76,7 @@ function MimicFromPicture() {
     const total = location.state.infty ? "\u221e" : images.length + results.length + 1;
     return (
         <div style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#F2EFE3'}}>
-            <Navbar style={{backgroundColor: "#F0BE5E"}} textColor="#FDFEFF"/>
+            <OrangeNavbar />
             <h1 className="mfm--headline">Mimic from picture</h1>
             {imageSrc ? null : <img src={questData.url} className="emotion--img" alt="Face with emotion to mimic"/>}
             {showCamera ? (<Picture onCapture={handleCapture} onHideCamera={handleHideCamera}/>) : (<div>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import '../../styles.css';
-import Navbar from "../../navbars/Navbar.js";
+import YellowNavbar from "../../navbars/YellowNavbar.js";
 import Button from "../../components/Button";
 import blueGhost from "../../images/blueGhost.png";
 import Input from "../../components/Input";
@@ -20,7 +20,7 @@ const RegisterPage = (props) => {
 
     return (
         <div style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#FFFDEE'}}>
-            <Navbar style={{backgroundColor: "#93D7FF"}} textColor="#FBFFEA"/>
+            <YellowNavbar/>
             <h1 className="login--text" style={{color: '#88CAFC', left: "37%"}}> Welcome to RYE! Fill the fields below
                 to register</h1>
 

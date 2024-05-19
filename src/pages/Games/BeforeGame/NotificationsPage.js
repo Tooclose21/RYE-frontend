@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../../../navbars/Navbar.js";
+import YellowNavbar from "../../../navbars/YellowNavbar.js";
 import Button from "../../../components/Button";
 import { useState } from 'react';
 import '../../../styles.css';
@@ -13,7 +13,7 @@ const NotificationsPage = () => {
     };
     return (
         <div style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#88CAFC'}}>
-            <Navbar style={{backgroundColor: "#FBFFEA"}} textColor="#88CAFC"/>
+            <YellowNavbar />
             <h1 className={"login--text"} style={{color: "#3A3A72", left: "5%", top: "10%"}}> Notifications</h1>
             <h1 className={"login--text2"} style={{color: "#FFFDEE", left: "5%", top: "25%"}}>Start time:</h1>
             <Button loc={{

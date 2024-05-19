@@ -1,23 +1,36 @@
 import '../../styles.css';
 import LightBlueNavbar from "../../navbars/LightBlueNavbar";
-import WelcomeMessage from "../../components/WelcomeMessage";
-import React from "react";
+import React, {useCallback} from "react";
 import BlueGhost from "../../components/BlueGhost";
 import Button from "../../components/Buttons";
-import {Link} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 
 function ChildWelcomePage() {
+    const navigate = useNavigate();
+    const chooseGameMode = useCallback(()=>{
+        navigate("/ChooseGameMode")
+    }, [navigate])
+    const goCustomization = useCallback(()=>{
+        navigate("/CharacterCustomization")
+    },[navigate])
+    const goToChildStats = useCallback(()=>{
+        navigate("/StatsForChild")
+    },[navigate])
     return (
         <div style={{backgroundColor: '#FFEEC0'}}>
             <LightBlueNavbar/>
-            <WelcomeMessage/>
+            <div className={"message--text"}>
+                <h1 className="message--text1"> Welcome back!</h1>
+                <h1 className="message--text2">What would you like to do today?</h1>
+            </div>
             <BlueGhost/>
-            <Link to="/ChooseGameMode"><Button loc={{position: 'absolute', top: '45%', left: '60%'}}
-                                               color="#88CAFC">Play</Button></Link>
+            <Button loc={{position: 'absolute', top: '45%', left: '60%'}}
+                    color="#88CAFC" onClick={chooseGameMode}>Play</Button>
             <Button loc={{position: 'absolute', top: '55%', left: '60%'}} color="#88CAFC">Tasks</Button>
-            <Link to="/CharacterCustomization"><Button loc={{position: 'absolute', top: '65%', left: '60%'}}
-                                                       color="#88CAFC">Customize</Button></Link>
-            <Button loc={{position: 'absolute', top: '75%', left: '60%'}} color="#88CAFC">My stats</Button>
+            <Button loc={{position: 'absolute', top: '65%', left: '60%'}}
+                    color="#88CAFC" onClick={goCustomization}>Customize</Button>
+            <Button loc={{position: 'absolute', top: '75%', left: '60%'}}
+                    color="#88CAFC" onClick={goToChildStats}>My stats</Button>
         </div>
     );
 }

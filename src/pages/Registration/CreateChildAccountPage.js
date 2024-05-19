@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import Navbar from "../../navbars/LightBlueNavbar.js";
+import LightBlueNavbar from "../../navbars/LightBlueNavbar.js";
 import Button from "../../components/Button";
 import blueGhost from "../../images/blueGhost.png";
 import {useNavigate} from "react-router-dom";
@@ -17,7 +17,7 @@ function CreateChildAccountPage() {
     const navigate = useNavigate();
     return (
         <div style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#88CAFC'}}>
-            <Navbar style={{backgroundColor: "#88CAFC"}} textColor="#FBFFEA"/>
+            <LightBlueNavbar/>
             <h1 className={"login--text"} style={{color:"#FBFFEA", left:"55%", top:"25%"}}>Create child account</h1>
             <h1 className="small--text"
                 style={{color: '#FBFFEA', left: "55%", top: "39.5%", position: 'absolute'}}> username:</h1>
