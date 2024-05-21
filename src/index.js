@@ -26,6 +26,7 @@ import RecognizeFromPicture from "./pages/Games/GameRunning/RecognizeFromPicture
 import DailyChallenge from "./pages/Games/GameRunning/DailyChallenge";
 import FinishedGame from "./pages/Games/AfterGame/FinishedGame";
 import StatsForChild from "./pages/Stats/Child/StatsForChild";
+import ChooseGameTime from "./pages/Games/BeforeGame/ChooseGameTime";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -44,6 +45,7 @@ root.render(
             <Route path="/parent-statistics" element={<ParentStatisticsPage/>}/>
             <Route exact path="/child-welcome" element={<ChildWelcomePage/>}/>
             <Route path="/ChooseGameMode" element={<ChooseGameMode/>}/>
+            <Route path="/ChooseGameTime" element={<ChooseGameTime/>}/>
             <Route path="/ChooseGameTimeRfP" element={<ChooseGameTimeRfP/>}/>
             <Route path="/ChooseGameTimeMfP" element={<ChooseGameTimeMfP/>}/>
             <Route path="/ChooseGameTimeMfN" element={<ChooseGameTimeMfN/>}/>
