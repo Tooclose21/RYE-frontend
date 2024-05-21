@@ -5,35 +5,7 @@ body {
     /*background-color: #FFEEC0;*/
 }
 
-/*nav {*/
-/*    height: 10%;*/
-/*    margin-top: 0;*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    background-color: #88CAFC;*/
-/*}*/
 
-/*.nav--img {*/
-/*    width:5%;*/
-/*    height:100%;*/
-/*    margin-right: 0.5%;*/
-/*}*/
-
-/*.nav--text {*/
-/*    !*flex-direction: column;*!*/
-/*    padding-top: 0.5%;*/
-/*    padding-bottom: 1%;*/
-/*}*/
-
-/*.nav--text1 {*/
-/*    font-size: 1.4vw;*/
-/*    color: #FFEEC0;*/
-/*}*/
-
-/*.nav--text2 {*/
-/*    font-size: 1.2vw;*/
-/*    color: #FDFEFF;*/
-/*}*/
 .message{
     width: 58%;
     height: 17%;
@@ -41,14 +13,14 @@ body {
     border-radius: 100px;
     font-size: 1vw;
 }
-.welcome--img {
-    position: absolute;
-    top: 50%;
-    left: 25%;
-    transform: translate(-50%, -25%);
-    width: 40%;
-    height: auto;
-}
+/*.welcome--img {*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    left: 25%;*/
+/*    transform: translate(-50%, -25%);*/
+/*    width: 40%;*/
+/*    height: auto;*/
+/*}*/
 .button {
     color: #FFF;
     border: none;
@@ -72,31 +44,31 @@ body {
     margin-bottom: 2%;
 }
 
-.login--text {
-    color: #88CAFC;
-    background-color: #FDFEFF;
-    width: 43%;
-    height: 20%;
-    margin-left: 45%;
-    margin-bottom: 1%;
-    border-radius: 100px;
-    position: absolute;
-    top: 19%;
-    left: 59%;
-    font-Size: 2.5vw;
-    margin-top: 2%;
+/*.login--text {*/
+/*    color: #88CAFC;*/
+/*    background-color: #FDFEFF;*/
+/*    width: 43%;*/
+/*    height: 20%;*/
+/*    margin-left: 45%;*/
+/*    margin-bottom: 1%;*/
+/*    border-radius: 100px;*/
+/*    position: absolute;*/
+/*    top: 19%;*/
+/*    left: 59%;*/
+/*    font-Size: 2.5vw;*/
+/*    margin-top: 2%;*/
 
-}
+/*}*/
 
-.login--text2{
-    color: #88CAFC;
-    position: absolute;
-    top: 53%;
-    left:  59%;
-    font-Size: 2.5vw;
-    margin-bottom: 2%;
-    margin-top: 2%;
-}
+/*.login--text2{*/
+/*    color: #88CAFC;*/
+/*    position: absolute;*/
+/*    top: 53%;*/
+/*    left:  59%;*/
+/*    font-Size: 2.5vw;*/
+/*    margin-bottom: 2%;*/
+/*    margin-top: 2%;*/
+/*}*/
 .small--text{
     font-size: 1vw;
 }

@@ -5,7 +5,55 @@ body {
     /*background-color: #FFEEC0;*/
 }
 
+.welcome--img {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -25%);
+    width: 35%;
+    height: auto;
+}
+.login--text1 {
+    color: #88CAFC;
+    position: absolute;
+    top: 20%;
+    left:  59%;
+    font-Size: 2.5vw;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
 
+.login--text2{
+    color: #88CAFC;
+    position: absolute;
+    width: 20%;
+    top: 53%;
+    left:  59%;
+    font-Size: 2.5vw;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+.login--as--parent{
+    color: #FFFFFF;
+    margin-left: 42%;
+    margin-top: 5%;
+}
+
+.username--parent--text{
+    color: #FFFFFF;
+    margin-left: 41.5%;
+    font-size: 1.1vw;
+    position: absolute;
+}
+
+.password--parent--text{
+    color: #FFFFFF;
+    margin-left: 41.5%;
+    margin-top: 4%;
+    font-size: 1.1vw;
+    position: absolute;
+}
 
 
 
