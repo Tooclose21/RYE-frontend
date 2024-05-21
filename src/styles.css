@@ -13,14 +13,6 @@ body {
     border-radius: 100px;
     font-size: 1vw;
 }
-/*.welcome--img {*/
-/*    position: absolute;*/
-/*    top: 50%;*/
-/*    left: 25%;*/
-/*    transform: translate(-50%, -25%);*/
-/*    width: 40%;*/
-/*    height: auto;*/
-/*}*/
 .button {
     color: #FFF;
     border: none;
@@ -42,35 +34,6 @@ body {
     cursor: pointer;
     margin-top: 2%;
     margin-bottom: 2%;
-}
-
-/*.login--text {*/
-/*    color: #88CAFC;*/
-/*    background-color: #FDFEFF;*/
-/*    width: 43%;*/
-/*    height: 20%;*/
-/*    margin-left: 45%;*/
-/*    margin-bottom: 1%;*/
-/*    border-radius: 100px;*/
-/*    position: absolute;*/
-/*    top: 19%;*/
-/*    left: 59%;*/
-/*    font-Size: 2.5vw;*/
-/*    margin-top: 2%;*/
-
-/*}*/
-
-/*.login--text2{*/
-/*    color: #88CAFC;*/
-/*    position: absolute;*/
-/*    top: 53%;*/
-/*    left:  59%;*/
-/*    font-Size: 2.5vw;*/
-/*    margin-bottom: 2%;*/
-/*    margin-top: 2%;*/
-/*}*/
-.small--text{
-    font-size: 1vw;
 }
 .medium--text{
     font-size: 1.5vw;

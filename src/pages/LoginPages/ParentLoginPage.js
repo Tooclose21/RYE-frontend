@@ -45,8 +45,7 @@ const ParentLoginPage = (props) => {
                 error={passwordError}
             />
                 <Button loc={{position: 'absolute', top: '50%', left: '43.5%', fontWeight: "bold"}} color="#CBD8E5" onClick={() => navigate('/main-page')}>Log in</Button>
-            <img src={blueGhost} className="welcome--img" alt="Blue ghost"
-                 style={{transform: 'translate(-50%, 5%)', left: '15%'}}/>
+            <img src={blueGhost} className="login--img" alt="Blue ghost"/>
         </div>
     );
 }
