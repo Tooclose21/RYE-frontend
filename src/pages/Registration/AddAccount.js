@@ -1,9 +1,9 @@
 // AddAccount.js
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import LightBlueNavbar from "../../navbars/LightBlueNavbar";
+import DarkBlueNavbar from "../../navbars/DarkBlueNavbar";
 import blueGhost from "../../images/blueGhost.png";
-import '../../styles.css';
+import '../Registration/AddAccount.css';
 
 function AddAccount() {
     const navigate = useNavigate();
@@ -14,16 +14,16 @@ function AddAccount() {
 
     return (
         <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#88CAFC' }}>
-            <LightBlueNavbar />
-            <div className="message" style={{ backgroundColor: "#3A3A72" }}>
-                <h1 className="medium--text" style={{ marginLeft: "30%", color: "#88CAFC" }}>
+            <DarkBlueNavbar />
+            <div className="add--account--messagebox">
+                <h1 className="add--account--message">
                     Great! Thanks for registering.
                     Now create accounts for your children. Once you create their accounts, you will be able to track their progress and set goals for them to achieve.
                 </h1>
             </div>
-            <h1 className="login--text2" style={{ top: "43%", left: "45%", color: "#FFFDEE" }}>Add account:</h1>
+            <h1 className="add--account--child--text">Add account:</h1>
             <button className="plus-button" onClick={handleAddAccount}>+</button>
-            <img src={blueGhost} className="welcome--img" alt="Blue ghost" style={{ top: "20%", left: "5%", width: '11%', height: '17%' }} />
+            <img src={blueGhost} className="add--child--img" alt="Blue ghost"/>
         </div>
     );
 }

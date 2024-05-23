@@ -1,0 +1,32 @@
+.create--child--acc-text {
+    color:#FBFFEA;
+    margin-left: 55%;
+    margin-top: 3%;
+    width: 20%;
+}
+
+.create--child--acc-username {
+    color: #FBFFEA;
+    margin-left: 55.5%;
+    margin-top: 3.5%;
+    font-size: 1.4vw;
+    font-weight: normal;
+}
+
+.create--child--acc-password{
+    color: #FBFFEA;
+    margin-left: 55.5%;
+    margin-top: 1.5%;
+    font-size: 1.4vw;
+    font-weight: normal;
+}
+
+.create--child--acc-repeatpassword{
+    color: #FBFFEA;
+    margin-left: 55.5%;
+    margin-top: 1.5%;
+    font-size: 1.4vw;
+    font-weight: normal;
+}
+
+

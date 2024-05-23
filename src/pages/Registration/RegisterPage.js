@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import '../../styles.css';
+import '../Registration/RegisterPage.css';
 import YellowNavbar from "../../navbars/YellowNavbar.js";
 import Button from "../../components/Button";
 import blueGhost from "../../images/blueGhost.png";
@@ -21,13 +21,12 @@ const RegisterPage = (props) => {
     return (
         <div style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#FFFDEE'}}>
             <YellowNavbar/>
-            <h1 className="login--text" style={{color: '#88CAFC', left: "37%"}}> Welcome to RYE! Fill the fields below
+            <h1 className="registration--welcome--text"> Welcome to RYE! Fill the fields below
                 to register</h1>
 
-            <h1 className="small--text"
-                style={{color: '#88CAFC', left: "41%", top: "29.5%", position: 'absolute'}}> first name:</h1>
+            <h1 className="register--firstname--text"> first name:</h1>
             <Input
-                loc={{position: 'absolute', top: '30%', left: '41%'}}
+                loc={{position: 'absolute', top: '35%', left: '41%'}}
                 style={{
                     color: "#FFFDEE", backgroundColor: "#88CAFC", borderColor: "#88CAFC",
                     width: '20%', height: '5%', marginTop: '2%'
@@ -39,10 +38,9 @@ const RegisterPage = (props) => {
             />
             <br/>
 
-            <h1 className="small--text"
-                style={{color: '#88CAFC', left: "69%", top: "29.5%", position: 'absolute'}}> last name:</h1>
+            <h1 className="register--lastname--text"> last name:</h1>
             <Input
-                loc={{position: 'absolute', top: '30%', left: '69%'}}
+                loc={{position: 'absolute', top: '35%', left: '69%'}}
                 style={{
                     color: "#FFFDEE", backgroundColor: "#88CAFC", borderColor: "#88CAFC",
                     width: '20%', height: '5%', marginTop: '2%'
@@ -54,10 +52,9 @@ const RegisterPage = (props) => {
             />
             <br/>
 
-            <h1 className="small--text"
-                style={{color: '#88CAFC', left: "69%", top: "39.5%", position: 'absolute'}}> username:</h1>
+            <h1 className="register--username--text"> username:</h1>
             <Input
-                loc={{position: 'absolute', top: '40%', left: '69%'}}
+                loc={{position: 'absolute', top: '45%', left: '69%'}}
                 style={{
                     color: "#FFFDEE", backgroundColor: "#88CAFC", borderColor: "#88CAFC",
                     width: '20%', height: '5%', marginTop: '2%'
@@ -69,10 +66,9 @@ const RegisterPage = (props) => {
             />
             <br/>
 
-            <h1 className="small--text"
-                style={{color: '#88CAFC', left: "41%", top: "39.5%", position: 'absolute'}}> email:</h1>
+            <h1 className="register--email--text"> email:</h1>
             <Input
-                loc={{position: 'absolute', top: '40%', left: '41%'}}
+                loc={{position: 'absolute', top: '45%', left: '41%'}}
                 style={{
                     color: "#FFFDEE", backgroundColor: "#88CAFC", borderColor: "#88CAFC",
                     width: '20%', height: '5%', marginTop: '2%'
@@ -83,10 +79,9 @@ const RegisterPage = (props) => {
                 error={emailError}
             />
             <br/>
-            <h1 className="small--text"
-                style={{color: '#88CAFC', left: "41%", top: "49.5%", position: 'absolute'}}> password:</h1>
+            <h1 className="register--password--text"> password:</h1>
             <Input
-                loc={{position: 'absolute', top: '50%', left: '41%'}}
+                loc={{position: 'absolute', top: '55%', left: '41%'}}
                 style={{
                     color: "#FFFDEE", backgroundColor: "#88CAFC", borderColor: "#88CAFC",
                     width: '20%', height: '5%', marginTop: '2%'
@@ -97,10 +92,9 @@ const RegisterPage = (props) => {
                 error={passwordError}
             />
             <br/>
-            <h1 className="small--text"
-                style={{color: '#88CAFC', left: "69%", top: "49.5%", position: 'absolute'}}> repeat password:</h1>
+            <h1 className="register--repeatpassword--text"> repeat password:</h1>
             <Input
-                loc={{position: 'absolute', top: '50%', left: '69%'}}
+                loc={{position: 'absolute', top: '55%', left: '69%'}}
                 style={{
                     color: "#FFFDEE", backgroundColor: "#88CAFC", borderColor: "#88CAFC",
                     width: '20%', height: '5%', marginTop: '2%'
@@ -111,7 +105,7 @@ const RegisterPage = (props) => {
                 // error={passwordError}
             />
 
-                <Button loc={{position: 'absolute', top: '60%', left: '59%'}} color="#88CAFC" textColor={"#FFFDEE"} onClick={() => navigate('/add-sub-account')}>Sign up</Button>
+                <Button loc={{position: 'absolute', top: '65%', left: '58%', fontWeight: 'bold'}} color="#88CAFC" textColor={"#FFFDEE"} onClick={() => navigate('/add-sub-account')}>Sign up</Button>
             <img src={blueGhost} className="welcome--img" alt="Blue ghost"
                  style={{transform: 'translate(-40%, -30%)', left: '15%'}}/>
         </div>

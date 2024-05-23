@@ -1,0 +1,52 @@
+.add--account--messagebox{
+    width: 64%;
+    height: 17%;
+    transform: translate(-10%, 20%);
+    border-radius: 100px;
+    font-size: 1vw;
+    background-color: #3A3A72;
+}
+
+.add--account--message {
+    font-size: 1.5vw;
+    margin-left: 30%;
+    color: #88CAFC;
+}
+
+.add--account--child--text {
+    color: #FFFDEE;
+    margin-left: 66%;
+    margin-top: 5%;
+}
+
+.plus-button {
+    background-color: #88CAFC;
+    border: none;
+    border-radius: 10%;
+    color: #FFFDEE;
+    font-size:5vw;
+    width: 14%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-top: -8%;
+    margin-left: 53%;
+    transform: translate(90%, 80%);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.plus-button:hover {
+    background-color: #FFFDEE;
+    color: #88CAFC;;
+}
+
+.add--child--img {
+    position: absolute;
+    margin-top: -15.5%;
+    left: 1%;
+    width: 11%;
+    height: 17%;
+}

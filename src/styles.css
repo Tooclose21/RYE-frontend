@@ -6,13 +6,6 @@ body {
 }
 
 
-.message{
-    width: 58%;
-    height: 17%;
-    transform: translate(-10%, 20%);
-    border-radius: 100px;
-    font-size: 1vw;
-}
 .button {
     color: #FFF;
     border: none;
@@ -39,34 +32,14 @@ body {
     font-size: 1.5vw;
 }
 
-.plus-button {
-    background-color: #88CAFC;
-    border: none;
-    border-radius: 50%;
-    color: #FFFDEE;
-    font-size:5vw;
-    width: 5%;
-    height: 9%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5% 10% 0 10%;
-/*    top, right, bottom, left*/
-    position: absolute;
-    top: 50%;
-    left: 45%;
-    transform: translate(90%, 80%);
-    font-weight: bold;
-    cursor: pointer;
-}
 
 .message--text2 {
     padding: 0 10% 5% 10%;
 }
-.plus-button:hover {
-    background-color: #FFFDEE;
-    color: #88CAFC;
-}
+/*.plus-button:hover {*/
+/*    background-color: #FFFDEE;*/
+/*    color: #88CAFC;*/
+/*}*/
 .option--text{
     font-size: 1vw;
     font-weight: bold;

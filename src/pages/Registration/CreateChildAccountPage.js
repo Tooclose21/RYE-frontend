@@ -6,6 +6,7 @@ import {useNavigate} from "react-router-dom";
 import BlueStar from "../../images/BlueStar.svg";
 import WhiteStar from "../../images/WhiteStar.svg";
 import Input from "../../components/Input";
+import "../Registration/CreateChildAccountPage.css"
 
 
 function CreateChildAccountPage() {
@@ -18,14 +19,13 @@ function CreateChildAccountPage() {
     return (
         <div style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#88CAFC'}}>
             <LightBlueNavbar/>
-            <h1 className={"login--text"} style={{color:"#FBFFEA", left:"55%", top:"25%"}}>Create child account</h1>
-            <h1 className="small--text"
-                style={{color: '#FBFFEA', left: "55%", top: "39.5%", position: 'absolute'}}> username:</h1>
+            <h1 className={"create--child--acc-text"}>Create child's account</h1>
+            <h1 className="create--child--acc-username"> username:</h1>
             <Input
                 loc={{position: 'absolute', top: '40%', left: '55%'}}
                 style={{
                     color: "#FFFDEE", backgroundColor: "#FBFFEA", borderColor: "#FBFFEA",
-                    width: '20%', height: '5%', marginTop: '2%'
+                    width: '20%', height: '5%', marginTop: '0'
                 }}
                 value={username}
                 placeholder=""
@@ -33,13 +33,12 @@ function CreateChildAccountPage() {
                 // error={emailError}
             />
             <br/>
-            <h1 className="small--text"
-                style={{color: '#FBFFEA', left: "55%", top: "49.5%", position: 'absolute'}}> password:</h1>
+            <h1 className="create--child--acc-password"> password:</h1>
             <Input
                 loc={{position: 'absolute', top: '50%', left: '55%'}}
                 style={{
                     color: "#FFFDEE", backgroundColor: "#FBFFEA", borderColor: "#FBFFEA",
-                    width: '20%', height: '5%', marginTop: '2%'
+                    width: '20%', height: '5%', marginTop: '1%'
                 }}
                 value={password}
                 placeholder=""
@@ -47,8 +46,7 @@ function CreateChildAccountPage() {
                 error={passwordError}
             />
             <br/>
-            <h1 className="small--text"
-                style={{color: '#FBFFEA', left: "55%", top: "59.5%", position: 'absolute'}}> repeat password:</h1>
+            <h1 className="create--child--acc-repeatpassword"> repeat password:</h1>
             <Input
                 loc={{position: 'absolute', top: '60%', left: '55%'}}
                 style={{
@@ -73,7 +71,7 @@ function CreateChildAccountPage() {
             <Button onClick={() => navigate('/add-sub-account')} loc={{
                 position: 'absolute',
                 top: '70%',
-                left: '58%',
+                left: '57.5%',
                 width: "15%",
                 height: "7%",
                 fontWeight: 'bold',
