@@ -1,0 +1,107 @@
+.statistics--parent--message{
+    width: 55%;
+    height: 17%;
+    transform: translate(-10%, 15%);
+    border-radius: 100px;
+    font-size: 1vw;
+    background-color: #FFFDEE;
+}
+.parent--statistics--text{
+    font-size: 1.5vw;
+    margin-left: 30%;
+    color: #3A3A72;
+}
+.account--statistics--text{
+    font-size: 1.5vw;
+    margin-left: 30%;
+    color: #FFFDEE;
+}
+.account--message{
+    width: 20%;
+    height: 5%;
+    transform: translate(-12%, 110%);
+    border-radius: 100px;
+    font-size: 1vw;
+    background-color: #88CAFC;
+}
+.general--message{
+    width: 20%;
+    height: 5%;
+    transform: translate(-12%, 130%);
+    border-radius: 100px;
+    font-size: 1vw;
+    background-color: #88CAFC;
+
+}
+
+.general--statistics--text{
+    font-size: 1.5vw;
+    margin-left: 40%;
+    color: #FFFDEE;
+}
+.account--parent--message{
+    font-size: 1.5vw;
+    background-color: #FFFDEE;
+    margin-left: 40%;
+
+    color: #FFFDEE;
+}
+.comboBox select {
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5vw;
+    height: 9%;
+    width: 12%;
+    cursor: pointer;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.rectangle1 {
+    position: absolute;
+    width: 10%;
+    height: 40%;
+    background-color: #FFFEFB;
+    border-radius: 10px;
+    transform: translate(20%, 30%);
+}
+.score--statistics--text{
+    color: #3A3A72;
+    position: absolute;
+    top: 55%;
+    left: 38%;
+}
+.rectangle2{
+    position: absolute;
+    width: 30%;
+    height: 40%;
+    background-color: #FFFEFB;
+    border-radius: 10px;
+    transform: translate(225%, 30%);
+}
+.rectangle3{
+    position: absolute;
+    width: 25%;
+    height: 40%;
+    background-color: #FFFEFB;
+    border-radius: 10px;
+    transform: translate(110%, 30%);
+}
+.period--statistics--text {
+    color: #3A3A72;
+    position: absolute;
+    top: 55%;
+    left: 4%;
+}
+.practice--statistics--text {
+    color: #3A3A72;
+    position: absolute;
+    top: 55%;
+    left: 77%;
+}
+.ghost--statistics--img{
+    position: absolute;
+    top:15%;
+    left: 0.5%;
+    width: 11%;
+    height: 17%;
+}

@@ -1,4 +1,4 @@
-import '../../../styles.css';
+import './ChooseGameMode.css';
 import OrangeNavbar from "../../../navbars/OrangeNavbar";
 import React from "react";
 import Button from "../../../components/Buttons";

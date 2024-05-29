@@ -1,9 +1,10 @@
-import '../../../styles.css';
-import Navbar from "../../../navbars/Navbar";
+import './FinishedGame.css';
+
 import React, {useEffect} from "react";
 import Button from "../../../components/Buttons";
 import {useLocation, useNavigate} from 'react-router-dom'
 import blueGhost from "../../../images/blueGhost.png";
+import OrangeNavbar from "../../../navbars/OrangeNavbar";
 
 function FinishedGame() {
     const location = useLocation();
@@ -50,7 +51,7 @@ function FinishedGame() {
     }, [quests]);
     return (
         <div style={{backgroundColor: '#FFF9E9'}}>
-            <Navbar style={{backgroundColor: "#F0BE5E"}} textColor="#FDFEFF"/>
+            <OrangeNavbar />
             <h1 className={"finished--game--text1"}>Great job!</h1>
             <h1 className={"finished--game--text2"}>You’ll became a pro soon!</h1>
             <h2 className={"score--text"}>Score: {result}/{total}</h2>

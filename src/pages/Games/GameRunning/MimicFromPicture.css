@@ -1,0 +1,23 @@
+.mfp--headline {
+    color: #F8A365;
+    width: 70%;
+    margin-left: 27%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-size: 3.5vw;
+}
+.emotion--img {
+    margin-top: 1%;
+    margin-left: 32%;
+    background-color: #FFFDEE;
+    width: 38%;
+    height:55%;
+}
+.counter--text--mfp {
+    color: #F0BE5E;
+    font-size: 3vw;
+    margin-left: 92%;
+    margin-top: 12%;
+    margin-bottom: 1%;
+
+}
