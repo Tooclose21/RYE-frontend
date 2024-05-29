@@ -23,11 +23,7 @@ function ParentUserProfile() {
             <h1 className={"user"}> User profile</h1>
             <h1 className="username--change--text"> change username:</h1>
             <Input
-                loc={{position: 'absolute', top: '40%', left: '59%'}}
-                style={{
-                    color: "#3A3A72", backgroundColor: "#FBFFEA", borderColor: "#FBFFEA",
-                    width: '20%', height: '5%', marginTop: '2%'
-                }}
+                className="change--username--input"
                 value={username}
                 placeholder=""
                 onChange={(ev) => setUsername(ev.target.value)}
@@ -38,11 +34,7 @@ function ParentUserProfile() {
             <h1 className="email--change--text"
                > change email address:</h1>
             <Input
-                loc={{position: 'absolute', top: '50%', left: '59%'}}
-                style={{
-                    color: "#3A3A72", backgroundColor: "#FBFFEA", borderColor: "#FBFFEA",
-                    width: '20%', height: '5%', marginTop: '2%'
-                }}
+               className='change--email--input'
                 value={email}
                 placeholder=""
                 onChange={(ev) => setEmail(ev.target.value)}
@@ -52,11 +44,7 @@ function ParentUserProfile() {
             <h1 className="password--change--text"
                > change password:</h1>
             <Input
-                loc={{position: 'absolute', top: '60%', left: '59%'}}
-                style={{
-                    color: "#3A3A72", backgroundColor: "#FBFFEA", borderColor: "#FBFFEA",
-                    width: '20%', height: '5%', marginTop: '2%'
-                }}
+                className="change--password--input"
                 value={password}
                 placeholder=""
                 onChange={(ev) => setPassword(ev.target.value)}
@@ -64,11 +52,7 @@ function ParentUserProfile() {
             />
             <h1 className="password--change--text-repeat"> repeat new password:</h1>
             <Input
-                loc={{position: 'absolute', top: '70%', left: '59%'}}
-                style={{
-                    color: "#3A3A72", backgroundColor: "#FBFFEA", borderColor: "#FBFFEA",
-                    width: '20%', height: '5%', marginTop: '2%'
-                }}
+                className="change--rep--password--input"
                 value={passwordRepeat}
                 placeholder=""
                 onChange={(ev) => setPasswordRepeat(ev.target.value)}

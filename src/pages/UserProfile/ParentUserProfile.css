@@ -48,3 +48,60 @@
     height: 60vw;
     transform: translate(-25%,-5%)
 }
+
+.change--password--input .inputBox{
+    position: absolute;
+    top: 60%;
+    left: 59%;
+    color: #3A3A72;
+    background-color: #FBFFEA;
+    border-color: #FBFFEA;
+    width: 20%;
+    height: 5%;
+    margin-top: 2%
+}
+.change--password--input .errorLabel{
+    color: #FF00FF;
+}
+.change--rep--password--input .inputBox{
+    position: absolute;
+    top: 70%;
+    left: 59%;
+    color: #3A3A72;
+    background-color: #FBFFEA;
+    border-color: #FBFFEA;
+    width: 20%;
+    height: 5%;
+    margin-top: 2%
+}
+.change--rep--password--input .errorLabel{
+    color: #FF00FF;
+}
+.change--email--input .inputBox{
+    position: absolute;
+    top: 50%;
+    left: 59%;
+    color: #3A3A72;
+    background-color: #FBFFEA;
+    border-color: #FBFFEA;
+    width: 20%;
+    height: 5%;
+    margin-top: 2%
+}
+.change--email--input .errorLabel{
+    color: #FF00FF;
+}
+.change--username--input .inputBox{
+    position: absolute;
+    top: 40%;
+    left: 59%;
+    color: #3A3A72;
+    background-color: #FBFFEA;
+    border-color: #FBFFEA;
+    width: 20%;
+    height: 5%;
+    margin-top: 2%
+}
+.change--username--input .errorLabel{
+    color: #FF00FF;
+}
