@@ -1,0 +1,57 @@
+.notifications--text{
+    font-Size: 2.5vw;
+    margin-left: 5%;
+    color: #3A3A72;
+    left: 5%;
+    top: 10%;
+}
+.start--time--text{
+    position: absolute;
+    font-Size: 2.5vw;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    color: #FFFDEE;
+    left: 5%;
+    top: 25%;
+}
+.interval--text{
+    position: absolute;
+    font-Size: 2.5vw;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    color: #3A3A72;
+    left: 75.5%;
+    top: 45%;
+}
+
+.start--date--text{
+    position: absolute;
+    font-Size: 2.5vw;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    color: #FFFDEE;
+    top: 25%;
+    left: 35%;
+}
+
+.repeat--notifications--text{
+    font-size: 1.5vw;
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    color:#FFFDEE;
+    font-weight:bold;
+}
+.checkBox{
+    position: absolute;
+    top: 81%;
+    left: 19%;
+}
+.rectangle{
+    position: absolute;
+    width:20%;
+    height:40%;
+    background-color:#FFEEC0;
+    border-radius:10px;
+    transform:translate(350%, 55%);
+}

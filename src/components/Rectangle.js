@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Rectangle = ({ style }) => {
-    return <div style={style}></div>;
+const Rectangle = ({ className }) => {
+    return <div className={className}></div>;
 };
 
-export default Rectangle;
+export default Rectangle;;

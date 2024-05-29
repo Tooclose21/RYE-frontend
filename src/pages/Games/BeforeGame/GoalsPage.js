@@ -1,27 +1,28 @@
 import React from "react";
 import YellowNavbar from "../../../navbars/YellowNavbar";
-import '../../../styles.css';
+import './GoalsPage.css';
 import Button from "../../../components/Button";
 import blueGhost from "../../../images/blueGhost.png";
-import {Link } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import ComboBox from "../../../components/ComboBox";
 
 
 function GoalsPage() {
+    const navigate = useNavigate();
     const AmountOptions = Array.from({ length: 5 }, (_, index) => index + 1);
     return (
         <div style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#88CAFC'}}>
             <YellowNavbar />
-            <div className={"message"} style={{backgroundColor: "#FFFDEE"}}>
+            <div className={"goals--message"}>
 
-                <h1 className={"medium--text"} style={{marginLeft: "30%", color: "#3A3A72"}}>
+                <h1 className={"goals--text"}>
                     <span style={{fontSize: "1.5em"}}>Welcome to Goals!</span> <br/> Here you can define goals for your
                     children to achieve and set custom notifications
                 </h1>
             </div>
-            <h1 className={"login--text2"} style={{color: "#FFFDEE", top: "10%", left: "80%"}}>Account:</h1>
-            <ComboBox className="comboBox" options={AmountOptions} style={{top: "25%", left: "80%"}}/>
-            <h1 className={"login--text2"} style={{color: "#FFFDEE", top: "35%", left: "5%"}}>Game mode:</h1>
+            <h1 className={"goals--text2"} >Account:</h1>
+            <ComboBox className="comboBox1" options={AmountOptions} style={{position:'absolute',top: "25%", left: "80%"}}/>
+            <h1 className={"goals--text3"} >Game mode:</h1>
             <Button loc={{
                 position: 'absolute',
                 top: '45%',
@@ -85,12 +86,11 @@ function GoalsPage() {
                 fontSize: "1.5vw"
             }}
                     color="#FBFFEA" textColor={"#3A3A72"}>15 quests</Button>
-            <img src={blueGhost} className="welcome--img" alt="Blue ghost"
-                 style={{top: "20%", left: "5%", width: '11%', height: '17%'}}/>
-            <h1 className={"login--text2"} style={{color: "#FFFDEE", top: "45%", left: "80%"}}>Amount:</h1>
-            <ComboBox className="comboBox" options={AmountOptions} style={{top: "60%", left: "80%"}}/>
+            <img src={blueGhost} className="goals--img" alt="Blue ghost"/>
+            <h1 className={"goals--text2"} style={{color: "#FFFDEE", top: "45%", left: "80%"}}>Amount:</h1>
+            <ComboBox className="comboBox" options={AmountOptions} style={{position:"absolute", top: "60%", left: "80%"}}/>
 
-            <Button loc={{
+            <Button  onClick={() => navigate('/set-notifications')} loc={{
                 position: 'absolute',
                 top: '85%',
                 left: '78%',

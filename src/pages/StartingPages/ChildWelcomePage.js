@@ -1,4 +1,4 @@
-import '../../styles.css';
+import './ChildWelcomePage.css';
 import LightBlueNavbar from "../../navbars/LightBlueNavbar";
 import React, {useCallback} from "react";
 import BlueGhost from "../../components/BlueGhost";
@@ -19,9 +19,9 @@ function ChildWelcomePage() {
     return (
         <div style={{backgroundColor: '#FFEEC0'}}>
             <LightBlueNavbar/>
-            <div className={"message--text"}>
-                <h1 className="message--text1"> Welcome back!</h1>
-                <h1 className="message--text2">What would you like to do today?</h1>
+            <div className={"start--text"}>
+                <h1 className="start--text2"> Welcome back!</h1>
+                <h1 className="start--text2">What would you like to do today?</h1>
             </div>
             <BlueGhost/>
             <Button loc={{position: 'absolute', top: '45%', left: '60%'}}
