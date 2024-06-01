@@ -1,7 +1,7 @@
-import '../../styles.css';
+import '../StartingPages/ChildWelcomePage.css';
 import LightBlueNavbar from "../../navbars/LightBlueNavbar";
 import React, {useCallback} from "react";
-import BlueGhost from "../../components/BlueGhost";
+import blueGhost from "../../images/blueGhost.png";
 import Button from "../../components/Buttons";
 import {useNavigate} from 'react-router-dom'
 
@@ -17,17 +17,17 @@ function ChildWelcomePage() {
         navigate("/StatsForChild")
     },[navigate])
     return (
-        <div style={{backgroundColor: '#FFEEC0'}}>
+        <div style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%',backgroundColor: '#FFEEC0'}}>
             <LightBlueNavbar/>
-            <div className={"message--text"}>
-                <h1 className="message--text1"> Welcome back!</h1>
-                <h1 className="message--text2">What would you like to do today?</h1>
+            <div className="welcome--child--text">
+                <h1 className="welcome--child--text1"> Welcome back!</h1>
+                <h1 className="welcome--child--text2">What would you like to do today?</h1>
             </div>
-            <BlueGhost/>
-            <Button loc={{position: 'absolute', top: '45%', left: '60%'}}
+            <img src={blueGhost} className="welcome--child--img" alt="Blue ghost"/>
+            <Button loc={{position: 'absolute', top: '42%', left: '60%'}}
                     color="#88CAFC" onClick={chooseGameMode}>Play</Button>
-            <Button loc={{position: 'absolute', top: '55%', left: '60%'}} color="#88CAFC">Tasks</Button>
-            <Button loc={{position: 'absolute', top: '65%', left: '60%'}}
+            <Button loc={{position: 'absolute', top: '53%', left: '60%'}} color="#88CAFC">Tasks</Button>
+            <Button loc={{position: 'absolute', top: '64%', left: '60%'}}
                     color="#88CAFC" onClick={goCustomization}>Customize</Button>
             <Button loc={{position: 'absolute', top: '75%', left: '60%'}}
                     color="#88CAFC" onClick={goToChildStats}>My stats</Button>

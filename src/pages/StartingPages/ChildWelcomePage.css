@@ -1,0 +1,26 @@
+.welcome--child--text {
+    background-color: #FFFDEE;
+    width: 40%;
+    height: 22%;
+    border-radius: 50px;
+    margin-left: 47%;
+    margin-top: 4%;
+    padding-left: 3%;
+    padding-top: 1%;
+}
+
+.welcome--child--text1 {
+    color: #6EB3E8;
+    margin-bottom: 0.2%;
+}
+
+.welcome--child--text2 {
+    color: #6EB3E8;
+    margin-top: 0;
+}
+
+.welcome--child--img {
+    margin-top: -2%;
+    margin-left: 9%;
+    width: 35%;
+}
