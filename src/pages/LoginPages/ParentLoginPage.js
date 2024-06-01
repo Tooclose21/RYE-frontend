@@ -21,11 +21,7 @@ const ParentLoginPage = (props) => {
             <h1 className="login--as--parent"> Log in as PARENT</h1>
             <h1 className="username--parent--text"> username:</h1>
             <Input
-                loc={{position: 'absolute', top: '30%', left: '41%'}}
-                style={{
-                    color: "#3A3A72", backgroundColor: "#CBD8E5", borderColor: "#CBD8E5",
-                    width: '20%', height: '5%', marginTop: '2%'
-                }}
+               className="parent--username--input"
                 value={email}
                 placeholder=""
                 onChange={(ev) => setEmail(ev.target.value)}
@@ -34,15 +30,12 @@ const ParentLoginPage = (props) => {
             <br/>
             <h1 className="password--parent--text"> password:</h1>
             <Input
-                loc={{position: 'absolute', top: '40%', left: '41%'}}
-                style={{
-                    color: "#3A3A72", backgroundColor: "#CBD8E5", borderColor: "#CBD8E5",
-                    width: '20%', height: '5%', marginTop: '2%'
-                }}
+
                 value={password}
                 placeholder=""
                 onChange={(ev) => setPassword(ev.target.value)}
                 error={passwordError}
+                className="parent--password--input"
             />
                 <Button loc={{position: 'absolute', top: '50%', left: '43.5%', fontWeight: "bold"}} color="#CBD8E5" onClick={() => navigate('/main-page')}>Log in</Button>
             <img src={blueGhost} className="login--img" alt="Blue ghost"/>

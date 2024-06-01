@@ -77,7 +77,7 @@ function MimicFromPicture() {
     return (
         <div style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#F2EFE3'}}>
             <OrangeNavbar />
-            <h1 className="mfm--headline">Mimic from picture</h1>
+            <h1 className="mfp--headline">Mimic from picture</h1>
             {imageSrc ? null : <img src={questData.url} className="emotion--img" alt="Face with emotion to mimic"/>}
             {showCamera ? (<Picture onCapture={handleCapture} onHideCamera={handleHideCamera}/>) : (<div>
                     {imageSrc && (<div style={{textAlign: 'center'}}>
@@ -100,7 +100,7 @@ function MimicFromPicture() {
             {!showCamera && (<Button onClick={handleClick} loc={{
                     position: 'absolute', top: '80%', left: '73%', width: '10%', height: '8%', color: '#F8A365'
                 }} color="#FEE8AA">Finish</Button>)}
-            <h1 className="counter--text"
+            <h1 className="counter--text--mfp"
                 style={{
                     marginBottom: "40%", top: "66.5%", position: "absolute"
                 }}>{results.length + 1}/{total}</h1>

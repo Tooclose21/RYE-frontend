@@ -4,6 +4,65 @@ body {
     overflow: hidden;
     /*background-color: #FFEEC0;*/
 }
+.child--password--input .inputBox{
+    position: absolute;
+    top: 41.2%;
+    left: 41%;
+    color: #3A3A72;
+    background-color: #FBFFEA;
+    border-color: #FBFFEA;
+    width: 20%;
+    height: 5%;
+    margin-top: 2%
+}
+.child--password--input .errorLabel{
+    color: #FF00FF;
+}
+.child--username--input .inputBox{
+    position: absolute;
+    top: 30%;
+    left: 41%;
+    color: #3A3A72;
+    background-color: #FBFFEA;
+    border-color: #FBFFEA;
+    width: 20%;
+    height: 5%;
+    margin-top: 2%
+}
+.parent--username--input .errorLabel{
+    color: #FF00FF;
+}
+
+
+.parent--password--input .inputBox{
+    position: absolute;
+    top: 41.5%;
+    left: 41%;
+    color: #3A3A72;
+    background-color: #cbd8e5;
+    border-color: #cbd8e5;
+    width: 20%;
+    height: 5%;
+    margin-top: 2%
+}
+.parent--password--input .errorLabel{
+    color: #FF00FF;
+}
+.parent--username--input .inputBox{
+    position: absolute;
+    top: 30%;
+    left: 41%;
+    color: #3A3A72;
+    background-color: #cbd8e5;
+    border-color: #cbd8e5;
+    width: 20%;
+    height: 5%;
+    margin-top: 2%
+}
+.child--username--input .errorLabel{
+    color: #FF00FF;
+}
+
 
 .welcome--img {
     position: absolute;

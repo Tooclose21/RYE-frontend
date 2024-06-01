@@ -47,26 +47,17 @@ const ChildLoginPage = (props) => {
         <h1 className="login--as--child"> Log in as CHILD</h1>
         <h1 className="username--parent--text"> username:</h1>
         <Input
-            loc={{position: 'absolute', top: '30%', left: '41%'}}
-            style={{
-                color: "#B0C5DA", backgroundColor: "#FBFFEA", borderColor: "#FBFFEA",
-                width: '20%', height: '5%', marginTop: '2%'
-            }}
             value={username}
-            placeholder="Username"
+            placeholder=""
             onChange={e => setUsername(e.target.value)}
             error={usernameError}
+            className="child--username--input"
         />
         <br/>
         <h1 className="password--parent--text"> password:</h1>
-        <Input
-            loc={{position: 'absolute', top: '40%', left: '41%'}}
-            style={{
-                color: "#3A3A72", backgroundColor: "#FBFFEA", borderColor: "#FBFFEA",
-                width: '20%', height: '5%', marginTop: '2%'
-            }}
+        <Input className="child--password--input"
             value={password}
-            placeholder="Password"
+            placeholder=""
             onChange={(ev) => setPassword(ev.target.value)}
             error={passwordError}
         />

@@ -1,0 +1,30 @@
+.emotion--img--recognize {
+    margin-top: 1%;
+    margin-left: 35%;
+    background-color: #FFFDEE;
+    width: 30%;
+    height:45%;
+}
+.name--emotion--rfp {
+    color: #F8A365;
+    width: 70%;
+    margin-left: 33%;
+    margin-top: 0.5%;
+    margin-bottom: 1%;
+    font-size: 2vw;;
+}
+.rfp--headline {
+    color: #E27A37;
+    width: 70%;
+    margin-left: 31%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-size: 3.5vw;
+}
+.counter--text--rfp {
+    color: #F0BE5E;
+    font-size: 3vw;
+    margin-left: 92%;
+    margin-top: 6%;
+    margin-bottom: 3%;
+}

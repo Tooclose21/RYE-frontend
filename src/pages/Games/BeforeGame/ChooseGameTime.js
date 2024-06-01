@@ -1,9 +1,10 @@
-import '../../../styles.css';
+import './ChooseGameTime.css';
 import Navbar from "../../../navbars/OrangeNavbar";
 import React from "react";
 import Button from "../../../components/Buttons";
 import {useLocation, useNavigate} from 'react-router-dom';
 import fetchEmotions from "../../../game-handle/FetchEmotions";
+import OrangeNavbar from "../../../navbars/OrangeNavbar";
 
 function ChooseGameTime() {
     const navigate = useNavigate();
@@ -16,7 +17,7 @@ function ChooseGameTime() {
         const modeToPath = {
             "Mimic from name": "/MimicFromName",
             "Mimic from picture": "/MimicFromPicture",
-            "Recognize from name": "/RecognizeFromPicture",
+            "Recognize from picture": "/RecognizeFromPicture",
             "DailyChallenge": "/DailyChallenge",
 
         };
@@ -57,8 +58,8 @@ function ChooseGameTime() {
 
     return (
         <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#B2F1FF' }}>
-            <Navbar style={{backgroundColor: "#F0BE5E"}} textColor="#FDFEFF"/>
-            <h1 className="choose--game--text">Choose game mode</h1>
+            <OrangeNavbar />
+            <h1 className="choose--game--time">Choose game time</h1>
             <Button
                 loc={{position: 'absolute', top: '35%', left: '40%', width: '25%', height: '8%', color: '#F8A365'}}
                 color="#FEE8AA"

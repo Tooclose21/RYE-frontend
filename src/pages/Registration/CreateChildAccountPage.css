@@ -29,4 +29,59 @@
     font-weight: normal;
 }
 
+.child--acc--password--input .inputBox{
+    position: absolute;
+    top: 48.5%;
+    left: 55.5%;
+    color: #3A3A72;
+    background-color: #FBFFEA;
+    border-color: #FBFFEA;
+    width: 20%;
+    height: 5%;
+    margin-top: 2%
+}
+.child--acc--password--input .errorLabel{
+    color: #FF00FF;
+}
+
+.child--acc--rep--password--input .inputBox{
+    position: absolute;
+    top: 62%;
+    left: 55.5%;
+    color: #3A3A72;
+    background-color: #FBFFEA;
+    border-color: #FBFFEA;
+    width: 20%;
+    height: 5%;
+    margin-top: 2%
+}
+.child--acc--rep--password--input .errorLabel{
+    color: #FF00FF;
+}
+
+.child--acc--username--input .inputBox{
+    position: absolute;
+    top: 35%;
+    left: 55.5%;
+    color: #3A3A72;
+    background-color: #FBFFEA;
+    border-color: #FBFFEA;
+    width: 20%;
+    height: 5%;
+    margin-top: 2%
+}
+.child--acc--username--input .errorLabel{
+    color: #FF00FF;
+}
+.gh--img {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -25%);
+    width: 35%;
+    height: auto;
+}
+
+
+
 

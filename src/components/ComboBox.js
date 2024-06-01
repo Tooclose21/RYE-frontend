@@ -9,8 +9,7 @@ function ComboBox({ options, style }) {
     };
 
     return (
-        <div style={{ ...style, position: 'absolute', backgroundColor: "#FBFFEA", borderRadius: "10px", width: "15%", height: "7%" }} >
-            {/* Apply className to the select element */}
+        <div style={{ ...style, backgroundColor: "#FBFFEA", borderRadius: "10px", width: "15%", height: "7%" }} >
             <select value={selectedValue} onChange={handleChange} style={{ height: "100%", width: "100%", padding: "0.5em", borderRadius: "10px", border: "none", backgroundColor: "#FBFFEA" }}>
                 <option value=""></option>
                 {options.map(option => (

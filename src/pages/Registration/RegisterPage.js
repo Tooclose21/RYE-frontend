@@ -5,6 +5,7 @@ import Button from "../../components/Button";
 import blueGhost from "../../images/blueGhost.png";
 import Input from "../../components/Input";
 import {useNavigate} from "react-router-dom";
+import LightBlueNavbar from "../../navbars/LightBlueNavbar";
 
 
 const RegisterPage = (props) => {
@@ -20,17 +21,13 @@ const RegisterPage = (props) => {
 
     return (
         <div style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#FFFDEE'}}>
-            <YellowNavbar/>
+            <LightBlueNavbar/>
             <h1 className="registration--welcome--text"> Welcome to RYE! Fill the fields below
                 to register</h1>
 
             <h1 className="register--firstname--text"> first name:</h1>
             <Input
-                loc={{position: 'absolute', top: '35%', left: '41%'}}
-                style={{
-                    color: "#FFFDEE", backgroundColor: "#88CAFC", borderColor: "#88CAFC",
-                    width: '20%', height: '5%', marginTop: '2%'
-                }}
+                className="register--firstname--input"
                 value={firstName}
                 placeholder=""
                 onChange={(ev) => setFirstName(ev.target.value)}
@@ -40,11 +37,7 @@ const RegisterPage = (props) => {
 
             <h1 className="register--lastname--text"> last name:</h1>
             <Input
-                loc={{position: 'absolute', top: '35%', left: '69%'}}
-                style={{
-                    color: "#FFFDEE", backgroundColor: "#88CAFC", borderColor: "#88CAFC",
-                    width: '20%', height: '5%', marginTop: '2%'
-                }}
+                className="register--lastname--input"
                 value={lastName}
                 placeholder=""
                 onChange={(ev) => setLastName(ev.target.value)}
@@ -54,11 +47,7 @@ const RegisterPage = (props) => {
 
             <h1 className="register--username--text"> username:</h1>
             <Input
-                loc={{position: 'absolute', top: '45%', left: '69%'}}
-                style={{
-                    color: "#FFFDEE", backgroundColor: "#88CAFC", borderColor: "#88CAFC",
-                    width: '20%', height: '5%', marginTop: '2%'
-                }}
+                className="register--username--input"
                 value={username}
                 placeholder=""
                 onChange={(ev) => setUsername(ev.target.value)}
@@ -68,11 +57,7 @@ const RegisterPage = (props) => {
 
             <h1 className="register--email--text"> email:</h1>
             <Input
-                loc={{position: 'absolute', top: '45%', left: '41%'}}
-                style={{
-                    color: "#FFFDEE", backgroundColor: "#88CAFC", borderColor: "#88CAFC",
-                    width: '20%', height: '5%', marginTop: '2%'
-                }}
+                className="register--email--input"
                 value={email}
                 placeholder=""
                 onChange={(ev) => setEmail(ev.target.value)}
@@ -81,11 +66,7 @@ const RegisterPage = (props) => {
             <br/>
             <h1 className="register--password--text"> password:</h1>
             <Input
-                loc={{position: 'absolute', top: '55%', left: '41%'}}
-                style={{
-                    color: "#FFFDEE", backgroundColor: "#88CAFC", borderColor: "#88CAFC",
-                    width: '20%', height: '5%', marginTop: '2%'
-                }}
+                className="register--password--input"
                 value={password}
                 placeholder=""
                 onChange={(ev) => setPassword(ev.target.value)}
@@ -94,11 +75,7 @@ const RegisterPage = (props) => {
             <br/>
             <h1 className="register--repeatpassword--text"> repeat password:</h1>
             <Input
-                loc={{position: 'absolute', top: '55%', left: '69%'}}
-                style={{
-                    color: "#FFFDEE", backgroundColor: "#88CAFC", borderColor: "#88CAFC",
-                    width: '20%', height: '5%', marginTop: '2%'
-                }}
+                className="register--repeatpassword--input"
                 value={passwordRepeat}
                 placeholder=""
                 onChange={(ev) => setPasswordRepeat(ev.target.value)}

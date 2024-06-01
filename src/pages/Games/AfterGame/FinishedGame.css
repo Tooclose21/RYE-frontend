@@ -1,0 +1,27 @@
+.finished--game--text1 {
+    color: #E27A37;
+    width: 15%;
+    margin-left: 50%;
+    margin-top: 5%;
+    margin-bottom: 0;
+}
+
+.finished--game--text2 {
+    color: #E27A37;
+    width: 30%;
+    margin-left: 50%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.score--text {
+    color: #F0BE5E;
+    font-size: 2vw;
+    margin-left: 60%;
+    margin-top: 10%;
+}
+.bghost--score{
+    display: flex;
+    margin: 0 1% 50% 12%;
+    width: 30%;
+    height: 45%;
+}

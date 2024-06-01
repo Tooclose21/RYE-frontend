@@ -1,4 +1,4 @@
-import '../../../styles.css';
+import './MimicFromName.css';
 import OrangeNavbar from "../../../navbars/OrangeNavbar";
 import React, {useEffect, useState} from "react";
 import Button from "../../../components/Buttons";
@@ -84,7 +84,7 @@ function MimicFromName() {
         <div style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#F2EFE3'}}>
             <OrangeNavbar />
             <h1 className="mfm--headline">Mimic from emotion name</h1>
-            {imageSrc ? null : <h1 className="emotion--name">{questData}</h1>}
+            {imageSrc ? null : <h1 className="emotion--name--mfm">{questData}</h1>}
             {showCamera ? (<Picture onCapture={handleCapture} onHideCamera={handleHideCamera}/>) : (<div>
                 {imageSrc && (<div style={{textAlign: 'center'}}>
                     <img src={imageSrc} alt="Captured"
