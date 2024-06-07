@@ -23,15 +23,17 @@ const ChildLoginPage = (props) => {
     const login = useCallback(() => {
         console.log(username)
         console.log(password)
-        navigate("/child-welcome")
-        // axios.post(callUrl, {
-        //     "login": email, "password": password,
-        // }).then(response => {
-        //     navigate("/child-welcome")
-        // }).catch(error => {
-        //     setEmailError("Incorrect credentials")
-        //     setPasswordError("Incorrect credentials")
-        // })
+        axios.post(callUrl, {
+            "login": username, "password": password,
+        }).then(response => {
+            console.log(response.data)
+            axios.defaults.headers.common['Authorization'] = `Bearer ${response.data}`;
+            navigate("/child-welcome")
+        }).catch(error => {
+            console.log(error)
+            setUsernameError("Incorrect credentials")
+            // setPasswordError("Incorrect credentials")
+        })
     }, [username, password, callUrl, navigate])
 
     return (<div className="ParentLoginPage"
@@ -44,35 +46,39 @@ const ChildLoginPage = (props) => {
                      backgroundColor: '#a8ddfd'
                  }}>
         <LightBlueNavbar/>
-        <h1 className="login--as--child"> Log in as CHILD</h1>
-        <h1 className="username--parent--text"> username:</h1>
-        <Input
-            loc={{position: 'absolute', top: '30%', left: '41%'}}
-            style={{
-                color: "#B0C5DA", backgroundColor: "#FBFFEA", borderColor: "#FBFFEA",
-                width: '20%', height: '5%', marginTop: '2%'
-            }}
-            value={username}
-            placeholder="Username"
-            onChange={e => setUsername(e.target.value)}
-            error={usernameError}
-        />
-        <br/>
-        <h1 className="password--parent--text"> password:</h1>
-        <Input
-            loc={{position: 'absolute', top: '40%', left: '41%'}}
-            style={{
-                color: "#3A3A72", backgroundColor: "#FBFFEA", borderColor: "#FBFFEA",
-                width: '20%', height: '5%', marginTop: '2%'
-            }}
-            value={password}
-            placeholder="Password"
-            onChange={(ev) => setPassword(ev.target.value)}
-            error={passwordError}
-        />
-        <Button loc={{position: 'absolute', top: '50%', left: '43.5%', fontWeight: "bold"}} color="#FBFFEA" textColor={"#B0C5DA"}
-                onClick={login}>Log
-            in</Button>
+        <div className={'login-col'}>
+            <h1
+                className="login--as--child"
+            > Log in as CHILD</h1>
+            <h1
+                className="username--parent--text"
+            > username:</h1>
+            <Input
+                style={{
+                    color: "#B0C5DA", backgroundColor: "#FBFFEA", borderColor: "#FBFFEA",
+                }}
+                value={username}
+                placeholder="Username"
+                onChange={e => setUsername(e.target.value)}
+            />
+            <h1
+                className="password--parent--text"
+            > password:</h1>
+            <Input
+                style={{
+                    color: "#3A3A72", backgroundColor: "#FBFFEA", borderColor: "#FBFFEA",
+                }}
+                value={password}
+                placeholder="Password"
+                onChange={(ev) => setPassword(ev.target.value)}
+            />
+            <Button
+                color="#FBFFEA"
+                    textColor={"#B0C5DA"}
+                    onClick={login}>Log
+                in</Button>
+            <p className='error-msg'>{usernameError}</p>
+        </div>
         <img src={blueGhost} className="login--img" alt="Blue ghost"/>
     </div>);
 }

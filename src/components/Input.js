@@ -1,7 +1,7 @@
 import React from 'react';
 import "../styles.css"
 
-const Input = ({value, placeholder, onChange, error, style, loc}) => {
+const Input = ({value, placeholder, onChange, error, style, loc, type}) => {
     const inputStyle = {
         ...style,
         color: "#06066a", // TODO: Refactor in stylesheet
@@ -17,10 +17,10 @@ const Input = ({value, placeholder, onChange, error, style, loc}) => {
         <div className="input--container">
             <input
                 value={value}
-                type='text'
+                type={type}
                 onChange={onChange}
                 placeholder={placeholder}
-                className="inputBox"
+                className="input-box"
                 style={inputStyle}
             />
             <label className="errorLabel" style={labelStyle}>

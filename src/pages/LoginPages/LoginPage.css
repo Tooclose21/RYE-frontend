@@ -4,6 +4,19 @@ body {
     overflow: hidden;
     /*background-color: #FFEEC0;*/
 }
+.login-col {
+    display: flex;
+    flex-direction: column;
+    /*margin: auto;*/
+    align-items: center;
+    justify-content: center;
+}
+
+.error-msg {
+    color: #ef0909;
+    font-size: 32px;
+    font-weight: bold;
+}
 
 .welcome--img {
     position: absolute;
@@ -15,12 +28,12 @@ body {
 }
 .login--text1 {
     color: #88CAFC;
-    position: absolute;
-    top: 20%;
-    left:  59%;
+    /*position: absolute;*/
+    /*top: 20%;*/
+    /*left:  59%;*/
     font-Size: 2.5vw;
-    margin-bottom: 2%;
-    margin-top: 2%;
+    /*margin-bottom: 2%;*/
+    /*margin-top: 2%;*/
 }
 
 .login--text2{
@@ -40,25 +53,31 @@ body {
     margin-top: 5%;
 }
 
+.login-input {
+    font-size: 16px;
+    height: 1.5rem;
+}
+
 .login--as--child{
     color: #FFFFFF;
-    margin-left: 42%;
-    margin-top: 5%;
+    /*margin-left: 42%;*/
+    /*margin-top: 5%;*/
 }
 
 .username--parent--text{
     color: #FFFFFF;
-    margin-left: 41.5%;
-    font-size: 1.1vw;
-    position: absolute;
+    /*margin-left: 41.5%;*/
+    font-size: 28px;
+    /*position: absolute;*/
 }
 
 .password--parent--text{
     color: #FFFFFF;
-    margin-left: 41.5%;
-    margin-top: 4%;
-    font-size: 1.1vw;
-    position: absolute;
+    /*margin-left: 41.5%;*/
+    /*margin-top: 4%;*/
+    font-size: 28px;
+
+    /*position: absolute;*/
 }
 
 .login--img{

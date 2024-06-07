@@ -218,6 +218,10 @@ blueGhost {
     height: 45%;
 }
 
+.input-box {
+    font-size: 28px;
+}
+
 .input--container {
     color: #3A3A72;
 }

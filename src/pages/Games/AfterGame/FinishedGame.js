@@ -4,6 +4,8 @@ import React, {useEffect} from "react";
 import Button from "../../../components/Buttons";
 import {useLocation, useNavigate} from 'react-router-dom'
 import blueGhost from "../../../images/blueGhost.png";
+import OrangeNavbar from "../../../navbars/OrangeNavbar";
+import saveResult from "../../../game-handle/SaveResult";
 
 function FinishedGame() {
     const location = useLocation();
@@ -11,13 +13,13 @@ function FinishedGame() {
     const navigate = useNavigate();
 
     let quests = 0;
-    let gameMode = '';
+    let mode = '';
     let result = 0;
     let total = 0;
 
     if (location.state) {
         quests = location.state.quests ? location.state.quests : 0;
-        gameMode = location.state.gameMode ? location.state.gameMode : '';
+        mode = location.state.mode ? location.state.mode : '';
         result = location.state.results ? location.state.results.reduce((a, b) => a + b, 0) : 0;
         total = location.state.results ? location.state.results.length : 0;
     }
@@ -27,30 +29,20 @@ function FinishedGame() {
         // TODO: Save result
         console.log("Result:", result)
         console.log("Results", location.state.results)
+        saveResult({
+            mode: mode,
+            result: result,
+            reward: result,
+            time: total
+        })
         navigate("/ChooseGameMode")
-        return;
-
-        if (clickCount === quests) {
-            navigate("/ChooseGameMode", {state: {quests: quests}})
-        } else {
-            if (gameMode === 'mimicFromName') {
-                navigate(`/MimicFromName?quests=${quests}`, {state: {clickCount: clickCount, quests: quests}});
-            } else if (gameMode === 'mimicFromPicture') {
-                navigate(`/MimicFromPicture?quests=${quests}`, {
-                    state: {
-                        clickCount: clickCount,
-                        quests: quests,
-                    }
-                });
-            }
-        }
     }
     useEffect(() => {
-        console.log("Quests:", quests, "Gamemode:", gameMode);
+        console.log("Quests:", quests, "Gamemode:", mode);
     }, [quests]);
     return (
         <div style={{backgroundColor: '#FFF9E9'}}>
-            <Navbar style={{backgroundColor: "#F0BE5E"}} textColor="#FDFEFF"/>
+            <OrangeNavbar style={{backgroundColor: "#F0BE5E"}} textColor="#FDFEFF"/>
             <h1 className={"finished--game--text1"}>Great job!</h1>
             <h1 className={"finished--game--text2"}>You’ll became a pro soon!</h1>
             <h2 className={"score--text"}>Score: {result}/{total}</h2>

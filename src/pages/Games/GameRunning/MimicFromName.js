@@ -6,6 +6,7 @@ import Picture from "../../../components/Picture";
 import {useLocation, useNavigate} from 'react-router-dom';
 import sendImage from "../../../game-handle/PictureHandle"
 import fetchPicture from "../../../game-handle/PictureFetch";
+import fetchEmotions from "../../../game-handle/FetchEmotions";
 
 function MimicFromName() {
     const location = useLocation();
@@ -28,6 +29,8 @@ function MimicFromName() {
     //     console.log("Quests:", quests);
     // }, [quests]);
 
+    console.log(questData)
+
     const handleClick = () => {
         if (!imageSrc) {
             return;
@@ -41,11 +44,11 @@ function MimicFromName() {
                 destination = images.length === 0 ? "/FinishedGame" : "/MimicFromName"
                 navigate(destination, {
                     state: {
-                        images: images, results: results
+                        images: images, results: results, mode: 'MIMIC_FROM_NAME'
                     }
                 });
             } else {
-                fetchPicture(1).then(response => {
+                fetchEmotions(1).then(response => {
 
                     destination = rate.score === 1 ? "/MimicFromName" : "/FinishedGame"
                     navigate(destination, {

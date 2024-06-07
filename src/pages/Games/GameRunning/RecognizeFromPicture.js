@@ -1,10 +1,12 @@
 import '../../../styles.css';
-import OrangeNavbar from "../../../navbars/OrangeNavbar";
+import Navbar from "../../../navbars/Navbar";
 import React from "react";
 import Button from "../../../components/Buttons";
 import emotion from "../../../images/emotion.png";
+import OrangeNavbar from "../../../navbars/OrangeNavbar";
 
 function RecognizeFromPicture() {
+
     return (
         <div style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#F2EFE3'}}>
             <OrangeNavbar/>

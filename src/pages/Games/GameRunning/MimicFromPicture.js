@@ -35,7 +35,7 @@ function MimicFromPicture() {
                 destination = images.length === 0 ? "/FinishedGame" : "/MimicFromPicture"
                 navigate(destination, {
                     state: {
-                        images: images, results: results
+                        images: images, results: results, mode: "MIMIC_FROM_PICTURE"
                     }
                 });
             } else {

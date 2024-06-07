@@ -4,6 +4,7 @@ import React from "react";
 import Button from "../../../components/Buttons";
 import {useLocation, useNavigate} from 'react-router-dom';
 import fetchEmotions from "../../../game-handle/FetchEmotions";
+import fetchPicture from "../../../game-handle/PictureFetch";
 
 function ChooseGameTime() {
     const navigate = useNavigate();
@@ -16,47 +17,43 @@ function ChooseGameTime() {
         const modeToPath = {
             "Mimic from name": "/MimicFromName",
             "Mimic from picture": "/MimicFromPicture",
-            "Recognize from name": "/RecognizeFromPicture",
+            "Recognize from picture": "/RecognizeFromPicture",
             "DailyChallenge": "/DailyChallenge",
+        };
 
+        const funcToPath = {
+            "Mimic from name": "name",
+            "Mimic from picture": "pic",
+            "Recognize from picture": "name",
+            "DailyChallenge": "/DailyChallenge",
         };
 
         const path = modeToPath[mode];
-        navigate(path)
 
-    //     if (path) {
-    //         fetchEmotions(quantity).then(response => {
-    //             console.log(response);
-    //             navigate(path, {
-    //                 state: {
-    //                     quests: quantity,
-    //                     images: response.data,
-    //                     results: [],
-    //                     infty: infty
-    //                 }
-    //             });
-    //         }).catch(error => console.log(error));
-    //     } else {
-    //         console.log("Invalid mode selected.");
-    //     }
-    };
-    // const handleNavigate = (selectedMode) => {
-    //     if(selectedMode==="DailyChallenge"){
-    //         navigate("/DailyChallenge");
-    //     }
-    //     if(selectedMode==="Mimic from name"){
-    //         navigate("/MimicFromName");
-    //     }
-    //     if(selectedMode==="Mimic from picture"){
-    //         navigate("/MimicFromPicture");
-    //     }
-    //     if(selectedMode==="Recognize from name"){
-    //         navigate("/RecognizeFromPicture");
-    //     }
-    // };
+        if (funcToPath[mode] === 'pic') {
+            fetchPicture(quantity).then(response => {
+                navigate(path, {
+                    state: {
+                        quests: quantity, images: response.data, results: [], infty: infty
+                    }
+                })
+            }).catch(err => console.log(err));
+        } else if (funcToPath[mode] === 'name') {
+            fetchEmotions(quantity).then(response => {
+                console.log(response)
+                navigate(path, {
+                    state: {
+                        quests: quantity, images: response.data, results: [], infty: infty
+                    }
+                });
+
+            }).catch(error => console.log(error));
+        }
+    }
 
     return (
-        <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#B2F1FF' }}>
+        <div
+            style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#B2F1FF'}}>
             <Navbar style={{backgroundColor: "#F0BE5E"}} textColor="#FDFEFF"/>
             <h1 className="choose--game--text">Choose game mode</h1>
             <Button
