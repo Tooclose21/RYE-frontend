@@ -1,111 +1,103 @@
-import React, { useState } from "react";
+import React, {useCallback, useState} from "react";
 import '../Registration/RegisterPage.css';
 import YellowNavbar from "../../navbars/YellowNavbar.js";
 import Button from "../../components/Button";
 import blueGhost from "../../images/blueGhost.png";
 import Input from "../../components/Input";
 import {useNavigate} from "react-router-dom";
+import {useApi} from "../../api/ApiProvider";
 
 
 const RegisterPage = (props) => {
+    const [error, setError] = useState('')
     const [email, setEmail] = useState('');
     const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
+    const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [passwordRepeat, setPasswordRepeat] = useState('');
-    const [username, setUsername] = useState('');
+    const [familyMember, setFamilyMember] = useState('');
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
+
     const navigate = useNavigate();
+    const api = useApi()
+
+
+    const registerCallback = useCallback(() => {
+        setPasswordError("")
+        if (password !== passwordRepeat) {
+            setPasswordError("Passwords do not match!")
+            return;
+        }
+
+        api.registerGuardian({
+            username: `${username}`,
+            familyMember: familyMember,
+            email: email,
+            password: password
+        }).then(response => {
+                if (!response.success) {
+                    setError("Unable to register")
+                    return
+                }
+                navigate("/")
+            }
+        )
+
+    }, [api, firstName, username, password, passwordRepeat, email, familyMember])
 
     return (
         <div style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#FFFDEE'}}>
             <YellowNavbar/>
             <h1 className="registration--welcome--text"> Welcome to RYE! Fill the fields below
                 to register</h1>
+            <div className='form-container'>
+                <div className='input-container'>
+                    <div className='input-column'>
+                        <h1 className='description-text'>First name</h1>
 
-            <h1 className="register--firstname--text"> first name:</h1>
-            <Input
-                loc={{position: 'absolute', top: '35%', left: '41%'}}
-                style={{
-                    color: "#FFFDEE", backgroundColor: "#88CAFC", borderColor: "#88CAFC",
-                    width: '20%', height: '5%', marginTop: '2%'
-                }}
-                value={firstName}
-                placeholder=""
-                onChange={(ev) => setFirstName(ev.target.value)}
-                // error={emailError}
-            />
-            <br/>
+                        <Input value={firstName} onChange={e => setFirstName(e.target.value)}
+                               style={{color: "#FFFDEE", backgroundColor: "#88CAFC", borderColor: "#88CAFC"}}/>
 
-            <h1 className="register--lastname--text"> last name:</h1>
-            <Input
-                loc={{position: 'absolute', top: '35%', left: '69%'}}
-                style={{
-                    color: "#FFFDEE", backgroundColor: "#88CAFC", borderColor: "#88CAFC",
-                    width: '20%', height: '5%', marginTop: '2%'
-                }}
-                value={lastName}
-                placeholder=""
-                onChange={(ev) => setLastName(ev.target.value)}
-                // error={emailError}
-            />
-            <br/>
+                        <h1 className='description-text'>Email name</h1>
 
-            <h1 className="register--username--text"> username:</h1>
-            <Input
-                loc={{position: 'absolute', top: '45%', left: '69%'}}
-                style={{
-                    color: "#FFFDEE", backgroundColor: "#88CAFC", borderColor: "#88CAFC",
-                    width: '20%', height: '5%', marginTop: '2%'
-                }}
-                value={username}
-                placeholder=""
-                onChange={(ev) => setUsername(ev.target.value)}
-                // error={emailError}
-            />
-            <br/>
+                        <Input value={email} onChange={e => setEmail(e.target.value)}
+                               style={{color: "#FFFDEE", backgroundColor: "#88CAFC", borderColor: "#88CAFC"}}/>
 
-            <h1 className="register--email--text"> email:</h1>
-            <Input
-                loc={{position: 'absolute', top: '45%', left: '41%'}}
-                style={{
-                    color: "#FFFDEE", backgroundColor: "#88CAFC", borderColor: "#88CAFC",
-                    width: '20%', height: '5%', marginTop: '2%'
-                }}
-                value={email}
-                placeholder=""
-                onChange={(ev) => setEmail(ev.target.value)}
-                error={emailError}
-            />
-            <br/>
-            <h1 className="register--password--text"> password:</h1>
-            <Input
-                loc={{position: 'absolute', top: '55%', left: '41%'}}
-                style={{
-                    color: "#FFFDEE", backgroundColor: "#88CAFC", borderColor: "#88CAFC",
-                    width: '20%', height: '5%', marginTop: '2%'
-                }}
-                value={password}
-                placeholder=""
-                onChange={(ev) => setPassword(ev.target.value)}
-                error={passwordError}
-            />
-            <br/>
-            <h1 className="register--repeatpassword--text"> repeat password:</h1>
-            <Input
-                loc={{position: 'absolute', top: '55%', left: '69%'}}
-                style={{
-                    color: "#FFFDEE", backgroundColor: "#88CAFC", borderColor: "#88CAFC",
-                    width: '20%', height: '5%', marginTop: '2%'
-                }}
-                value={passwordRepeat}
-                placeholder=""
-                onChange={(ev) => setPasswordRepeat(ev.target.value)}
-                // error={passwordError}
-            />
+                        <h1 className='description-text'>Password</h1>
 
-                <Button loc={{position: 'absolute', top: '65%', left: '58%', fontWeight: 'bold'}} color="#88CAFC" textColor={"#FFFDEE"} onClick={() => navigate('/add-sub-account')}>Sign up</Button>
+                        <Input value={password} onChange={e => setPassword(e.target.value)} type={'password'}
+                               style={{color: "#FFFDEE", backgroundColor: "#88CAFC", borderColor: "#88CAFC"}}
+                               error={passwordError}/>
+                    </div>
+
+                    <div className='input-column'>
+                        <h1 className='description-text'>Username</h1>
+
+                        <Input value={username} onChange={e => setUsername(e.target.value)}
+                               style={{color: "#FFFDEE", backgroundColor: "#88CAFC", borderColor: "#88CAFC"}}/>
+
+                        <h1 className='description-text'>Family member</h1>
+
+                        <Input value={familyMember} onChange={e => setFamilyMember(e.target.value)}
+                               style={{color: "#FFFDEE", backgroundColor: "#88CAFC", borderColor: "#88CAFC"}}/>
+
+                        <h1 className='description-text'>Repeat password</h1>
+
+                        <Input value={passwordRepeat} onChange={e => setPasswordRepeat(e.target.value)}
+                               type={'password'}
+                               style={{color: "#FFFDEE", backgroundColor: "#88CAFC", borderColor: "#88CAFC"}}
+                               error={passwordError}/>
+
+                    </div>
+
+                </div>
+
+                <Button color="#88CAFC" textColor={"#FFFDEE"} onClick={registerCallback}>Sign
+                    up</Button>
+            </div>
+
+
             <img src={blueGhost} className="welcome--img" alt="Blue ghost"
                  style={{transform: 'translate(-40%, -30%)', left: '15%'}}/>
         </div>

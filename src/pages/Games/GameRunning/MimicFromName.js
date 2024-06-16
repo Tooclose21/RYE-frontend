@@ -7,37 +7,36 @@ import {useLocation, useNavigate} from 'react-router-dom';
 import sendImage from "../../../game-handle/PictureHandle"
 import fetchPicture from "../../../game-handle/PictureFetch";
 import fetchEmotions from "../../../game-handle/FetchEmotions";
+import {useApi} from "../../../api/ApiProvider";
 
 function MimicFromName() {
     const location = useLocation();
     const navigate = useNavigate();
-
-    // const searchParams = new URLSearchParams(location.search);
-    // const quests = parseInt(searchParams.get('quests')) || 0;
-    // const initialClickCount = location.state ? location.state.clickCount : 0;
+    const api = useApi();
 
     const questData = location.state.images[0];
     const results = location.state.results;
 
     const [, ...images] = location.state.images
 
-    // const [clickCount, setClickCount] = useState(initialClickCount);
     const [imageSrc, setImageSrc] = useState(null);
     const [showCamera, setShowCamera] = useState(false);
 
-    // useEffect(() => {
-    //     console.log("Quests:", quests);
-    // }, [quests]);
 
-    console.log(questData)
 
     const handleClick = () => {
         if (!imageSrc) {
             return;
         }
 
-         sendImage(imageSrc, questData).then(rate => {
-            results.push(rate.score)
+        console.log(questData)
+        api.sendImage(imageSrc, questData).then(rate => {
+            console.log("rate", rate)
+            if (!rate.success) {
+                console.log("Failed to send data")
+                return
+            }
+            results.push(rate.data.score)
 
             let destination;
             if (!location.state.infty) {
@@ -48,17 +47,16 @@ function MimicFromName() {
                     }
                 });
             } else {
-                fetchEmotions(1).then(response => {
-
-                    destination = rate.score === 1 ? "/MimicFromName" : "/FinishedGame"
+                api.fetchEmotions(1).then(response => {
+                    destination = rate.data.score === 1 ? "/MimicFromName" : "/FinishedGame"
                     navigate(destination, {
                         state: {
-                            images: response.data, results: results, infty: location.state.infty
+                            images: response.data, results: results, infty: location.state.infty, mode: 'MIMIC_FROM_NAME'
                         }
                     })
                 });
             }
-        }).catch(err => console.log(err));
+        })
         setImageSrc(null);
     };
 
@@ -85,7 +83,7 @@ function MimicFromName() {
 
     return (
         <div style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#F2EFE3'}}>
-            <OrangeNavbar />
+            <OrangeNavbar/>
             <h1 className="mfm--headline">Mimic from emotion name</h1>
             {imageSrc ? null : <h1 className="emotion--name">{questData}</h1>}
             {showCamera ? (<Picture onCapture={handleCapture} onHideCamera={handleHideCamera}/>) : (<div>

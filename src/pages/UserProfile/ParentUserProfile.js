@@ -1,11 +1,12 @@
-import React, {useState} from "react";
+import React, {useCallback, useState} from "react";
 import Navbar from "../../navbars/DarkBlueNavbar";
 import Button from "../../components/Button";
 import blueGhost from "../../images/blueGhost.png";
-import {Link } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import '../../styles.css';
 import Input from "../../components/Input";
 import WhiteStar from "../../images/WhiteStar.svg";
+import {useApi} from "../../api/ApiProvider";
 
 
 function ParentUserProfile() {
@@ -15,6 +16,24 @@ function ParentUserProfile() {
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
     const [passwordRepeat, setPasswordRepeat] = useState('');
+
+    const navigate = useNavigate();
+    const api = useApi();
+
+
+    const manageAccounts = useCallback(() => {
+        api.fetchSubAccounts().then(response => {
+            if (!response.success) {
+                console.log(response);
+                return
+            }
+
+            console.log(response.data)
+            navigate('/add-sub-account', {state: {kids: response.data}})
+
+        })
+    }, [api, navigate])
+
     return (
         <div style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#3A3A72'}}>
             <Navbar />
@@ -77,10 +96,8 @@ function ParentUserProfile() {
             <img src={WhiteStar} alt="Star"
                  style={{width: "60vw", height: "60vw", transform: "translate(-25%,-5%)"}}/>
             <h1 className={"login--text2"} style={{color: "#3A3A72", top: "50%",left:"5%"}}> Manage children <br/>accounts:</h1>
-            <Link to="/add-sub-account">
-            <Button loc={{position: 'absolute', top: '70%', left: '5%', width: "15%"}} color="#3A3A72">Children
+            <Button loc={{position: 'absolute', top: '70%', left: '5%', width: "15%"}} color="#3A3A72" onClick={manageAccounts}>Children
                 accounts</Button>
-            </Link>
         </div>
     );
 }

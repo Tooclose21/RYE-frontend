@@ -6,11 +6,13 @@ import {useLocation, useNavigate} from 'react-router-dom'
 import blueGhost from "../../../images/blueGhost.png";
 import OrangeNavbar from "../../../navbars/OrangeNavbar";
 import saveResult from "../../../game-handle/SaveResult";
+import {useApi} from "../../../api/ApiProvider";
 
 function FinishedGame() {
     const location = useLocation();
     const clickCount = location.state ? location.state.clickCount : 0;
     const navigate = useNavigate();
+    const api = useApi()
 
     let quests = 0;
     let mode = '';
@@ -24,22 +26,24 @@ function FinishedGame() {
         total = location.state.results ? location.state.results.length : 0;
     }
 
-
     const handleClick = () => {
-        // TODO: Save result
         console.log("Result:", result)
         console.log("Results", location.state.results)
-        saveResult({
+
+        api.saveResults({
             mode: mode,
             result: result,
             reward: result,
             time: total
+        }).then(response => {
+            if (!response.success) {
+                console.log("failed")
+                return
+            }
+            navigate("/ChooseGameMode")
         })
-        navigate("/ChooseGameMode")
     }
-    useEffect(() => {
-        console.log("Quests:", quests, "Gamemode:", mode);
-    }, [quests]);
+
     return (
         <div style={{backgroundColor: '#FFF9E9'}}>
             <OrangeNavbar style={{backgroundColor: "#F0BE5E"}} textColor="#FDFEFF"/>

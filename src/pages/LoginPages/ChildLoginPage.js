@@ -6,6 +6,7 @@ import blueGhost from "../../images/blueGhost.png";
 import axios from "axios";
 import Input from "../../components/Input";
 import {useNavigate} from "react-router-dom";
+import {useApi} from "../../api/ApiProvider";
 
 
 const ChildLoginPage = (props) => {
@@ -17,22 +18,19 @@ const ChildLoginPage = (props) => {
     const [usernameError, setUsernameError] = useState('');
     const [passwordError, setPasswordError] = useState('');
 
+    const api = useApi();
     const navigate = useNavigate();
 
 
     const login = useCallback(() => {
         console.log(username)
         console.log(password)
-        axios.post(callUrl, {
-            "login": username, "password": password,
-        }).then(response => {
-            console.log(response.data)
-            axios.defaults.headers.common['Authorization'] = `Bearer ${response.data}`;
-            navigate("/child-welcome")
-        }).catch(error => {
-            console.log(error)
-            setUsernameError("Incorrect credentials")
-            // setPasswordError("Incorrect credentials")
+        api.loginKid(username, password).then(response => {
+            if (!response.success) {
+                setUsernameError("Invalid credentials!")
+                return;
+            }
+            navigate('/child-welcome')
         })
     }, [username, password, callUrl, navigate])
 

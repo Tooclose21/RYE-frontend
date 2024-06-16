@@ -12,6 +12,8 @@ body {
     justify-content: center;
 }
 
+
+
 .error-msg {
     color: #ef0909;
     font-size: 32px;
@@ -49,8 +51,6 @@ body {
 
 .login--as--parent{
     color: #FFFFFF;
-    margin-left: 42%;
-    margin-top: 5%;
 }
 
 .login-input {
