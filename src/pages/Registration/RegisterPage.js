@@ -60,7 +60,7 @@ const RegisterPage = (props) => {
                         <Input value={firstName} onChange={e => setFirstName(e.target.value)}
                                style={{color: "#FFFDEE", backgroundColor: "#88CAFC", borderColor: "#88CAFC"}}/>
 
-                        <h1 className='description-text'>Email name</h1>
+                        <h1 className='description-text'>Email</h1>
 
                         <Input value={email} onChange={e => setEmail(e.target.value)}
                                style={{color: "#FFFDEE", backgroundColor: "#88CAFC", borderColor: "#88CAFC"}}/>
