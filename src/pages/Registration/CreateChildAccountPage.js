@@ -41,11 +41,7 @@ function CreateChildAccountPage() {
             <h1 className={"create--child--acc-text"}>Create child's account</h1>
             <h1 className="create--child--acc-username"> username:</h1>
             <Input
-                loc={{position: 'absolute', top: '40%', left: '55%'}}
-                style={{
-                    color: "#FFFDEE", backgroundColor: "#FBFFEA", borderColor: "#FBFFEA",
-                    width: '20%', height: '5%', marginTop: '0'
-                }}
+                className="child--acc--username--input"
                 value={username}
                 placeholder=""
                 onChange={(ev) => setUsername(ev.target.value)}
@@ -54,11 +50,7 @@ function CreateChildAccountPage() {
             <br/>
             <h1 className="create--child--acc-password"> password:</h1>
             <Input
-                loc={{position: 'absolute', top: '50%', left: '55%'}}
-                style={{
-                    color: "#FFFDEE", backgroundColor: "#FBFFEA", borderColor: "#FBFFEA",
-                    width: '20%', height: '5%', marginTop: '1%'
-                }}
+                className="child--acc--password--input"
                 value={password}
                 placeholder=""
                 onChange={(ev) => setPassword(ev.target.value)}
@@ -67,11 +59,7 @@ function CreateChildAccountPage() {
             <br/>
             <h1 className="create--child--acc-repeatpassword"> repeat password:</h1>
             <Input
-                loc={{position: 'absolute', top: '60%', left: '55%'}}
-                style={{
-                    color: "#FFFDEE", backgroundColor: "#FBFFEA", borderColor: "#FBFFEA",
-                    width: '20%', height: '5%', marginTop: '2%'
-                }}
+                className="child--acc--rep--password--input"
                 value={passwordRepeat}
                 placeholder=""
                 onChange={(ev) => setPasswordRepeat(ev.target.value)}
@@ -82,7 +70,7 @@ function CreateChildAccountPage() {
                      style={{width: "50vw", height: "50vw", transform: "translate(-35%,30%)"}}/>
                 <img src={WhiteStar} alt="Star"
                      style={{width: "45vw", height: "45vw", transform: "translate(-138%,20%)"}}/>
-                <img src={blueGhost} className="welcome--img" alt="Blue ghost"
+                <img src={blueGhost} className="gh--img" alt="Blue ghost"
                      style={{width: "25vw", height: "19vw", transform: "translate(-105%,20%)"}}/>
             </div>
 
@@ -90,7 +78,7 @@ function CreateChildAccountPage() {
             <Button onClick={createAccount} loc={{
                 position: 'absolute',
                 top: '70%',
-                left: '57.5%',
+                left: '58%',
                 width: "15%",
                 height: "7%",
                 fontWeight: 'bold',

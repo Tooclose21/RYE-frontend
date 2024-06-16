@@ -1,4 +1,4 @@
-import '../../../styles.css';
+import './DailyChallenge.css';
 import OrangeNavbar from "../../../navbars/OrangeNavbar";
 import React from "react";
 import Button from "../../../components/Buttons";
@@ -10,8 +10,8 @@ function DailyChallenge() {
             <OrangeNavbar />
             <h1 className="dailyChallenge--text1">Daily challenge</h1>
             <h2 className={"dailyChallenge--text2"}>Name and mimic emotion</h2>
-            <img src={emotion} className="emotion--img--recognize" alt="Face with emotion to mimic"/>
-            <h2 className={"name--emotion--rfp"}>Name emotion:</h2>
+            <img src={emotion} className="emotion--img--daily" alt="Face with emotion to mimic"/>
+            <h2 className={"name--emotion"}>Name emotion:</h2>
             <Button loc={{position: 'absolute', top: '75%', left: '33%',
                 width: '15%', height: '8%', color: '#F8A365'}}
                     color="#FEE8AA">Happy</Button>

@@ -1,5 +1,6 @@
+import './RecognizeFromPicture.css';
+import OrangeNavbar from "../../../navbars/OrangeNavbar";
 import '../../../styles.css';
-import Navbar from "../../../navbars/Navbar";
 import React from "react";
 import Button from "../../../components/Buttons";
 import emotion from "../../../images/emotion.png";

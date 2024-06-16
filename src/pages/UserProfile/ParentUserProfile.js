@@ -4,9 +4,11 @@ import Button from "../../components/Button";
 import blueGhost from "../../images/blueGhost.png";
 import {Link, useNavigate} from "react-router-dom";
 import '../../styles.css';
+import './ParentUserProfile.css';
 import Input from "../../components/Input";
 import WhiteStar from "../../images/WhiteStar.svg";
 import {useApi} from "../../api/ApiProvider";
+import DarkBlueNavbar from "../../navbars/DarkBlueNavbar";
 
 
 function ParentUserProfile() {
@@ -36,16 +38,11 @@ function ParentUserProfile() {
 
     return (
         <div style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#3A3A72'}}>
-            <Navbar />
-            <h1 className={"login--text"} style={{color: "#FBFFEA", top: "25%"}}> User profile</h1>
-            <h1 className="small--text"
-                style={{color: '#FBFFEA', left: "59%", top: "39.5%", position: 'absolute'}}> change username:</h1>
+            <DarkBlueNavbar/>
+            <h1 className={"user"}> User profile</h1>
+            <h1 className="username--change--text"> change username:</h1>
             <Input
-                loc={{position: 'absolute', top: '40%', left: '59%'}}
-                style={{
-                    color: "#3A3A72", backgroundColor: "#FBFFEA", borderColor: "#FBFFEA",
-                    width: '20%', height: '5%', marginTop: '2%'
-                }}
+                className="change--username--input"
                 value={username}
                 placeholder=""
                 onChange={(ev) => setUsername(ev.target.value)}
@@ -53,41 +50,28 @@ function ParentUserProfile() {
             />
             <br/>
 
-            <h1 className="small--text"
-                style={{color: '#FBFFEA', left: "59%", top: "49.5%", position: 'absolute'}}> change email address:</h1>
+            <h1 className="email--change--text"
+               > change email address:</h1>
             <Input
-                loc={{position: 'absolute', top: '50%', left: '59%'}}
-                style={{
-                    color: "#3A3A72", backgroundColor: "#FBFFEA", borderColor: "#FBFFEA",
-                    width: '20%', height: '5%', marginTop: '2%'
-                }}
+               className='change--email--input'
                 value={email}
                 placeholder=""
                 onChange={(ev) => setEmail(ev.target.value)}
                 error={emailError}
             />
             <br/>
-            <h1 className="small--text"
-                style={{color: '#FBFFEA', left: "59%", top: "59.5%", position: 'absolute'}}> change password:</h1>
+            <h1 className="password--change--text"
+               > change password:</h1>
             <Input
-                loc={{position: 'absolute', top: '60%', left: '59%'}}
-                style={{
-                    color: "#3A3A72", backgroundColor: "#FBFFEA", borderColor: "#FBFFEA",
-                    width: '20%', height: '5%', marginTop: '2%'
-                }}
+                className="change--password--input"
                 value={password}
                 placeholder=""
                 onChange={(ev) => setPassword(ev.target.value)}
                 error={passwordError}
             />
-            <h1 className="small--text"
-                style={{color: '#FBFFEA', left: "59%", top: "69.5%", position: 'absolute'}}> repeat new password:</h1>
+            <h1 className="password--change--text-repeat"> repeat new password:</h1>
             <Input
-                loc={{position: 'absolute', top: '70%', left: '59%'}}
-                style={{
-                    color: "#3A3A72", backgroundColor: "#FBFFEA", borderColor: "#FBFFEA",
-                    width: '20%', height: '5%', marginTop: '2%'
-                }}
+                className="change--rep--password--input"
                 value={passwordRepeat}
                 placeholder=""
                 onChange={(ev) => setPasswordRepeat(ev.target.value)}

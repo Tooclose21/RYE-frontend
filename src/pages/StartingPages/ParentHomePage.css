@@ -1,0 +1,24 @@
+
+.user--message{
+    width: 58%;
+    height: 17%;
+    transform: translate(-10%, 20%);
+    border-radius: 100px;
+    font-size: 1vw;
+    background-color: #3A3A72;
+    width:40%;
+}
+.user--text{
+    font-size: 1.5vw;
+    margin-left: 40%;
+    color: #FBFFEA;
+}
+.ghost--img {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    width: 11%;
+    height: 17%;
+    transform: translate(-50%, -25%);
+
+}

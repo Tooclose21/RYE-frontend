@@ -1,0 +1,107 @@
+.user {
+    color: #FBFFEA;
+    position: absolute;
+    top: 25%;
+    left: 59%;
+    font-Size: 2.5vw;
+    margin-top: 2%;
+}
+.userProfile--text2{
+    color: #3A3A72;
+    position: absolute;
+    top: 50%;
+    left:  5%;
+    font-Size: 2.5vw;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+.username--change--text{
+    font-size: 1vw;
+    color: #FBFFEA;
+    left: 59%;
+    top: 39.5%;
+    position: absolute;
+}
+.email--change--text{
+    font-size: 1vw;
+    color: #FBFFEA;
+    left: 59%;
+    top: 49.5%;
+    position: absolute;
+}
+.password--change--text{
+    font-size: 1vw;
+    color: #FBFFEA;
+    left: 59%;
+    top: 59.5%;
+    position: absolute;
+}
+.password--change--text-repeat{
+    font-size: 1vw;
+    color: #FBFFEA;
+    left: 59%;
+    top: 69.5%;
+    position: absolute;
+}
+.star{
+    width: 60vw;
+    height: 60vw;
+    transform: translate(-25%,-5%)
+}
+
+.change--password--input .inputBox{
+    position: absolute;
+    top: 60%;
+    left: 59%;
+    color: #3A3A72;
+    background-color: #FBFFEA;
+    border-color: #FBFFEA;
+    width: 20%;
+    height: 5%;
+    margin-top: 2%
+}
+.change--password--input .errorLabel{
+    color: #FF00FF;
+}
+.change--rep--password--input .inputBox{
+    position: absolute;
+    top: 70%;
+    left: 59%;
+    color: #3A3A72;
+    background-color: #FBFFEA;
+    border-color: #FBFFEA;
+    width: 20%;
+    height: 5%;
+    margin-top: 2%
+}
+.change--rep--password--input .errorLabel{
+    color: #FF00FF;
+}
+.change--email--input .inputBox{
+    position: absolute;
+    top: 50%;
+    left: 59%;
+    color: #3A3A72;
+    background-color: #FBFFEA;
+    border-color: #FBFFEA;
+    width: 20%;
+    height: 5%;
+    margin-top: 2%
+}
+.change--email--input .errorLabel{
+    color: #FF00FF;
+}
+.change--username--input .inputBox{
+    position: absolute;
+    top: 40%;
+    left: 59%;
+    color: #3A3A72;
+    background-color: #FBFFEA;
+    border-color: #FBFFEA;
+    width: 20%;
+    height: 5%;
+    margin-top: 2%
+}
+.change--username--input .errorLabel{
+    color: #FF00FF;
+}

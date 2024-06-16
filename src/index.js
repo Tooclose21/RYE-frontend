@@ -16,9 +16,6 @@ import ParentUserProfile from "./pages/UserProfile/ParentUserProfile";
 import NotificationsPage from "./pages/Games/BeforeGame/NotificationsPage";
 import ParentStatisticsPage from "./pages/Stats/Parent/ParentStatisticsPage";
 import ChooseGameMode from "./pages/Games/BeforeGame/ChooseGameMode";
-import ChooseGameTimeRfP from "./pages/Games/BeforeGame/ChooseGameTimeRfP";
-import ChooseGameTimeMfP from "./pages/Games/BeforeGame/ChooseGameTimeMfP";
-import ChooseGameTimeMfN from "./pages/Games/BeforeGame/ChooseGameTimeMfN";
 import CharacterCustomization from "./pages/CharacterCustomization/CharacterCustomization";
 import MimicFromName from "./pages/Games/GameRunning/MimicFromName";
 import MimicFromPicture from "./pages/Games/GameRunning/MimicFromPicture";
@@ -48,9 +45,9 @@ root.render(
                 <Route exact path="/child-welcome" element={<ChildWelcomePage/>}/>
                 <Route path="/ChooseGameMode" element={<ChooseGameMode/>}/>
                 <Route path="/ChooseGameTime" element={<ChooseGameTime/>}/>
-                <Route path="/ChooseGameTimeRfP" element={<ChooseGameTimeRfP/>}/>
-                <Route path="/ChooseGameTimeMfP" element={<ChooseGameTimeMfP/>}/>
-                <Route path="/ChooseGameTimeMfN" element={<ChooseGameTimeMfN/>}/>
+                {/*<Route path="/ChooseGameTimeRfP" element={<ChooseGameTimeRfP/>}/>*/}
+                {/*<Route path="/ChooseGameTimeMfP" element={<ChooseGameTimeMfP/>}/>*/}
+                {/*<Route path="/ChooseGameTimeMfN" element={<ChooseGameTimeMfN/>}/>*/}
                 <Route path="/CharacterCustomization" element={<CharacterCustomization/>}/>
                 <Route path="MimicFromName" element={<MimicFromName/>}/>
                 <Route path="MimicFromPicture" element={<MimicFromPicture/>}/>

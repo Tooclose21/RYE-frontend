@@ -73,34 +73,122 @@
     color: #88CAFC;
     font-size: 1.2vw;
     margin-left: 69.6%;
-    margin-top: -3.6%;
+    margin-top: -4.3%;
 }
 
 .register--username--text {
     color: #88CAFC;
     font-size: 1.2vw;
     margin-left: 41.5%;
-    margin-top: 1%;
+    margin-top: 0.2%;
 }
 
 .register--email--text {
     color: #88CAFC;
     font-size: 1.2vw;
     margin-left: 69.6%;
-    margin-top: -3.6%;
+    margin-top: -4.4%;
 }
 
 .register--password--text {
     color: #88CAFC;
     font-size: 1.2vw;
     margin-left: 41.5%;
-    margin-top: 0.5%;
+    margin-top: 0.3%;
 }
 
 .register--repeatpassword--text {
     color: #88CAFC;
     font-size: 1.2vw;
     margin-left: 69.6%;
-    margin-top: -3.6%;
+    margin-top: -4.5%;
 }
+
+.register--firstname--input .inputBox{
+    position: absolute;
+    top: 35%;
+    left: 41%;
+    color: #3A3A72;
+    background-color: #88CAFC;
+    border-color: #88CAFC;
+    width: 20%;
+    height: 5%;
+    margin-top: 2%
+}
+.register--firstname--input .errorLabel{
+    color: #FF00FF;
+}
+.register--lastname--input .inputBox{
+    position: absolute;
+    top: 35%;
+    left: 69%;
+    color: #3A3A72;
+    background-color: #88CAFC;
+    border-color: #88CAFC;
+    width: 20%;
+    height: 5%;
+    margin-top: 2%
+}
+.register--lastname--input .errorLabel{
+    color: #FF00FF;
+}
+.register--username--input .inputBox{
+    position: absolute;
+    top: 45%;
+    left: 41%;
+    color: #3A3A72;
+    background-color: #88CAFC;
+    border-color: #88CAFC;
+    width: 20%;
+    height: 5%;
+    margin-top: 2%
+}
+.register--username--input .errorLabel{
+    color: #FF00FF;
+}
+
+.register--email--input .inputBox{
+    position: absolute;
+    top: 45%;
+    left: 69%;
+    color: #3A3A72;
+    background-color: #88CAFC;
+    border-color: #88CAFC;
+    width: 20%;
+    height: 5%;
+    margin-top: 2%
+}
+.register--email--input .errorLabel{
+    color: #FF00FF;
+}
+
+.register--password--input .inputBox{
+    position: absolute;
+    top: 55%;
+    left: 41%;
+    color: #3A3A72;
+    background-color: #88CAFC;
+    border-color: #88CAFC;
+    width: 20%;
+    height: 5%;
+    margin-top: 2%
+}
+.register--password--input .errorLabel{
+    color: #FF00FF;
+}
+.register--repeatpassword--input .inputBox{
+    position: absolute;
+    top: 55%;
+    left: 69%;
+    color: #3A3A72;
+    background-color: #88CAFC;
+    border-color: #88CAFC;
+    width: 20%;
+    height: 5%;
+    margin-top: 2%
+}
+.register--repeatpassword--input .errorLabel{
+    color: #FF00FF;
+}
+
 

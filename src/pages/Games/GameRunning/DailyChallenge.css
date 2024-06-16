@@ -1,0 +1,30 @@
+.dailyChallenge--text1 {
+    color: #E27A37;
+    width: 70%;
+    margin-left: 31%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.dailyChallenge--text2 {
+    color: #E27A37;
+    width: 70%;
+    margin-left: 31%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.name--emotion {
+    color: #F8A365;
+    width: 70%;
+    margin-left: 31%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-size: 2vw;;
+}
+.emotion--img--daily {
+    margin-top: 1%;
+    margin-left: 35%;
+    background-color: #FFFDEE;
+    width: 30%;
+    height:45%;
+}

@@ -6,6 +6,7 @@ import blueGhost from "../../images/blueGhost.png";
 import Input from "../../components/Input";
 import {useNavigate} from "react-router-dom";
 import {useApi} from "../../api/ApiProvider";
+import LightBlueNavbar from "../../navbars/LightBlueNavbar";
 
 
 const RegisterPage = (props) => {
@@ -48,7 +49,7 @@ const RegisterPage = (props) => {
 
     return (
         <div style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#FFFDEE'}}>
-            <YellowNavbar/>
+            <LightBlueNavbar/>
             <h1 className="registration--welcome--text"> Welcome to RYE! Fill the fields below
                 to register</h1>
             <div className='form-container'>

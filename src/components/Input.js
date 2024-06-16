@@ -1,31 +1,21 @@
 import React from 'react';
-import "../styles.css"
+import "./Input.css";
 
-const Input = ({value, placeholder, onChange, error, style, loc, type}) => {
-    const inputStyle = {
-        ...style,
-        color: "#06066a", // TODO: Refactor in stylesheet
-        ...loc,
-        borderRadius: '10px'
-    };
-    const labelStyle = {
-        ...loc,
-        color: "#FF0000" // Default color if not provided
-    };
-
+const Input = ({ value, placeholder, onChange, error, className }) => {
     return (
-        <div className="input--container">
+        <div className={`input--container ${className}`}>
             <input
                 value={value}
                 type={type}
                 onChange={onChange}
                 placeholder={placeholder}
-                className="input-box"
-                style={inputStyle}
+                className="inputBox"
             />
-            <label className="errorLabel" style={labelStyle}>
-                {error}
-            </label>
+            {error && (
+                <label className="errorLabel">
+                    {error}
+                </label>
+            )}
         </div>
     );
 };

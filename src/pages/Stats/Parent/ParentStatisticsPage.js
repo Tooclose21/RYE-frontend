@@ -1,8 +1,7 @@
 import React from "react";
 import LightBlueNavbar from "../../../navbars/LightBlueNavbar.js";
-import Button from "../../../components/Button";
 import blueGhost from "../../../images/blueGhost.png";
-import '../../../styles.css';
+import './ParentStatisticsPage.css';
 import ComboBox from "../../../components/ComboBox";
 import Rectangle from "../../../components/Rectangle";
 
@@ -12,45 +11,30 @@ function ParentStatisticsPage() {
     return (
         <div style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#D2EBFF'}}>
             <LightBlueNavbar/>
-            <div className={"message"} style={{backgroundColor: "#FFFDEE", width: "55%"}}>
-                <h1 className={"medium--text"} style={{marginLeft: "30%", color: "#3A3A72"}}>
+            <div className={"statistics--parent--message"}>
+                <h1 className={"parent--statistics--text"} >
                     <span style={{fontSize: "2vw"}}>Welcome to Statistics!</span> <br/>
                     Here you can view your children’s progress and learn everything about the process!
                 </h1>
             </div>
-            <div className={"message"}
-                 style={{backgroundColor: "#88CAFC", width: "20%", height: "5%", transform: "translate(-12%, 110%)"}}>
-                <h1 className={"medium--text"} style={{marginLeft: "40%", color: "#FFFDEE"}}>
+            <div className={"account--message"}>
+                <h1 className={"account--statistics--text"} >
                     Account
                 </h1>
             </div>
-            <ComboBox className="comboBox" options={AmountOptions} style={{top: "36%", left: "20%"}}/>
-            <div className={"message"}
-                 style={{backgroundColor: "#88CAFC", width: "20%", height: "5%", transform: "translate(-12%, 200%)"}}>
-                <h1 className={"medium--text"} style={{marginLeft: "40%", color: "#FFFDEE"}}>
+            <ComboBox className="comboBox" options={AmountOptions} style={{position:'absolute',top: "35.5%", left: "25%"}}/>
+            <div className={"general--message"}>
+                <h1 className={"general--statistics--text"}>
                     General
                 </h1>
             </div>
-            <Rectangle style={{
-                position: 'absolute', width: '10%', height: "40%", backgroundColor: "#FFFEFB",
-                borderRadius: "10px", transform: "translate(20%, 30%)"
-            }}/>
-            <h1 className={"medium--text"}
-                style={{color: "#3A3A72", position: 'absolute', top: "55%", left: "4.5%"}}>Period</h1>
-            <Rectangle style={{
-                position: 'absolute', width: '25%', height: "40%", backgroundColor: "#FFFEFB",
-                borderRadius: "10px", transform: "translate(110%, 30%)"
-            }}/>
-            <h1 className={"medium--text"}
-                style={{color: "#3A3A72", position: 'absolute', top: "55%", left: "38%"}}>Score</h1>
-            <Rectangle style={{
-                position: 'absolute', width: '35%', height: "40%", backgroundColor: "#FFFEFB",
-                borderRadius: "10px", transform: "translate(180%, 30%)"
-            }}/>
-            <h1 className={"medium--text"}
-                style={{color: "#3A3A72", position: 'absolute', top: "55%", left: "77%"}}>Practice time</h1>
-            <img src={blueGhost} className="welcome--img" alt="Blue ghost"
-                 style={{top: "20%", left: "5%", width: '11%', height: '17%'}}/>
+            <Rectangle className="rectangle1" />
+            <h1 className={"period--statistics--text"}>Period</h1>
+            <Rectangle className="rectangle3"/>
+            <h1 className={"score--statistics--text"}>Score</h1>
+            <Rectangle className="rectangle2"/>
+            <h1 className={"practice--statistics--text"}>Practice time</h1>
+            <img src={blueGhost} className="ghost--statistics--img" alt="Blue ghost"/>
         </div>
     );
 }
