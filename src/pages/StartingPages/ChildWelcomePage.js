@@ -4,16 +4,26 @@ import React, {useCallback} from "react";
 import BlueGhost from "../../components/BlueGhost";
 import Button from "../../components/Buttons";
 import {useNavigate} from 'react-router-dom'
+import {useApi} from "../../api/ApiProvider";
 
 function ChildWelcomePage() {
     const navigate = useNavigate();
+    const api = useApi();
     const chooseGameMode = useCallback(()=>{
         navigate("/ChooseGameMode")
     }, [navigate])
     const goCustomization = useCallback(()=>{
         navigate("/CharacterCustomization")
     },[navigate])
+
     const goToChildStats = useCallback(()=>{
+        api.fetchStats().then(response => {
+            if (!response.success) {
+                console.log(response);
+                return
+            }
+            console.log(response)
+        })
         navigate("/StatsForChild")
     },[navigate])
     return (

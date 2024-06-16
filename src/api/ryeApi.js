@@ -230,4 +230,48 @@ export class RyeApi {
             }
         }
     }
+
+    async fetchStats() {
+        try {
+            const modes = ["MIMIC_FROM_PICTURE", "MIMIC_FROM_NAME", 'RECOGNIZE_FROM_PICTURE']
+            const requests = {}
+            modes.forEach(mode => {
+                requests[mode] = this.client.get('/stats/getResultsByMode', {params: {mode: mode}})
+            })
+            const data = {}
+            for (const mode of modes) {
+                const response = await requests[mode]
+                const partial = response.data
+
+                const series = {}
+                partial.forEach(item => {
+                    if (!(item.date in series)) {
+                        series[item.date] = []
+                    }
+                    series[item.date].push(item.result)
+                })
+
+                const mode_data = {}
+                for (const [key, val] of Object.entries(series)) {
+                    mode_data[key] = val.reduce((a, b) => a + b) / val.length
+                }
+
+                data[mode] = mode_data
+            }
+
+            return {
+                success: true,
+                data: data,
+                statusCode: 200
+            }
+
+        } catch (err) {
+            console.log(err)
+            return {
+                success: false,
+                data: null,
+                statusCode: err.response?.status || 0
+            }
+        }
+    }
 }
