@@ -6,10 +6,12 @@ import Picture from "../../../components/Picture";
 import {useLocation, useNavigate} from 'react-router-dom';
 import sendImage from "../../../game-handle/PictureHandle";
 import fetchPicture from "../../../game-handle/PictureFetch";
+import {useApi} from "../../../api/ApiProvider";
 
 function MimicFromPicture() {
     const location = useLocation();
     const navigate = useNavigate();
+    const api = useApi();
 
     // get image url to be displayed
     const questData = location.state.images[0];
@@ -26,16 +28,19 @@ function MimicFromPicture() {
         if (!imageSrc) {
             return;
         }
-
-        sendImage(imageSrc, questData.emotion).then(rate => {
-            results.push(rate.score)
+        api.sendImage(imageSrc, questData.emotion).then((rate) => {
+            console.log("rate", rate)
+            if (!rate.success) {
+                return;
+            }
+            results.push(rate.data.score);
 
             let destination;
             if (!location.state.infty) {
                 destination = images.length === 0 ? "/FinishedGame" : "/MimicFromPicture"
                 navigate(destination, {
                     state: {
-                        images: images, results: results
+                        images: images, results: results, mode: "MIMIC_FROM_PICTURE"
                     }
                 });
             } else {
@@ -44,13 +49,12 @@ function MimicFromPicture() {
                     destination = rate.score === 1 ? "/MimicFromPicture" : "/FinishedGame"
                     navigate(destination, {
                         state: {
-                            images: response.data, results: results, infty: location.state.infty
+                            images: response.data, results: results, infty: location.state.infty, mode: "MIMIC_FROM_PICTURE"
                         }
                     })
                 });
             }
-        }).catch(err => console.log(err));
-
+        })
 
         setImageSrc(null);
     };

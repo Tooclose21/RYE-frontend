@@ -1,8 +1,65 @@
-.registration--welcome--text{
+.registration--welcome--text {
     color: #88CAFC;
+    font-size: 52px;
     margin-left: 52%;
     margin-top: 5%;
     width: 25%;
+}
+
+.input-container {
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: normal;
+}
+
+.input-container input {
+    font-size: 44px;
+    padding: 0.5rem;
+
+}
+
+
+.input-container input:invalid {
+    border: none;
+    outline: 2px solid red;
+    border-radius: 5px;
+
+}
+
+
+.description-text {
+}
+
+.form-container {
+    margin-left: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.form-container button {
+    font-size: 54px;
+    padding: 0.5rem;
+}
+
+
+.input-column {
+    padding: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .register--firstname--text {
@@ -12,35 +69,35 @@
     margin-top: 1%;
 }
 
-.register--lastname--text{
+.register--lastname--text {
     color: #88CAFC;
     font-size: 1.2vw;
     margin-left: 69.6%;
     margin-top: -4.3%;
 }
 
-.register--username--text{
+.register--username--text {
     color: #88CAFC;
     font-size: 1.2vw;
     margin-left: 41.5%;
     margin-top: 0.2%;
 }
 
-.register--email--text{
+.register--email--text {
     color: #88CAFC;
     font-size: 1.2vw;
     margin-left: 69.6%;
     margin-top: -4.4%;
 }
 
-.register--password--text{
+.register--password--text {
     color: #88CAFC;
     font-size: 1.2vw;
     margin-left: 41.5%;
     margin-top: 0.3%;
 }
 
-.register--repeatpassword--text{
+.register--repeatpassword--text {
     color: #88CAFC;
     font-size: 1.2vw;
     margin-left: 69.6%;

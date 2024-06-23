@@ -24,33 +24,39 @@ import DailyChallenge from "./pages/Games/GameRunning/DailyChallenge";
 import FinishedGame from "./pages/Games/AfterGame/FinishedGame";
 import StatsForChild from "./pages/Stats/Child/StatsForChild";
 import ChooseGameTime from "./pages/Games/BeforeGame/ChooseGameTime";
+import ApiProvider from "./api/ApiProvider";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <BrowserRouter>
-        <Routes>
-            <Route exact path="/" element={<LoginPage/>}/>
-            <Route path="/parent-login" element={<ParentLoginPage/>}/>
-            <Route path="/child-login" element={<ChildLoginPage/>}/>
-            <Route path="/register" element={<RegisterPage/>}/>
-            <Route path="/add-sub-account" element={<AddAccount/>}/>
-            <Route path="/create-sub-account" element={<CreateChildAccountPage/>}/>
-            <Route path="/main-page" element={<ParentHomePage/>}/>
-            <Route path="/goals" element={<GoalsPage/>}/>
-            <Route path="/parent-profile" element={<ParentUserProfile/>}/>
-            <Route path="/set-notifications" element={<NotificationsPage/>}/>
-            <Route path="/parent-statistics" element={<ParentStatisticsPage/>}/>
-            <Route exact path="/child-welcome" element={<ChildWelcomePage/>}/>
-            <Route path="/ChooseGameMode" element={<ChooseGameMode/>}/>
-            <Route path="/ChooseGameTime" element={<ChooseGameTime/>}/>
-            <Route path="/CharacterCustomization" element={<CharacterCustomization/>}/>
-            <Route path="MimicFromName" element={<MimicFromName/>}/>
-            <Route path="MimicFromPicture" element={<MimicFromPicture/>}/>
-            <Route path="RecognizeFromPicture" element={<RecognizeFromPicture/>}/>
-            <Route path="DailyChallenge" element={<DailyChallenge/>}/>
-            <Route path="FinishedGame" element={<FinishedGame/>}/>
-            <Route path="StatsForChild" element={<StatsForChild/>}></Route>
-        </Routes>
+        <ApiProvider>
+            <Routes>
+                <Route exact path="/" element={<LoginPage/>}/>
+                <Route path="/parent-login" element={<ParentLoginPage/>}/>
+                <Route path="/child-login" element={<ChildLoginPage/>}/>
+                <Route path="/register" element={<RegisterPage/>}/>
+                <Route path="/add-sub-account" element={<AddAccount/>}/>
+                <Route path="/create-sub-account" element={<CreateChildAccountPage/>}/>
+                <Route path="/main-page" element={<ParentHomePage/>}/>
+                <Route path="/goals" element={<GoalsPage/>}/>
+                <Route path="/parent-profile" element={<ParentUserProfile/>}/>
+                <Route path="/set-notifications" element={<NotificationsPage/>}/>
+                <Route path="/parent-statistics" element={<ParentStatisticsPage/>}/>
+                <Route exact path="/child-welcome" element={<ChildWelcomePage/>}/>
+                <Route path="/ChooseGameMode" element={<ChooseGameMode/>}/>
+                <Route path="/ChooseGameTime" element={<ChooseGameTime/>}/>
+                {/*<Route path="/ChooseGameTimeRfP" element={<ChooseGameTimeRfP/>}/>*/}
+                {/*<Route path="/ChooseGameTimeMfP" element={<ChooseGameTimeMfP/>}/>*/}
+                {/*<Route path="/ChooseGameTimeMfN" element={<ChooseGameTimeMfN/>}/>*/}
+                <Route path="/CharacterCustomization" element={<CharacterCustomization/>}/>
+                <Route path="MimicFromName" element={<MimicFromName/>}/>
+                <Route path="MimicFromPicture" element={<MimicFromPicture/>}/>
+                <Route path="RecognizeFromPicture" element={<RecognizeFromPicture/>}/>
+                <Route path="DailyChallenge" element={<DailyChallenge/>}/>
+                <Route path="FinishedGame" element={<FinishedGame/>}/>
+                <Route path="StatsForChild" element={<StatsForChild/>}></Route>
+            </Routes>
+        </ApiProvider>
     </BrowserRouter>
 );
 

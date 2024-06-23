@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useCallback, useState} from "react";
 import LightBlueNavbar from "../../navbars/LightBlueNavbar.js";
 import Button from "../../components/Button";
 import blueGhost from "../../images/blueGhost.png";
@@ -7,6 +7,7 @@ import BlueStar from "../../images/BlueStar.svg";
 import WhiteStar from "../../images/WhiteStar.svg";
 import Input from "../../components/Input";
 import "../Registration/CreateChildAccountPage.css"
+import {useApi} from "../../api/ApiProvider";
 
 
 function CreateChildAccountPage() {
@@ -15,7 +16,25 @@ function CreateChildAccountPage() {
     const [username, setUsername] = useState('');
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
+
     const navigate = useNavigate();
+    const api = useApi();
+
+    const createAccount = useCallback(() => {
+        if (password !== passwordRepeat) {
+            setPasswordError("Passwords do not match")
+            return
+        }
+
+        api.createChild({username: username, password: password}).then(response => {
+            if (!response.success) {
+                console.log(response)
+                return
+            }
+            navigate('/add-sub-account', {state: {kids: response.data}})
+        })
+    })
+
     return (
         <div style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#88CAFC'}}>
             <LightBlueNavbar/>
@@ -46,7 +65,7 @@ function CreateChildAccountPage() {
                 onChange={(ev) => setPasswordRepeat(ev.target.value)}
                 // error={passwordError}
             />
-            <div style={{position: "fixed", bottom: 0, left: 0}}>
+            <div style={{position: "fixed", bottom: 0, left: 0, zIndex: -10}}>
                 <img src={BlueStar} alt="Star"
                      style={{width: "50vw", height: "50vw", transform: "translate(-35%,30%)"}}/>
                 <img src={WhiteStar} alt="Star"
@@ -56,7 +75,7 @@ function CreateChildAccountPage() {
             </div>
 
 
-            <Button onClick={() => navigate('/add-sub-account')} loc={{
+            <Button onClick={createAccount} loc={{
                 position: 'absolute',
                 top: '70%',
                 left: '58%',

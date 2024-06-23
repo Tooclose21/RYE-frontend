@@ -1,12 +1,16 @@
 // AddAccount.js
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 import DarkBlueNavbar from "../../navbars/DarkBlueNavbar";
 import blueGhost from "../../images/blueGhost.png";
 import '../Registration/AddAccount.css';
 
 function AddAccount() {
+    const location = useLocation();
     const navigate = useNavigate();
+
+    const kids = location.state?.kids? location.state.kids : [];
+    console.log("kids", kids)
 
     const handleAddAccount = () => {
         navigate('/create-sub-account');

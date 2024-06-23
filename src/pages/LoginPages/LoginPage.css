@@ -4,65 +4,21 @@ body {
     overflow: hidden;
     /*background-color: #FFEEC0;*/
 }
-.child--password--input .inputBox{
-    position: absolute;
-    top: 41.2%;
-    left: 41%;
-    color: #3A3A72;
-    background-color: #FBFFEA;
-    border-color: #FBFFEA;
-    width: 20%;
-    height: 5%;
-    margin-top: 2%
-}
-.child--password--input .errorLabel{
-    color: #FF00FF;
-}
-.child--username--input .inputBox{
-    position: absolute;
-    top: 30%;
-    left: 41%;
-    color: #3A3A72;
-    background-color: #FBFFEA;
-    border-color: #FBFFEA;
-    width: 20%;
-    height: 5%;
-    margin-top: 2%
-}
-.parent--username--input .errorLabel{
-    color: #FF00FF;
+.login-col {
+    display: flex;
+    flex-direction: column;
+    /*margin: auto;*/
+    align-items: center;
+    justify-content: center;
 }
 
 
-.parent--password--input .inputBox{
-    position: absolute;
-    top: 41.5%;
-    left: 41%;
-    color: #3A3A72;
-    background-color: #cbd8e5;
-    border-color: #cbd8e5;
-    width: 20%;
-    height: 5%;
-    margin-top: 2%
-}
-.parent--password--input .errorLabel{
-    color: #FF00FF;
-}
-.parent--username--input .inputBox{
-    position: absolute;
-    top: 30%;
-    left: 41%;
-    color: #3A3A72;
-    background-color: #cbd8e5;
-    border-color: #cbd8e5;
-    width: 20%;
-    height: 5%;
-    margin-top: 2%
-}
-.child--username--input .errorLabel{
-    color: #FF00FF;
-}
 
+.error-msg {
+    color: #ef0909;
+    font-size: 32px;
+    font-weight: bold;
+}
 
 .welcome--img {
     position: absolute;
@@ -74,12 +30,12 @@ body {
 }
 .login--text1 {
     color: #88CAFC;
-    position: absolute;
-    top: 20%;
-    left:  59%;
+    /*position: absolute;*/
+    /*top: 20%;*/
+    /*left:  59%;*/
     font-Size: 2.5vw;
-    margin-bottom: 2%;
-    margin-top: 2%;
+    /*margin-bottom: 2%;*/
+    /*margin-top: 2%;*/
 }
 
 .login--text2{
@@ -95,29 +51,33 @@ body {
 
 .login--as--parent{
     color: #FFFFFF;
-    margin-left: 42%;
-    margin-top: 5%;
+}
+
+.login-input {
+    font-size: 16px;
+    height: 1.5rem;
 }
 
 .login--as--child{
     color: #FFFFFF;
-    margin-left: 42%;
-    margin-top: 5%;
+    /*margin-left: 42%;*/
+    /*margin-top: 5%;*/
 }
 
 .username--parent--text{
     color: #FFFFFF;
-    margin-left: 41.5%;
-    font-size: 1.1vw;
-    position: absolute;
+    /*margin-left: 41.5%;*/
+    font-size: 28px;
+    /*position: absolute;*/
 }
 
 .password--parent--text{
     color: #FFFFFF;
-    margin-left: 41.5%;
-    margin-top: 4%;
-    font-size: 1.1vw;
-    position: absolute;
+    /*margin-left: 41.5%;*/
+    /*margin-top: 4%;*/
+    font-size: 28px;
+
+    /*position: absolute;*/
 }
 
 .login--img{

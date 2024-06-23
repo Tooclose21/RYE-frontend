@@ -1,4 +1,6 @@
-* {box-sizing: border-box;}
+* {
+    box-sizing: border-box;
+}
 
 body {
     overflow: hidden;
@@ -27,18 +29,21 @@ body {
 .message--text2 {
     padding: 0 10% 5% 10%;
 }
+
 /*.plus-button:hover {*/
 /*    background-color: #FFFDEE;*/
 /*    color: #88CAFC;*/
 /*}*/
-.option--text{
+.option--text {
     font-size: 1vw;
     font-weight: bold;
     color: #3A3A72;
 }
+
 blueGhost {
 
 }
+
 .bghost--img {
     margin: 0 80% 60% 10%;
     width: 30%;
@@ -111,7 +116,7 @@ blueGhost {
     margin-left: 32%;
     background-color: #FFFDEE;
     width: 38%;
-    height:55%;
+    height: 55%;
 }
 
 .counter--text--mfp {
@@ -136,7 +141,7 @@ blueGhost {
     margin-left: 35%;
     background-color: #FFFDEE;
     width: 30%;
-    height:45%;
+    height: 45%;
 }
 
 .counter--text--rfp {
@@ -194,13 +199,29 @@ blueGhost {
     margin-left: 60%;
     margin-top: 10%;
 }
-.bghost--score{
+
+.bghost--score {
     display: flex;
     margin: 0 1% 50% 12%;
     width: 30%;
     height: 45%;
 }
 
+.input-box {
+    font-size: 28px;
+}
+
 .input--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     color: #3A3A72;
+}
+
+.input-box:invalid {
+    background-color: ivory;
+    border: none;
+    outline: 2px solid red;
+    border-radius: 5px;
 }

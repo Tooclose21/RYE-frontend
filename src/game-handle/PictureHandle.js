@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const callUrl = `${process.env.REACT_APP_LOCAL_URL}/mimic/rate`
+const callUrl = `${process.env.REACT_APP_LOCAL_URL}/aws/extractEmotion`
 
 // Converts image from WebCam to blob
 const dataURLtoBlob = (dataURL) => {
@@ -16,7 +16,7 @@ const dataURLtoBlob = (dataURL) => {
 
 const sendImage = async (image, expected_result) => {
     const formData = new FormData()
-    formData.append("file", dataURLtoBlob(image), "image.jpeg")
+    formData.append("file", dataURLtoBlob(image), `${expected_result}.jpeg`)
 
 
     try {
