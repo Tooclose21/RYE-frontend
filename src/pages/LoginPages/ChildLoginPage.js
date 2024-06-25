@@ -66,18 +66,20 @@ const ChildLoginPage = (props) => {
                 style={{
                     color: "#3A3A72", backgroundColor: "#FBFFEA", borderColor: "#FBFFEA",
                 }}
+                type={'password'}
                 value={password}
                 placeholder="Password"
                 onChange={(ev) => setPassword(ev.target.value)}
             />
             <Button
                 color="#FBFFEA"
+                loc={{width: '10%'}}
                     textColor={"#B0C5DA"}
                     onClick={login}>Log
                 in</Button>
             <p className='error-msg'>{usernameError}</p>
         </div>
-        <img src={blueGhost} className="login--img" alt="Blue ghost"/>
+        {/*<img src={blueGhost} className="login--img" alt="Blue ghost"/>*/}
     </div>);
 }
 

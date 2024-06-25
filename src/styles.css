@@ -35,7 +35,7 @@ body {
 /*    color: #88CAFC;*/
 /*}*/
 .option--text {
-    font-size: 1vw;
+    font-size: 24px;
     font-weight: bold;
     color: #3A3A72;
 }
@@ -180,15 +180,17 @@ blueGhost {
 .finished--game--text1 {
     color: #E27A37;
     width: 15%;
-    margin-left: 50%;
-    margin-top: 5%;
+    font-size: 52px;
+    margin-left: 53%;
+    margin-top: 10%;
     margin-bottom: 0;
 }
 
 .finished--game--text2 {
     color: #E27A37;
+    font-size: 52px;
     width: 30%;
-    margin-left: 50%;
+    margin-left: 53%;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -202,9 +204,11 @@ blueGhost {
 
 .bghost--score {
     display: flex;
-    margin: 0 1% 50% 12%;
-    width: 30%;
-    height: 45%;
+    /*margin: 0 1% 20% 12%;*/
+    margin-top: -40%;
+    margin-left: 10%;
+    width: 50%;
+    height: 110%;
 }
 
 .input-box {

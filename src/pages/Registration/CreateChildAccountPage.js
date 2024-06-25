@@ -14,6 +14,7 @@ function CreateChildAccountPage() {
     const [password, setPassword] = useState('');
     const [passwordRepeat, setPasswordRepeat] = useState('');
     const [username, setUsername] = useState('');
+    const [name, setName] = useState('');
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
 
@@ -39,7 +40,19 @@ function CreateChildAccountPage() {
         <div style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#88CAFC'}}>
             <LightBlueNavbar/>
             <h1 className={"create--child--acc-text"}>Create child's account</h1>
-            <h1 className="create--child--acc-username"> username:</h1>
+            <div className={'column'}>
+
+            </div>
+            <h1 className="create--child--acc--name">name:</h1>
+            <Input
+                className="child--acc--name--input"
+                value={name}
+                placeholder=""
+                onChange={(ev) => setName(ev.target.value)}
+                // error={emailError}
+            />
+            <br/>
+            <h1 className="create--child--acc--username"> username:</h1>
             <Input
                 className="child--acc--username--input"
                 value={username}
@@ -48,10 +61,12 @@ function CreateChildAccountPage() {
                 // error={emailError}
             />
             <br/>
+
             <h1 className="create--child--acc-password"> password:</h1>
             <Input
                 className="child--acc--password--input"
                 value={password}
+                type={'password'}
                 placeholder=""
                 onChange={(ev) => setPassword(ev.target.value)}
                 error={passwordError}
@@ -62,6 +77,7 @@ function CreateChildAccountPage() {
                 className="child--acc--rep--password--input"
                 value={passwordRepeat}
                 placeholder=""
+                type={'password'}
                 onChange={(ev) => setPasswordRepeat(ev.target.value)}
                 // error={passwordError}
             />
@@ -71,7 +87,7 @@ function CreateChildAccountPage() {
                 <img src={WhiteStar} alt="Star"
                      style={{width: "45vw", height: "45vw", transform: "translate(-138%,20%)"}}/>
                 <img src={blueGhost} className="gh--img" alt="Blue ghost"
-                     style={{width: "25vw", height: "19vw", transform: "translate(-105%,20%)"}}/>
+                     style={{width: "25vw", height: "28vw", transform: "translate(-105%,-10%)"}}/>
             </div>
 
 

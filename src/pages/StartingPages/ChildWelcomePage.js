@@ -23,8 +23,8 @@ function ChildWelcomePage() {
                 return
             }
             console.log(response)
-        })
-        navigate("/StatsForChild")
+            navigate("/StatsForChild", {state: {stats: response.data}})
+        }).catch(err => console.log(err))
     },[navigate])
     return (
         <div style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%',backgroundColor: '#FFEEC0'}}>
@@ -36,11 +36,13 @@ function ChildWelcomePage() {
             <img src={blueGhost} className="welcome--child--img" alt="Blue ghost"/>
             <Button loc={{position: 'absolute', top: '42%', left: '60%'}}
                     color="#88CAFC" onClick={chooseGameMode}>Play</Button>
-            <Button loc={{position: 'absolute', top: '53%', left: '60%'}} color="#88CAFC">Tasks</Button>
+            <Button loc={{position: 'absolute', top: '53%', left: '60%'}} color="#88CAFC"
+                    onClick={() => navigate("/Task")}
+            >Tasks</Button>
             <Button loc={{position: 'absolute', top: '64%', left: '60%'}}
-                    color="#88CAFC" onClick={goCustomization}>Customize</Button>
+                    color="#88CAFC" onClick={goToChildStats}>My statistics</Button>
             <Button loc={{position: 'absolute', top: '75%', left: '60%'}}
-                    color="#88CAFC" onClick={goToChildStats}>My stats</Button>
+                    color="#88CAFC" onClick={() => navigate("/")}>Log out</Button>
         </div>
     );
 }

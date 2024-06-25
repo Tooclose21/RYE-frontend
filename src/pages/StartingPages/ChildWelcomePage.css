@@ -1,26 +1,29 @@
 .welcome--child--text {
     background-color: #FFFDEE;
     width: 40%;
-    height: 22%;
+    height: 16%;
     border-radius: 50px;
     margin-left: 47%;
     margin-top: 4%;
-    padding-left: 3%;
+    padding-left: 5%;
     padding-top: 1%;
 }
 
 .welcome--child--text1 {
     color: #6EB3E8;
     margin-bottom: 0.2%;
+    font-size: 52px;
 }
 
 .welcome--child--text2 {
     color: #6EB3E8;
     margin-top: 0;
+    font-size: 52px;
+
 }
 
 .welcome--child--img {
-    margin-top: -2%;
-    margin-left: 9%;
-    width: 35%;
+    margin-top: -25%;
+    margin-left: 3%;
+    width: 50%;
 }

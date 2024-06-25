@@ -17,11 +17,11 @@ function ChooseGameMode() {
             <OrangeNavbar />
             <h1 className={"choose--game--text"}>Choose game mode</h1>
             <Button
-                onClick={() => handleButtonClick("DailyChallenge")}
+                onClick={() => navigate("/HowToPlay")}
                 loc={{position: 'absolute', top: '35%', left: '35%', width: '35%', height: '8%', color: '#F8A365'}}
                 color="#FEE8AA"
             >
-                Daily challenge
+                How to play?
             </Button>
             <Button
                 onClick={() => handleButtonClick("Mimic from name")}
@@ -45,11 +45,11 @@ function ChooseGameMode() {
                 Recognize from picture
             </Button>
             <Button
-                onClick={() => navigate('/HowToPlay')}
+                onClick={() => navigate('/child-welcome')}
                 loc={{position: 'absolute', top: '75%', left: '35%', width: '35%', height: '8%', color: '#F8A365'}}
                 color="#FEE8AA"
             >
-                How to play?
+                Back
             </Button>
         </div>
     );

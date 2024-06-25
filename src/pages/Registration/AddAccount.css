@@ -1,4 +1,7 @@
 .add--account--messagebox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 64%;
     height: 17%;
     transform: translate(-10%, 20%);
@@ -45,8 +48,8 @@
 
 .add--child--img {
     position: absolute;
-    margin-top: -15.5%;
+    margin-top: -19.5%;
     left: 1%;
-    width: 11%;
-    height: 17%;
+    width: 13%;
+    height: 26%;
 }

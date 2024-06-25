@@ -3,20 +3,31 @@
     margin-left: 55%;
     margin-top: 3%;
     width: 20%;
+    font-size: 52px;
 }
 
-.create--child--acc-username {
+.create--child--acc--username {
     color: #FBFFEA;
     margin-left: 55.5%;
-    margin-top: 3.5%;
+    margin-top: 4%;
     font-size: 1.4vw;
     font-weight: normal;
 }
 
+.create--child--acc--name {
+    color: #FBFFEA;
+    margin-left: 55.5%;
+    margin-top: 1%;
+    font-size: 1.4vw;
+    font-weight: normal;
+}
+
+
 .create--child--acc-password{
     color: #FBFFEA;
     margin-left: 55.5%;
-    margin-top: 1.5%;
+    margin-top: 4%;
+
     font-size: 1.4vw;
     font-weight: normal;
 }
@@ -24,7 +35,7 @@
 .create--child--acc-repeatpassword{
     color: #FBFFEA;
     margin-left: 55.5%;
-    margin-top: 1.5%;
+    margin-top: 4%;
     font-size: 1.4vw;
     font-weight: normal;
 }
@@ -36,6 +47,7 @@
     color: #3A3A72;
     background-color: #FBFFEA;
     border-color: #FBFFEA;
+    font-size: 32px;
     width: 20%;
     height: 5%;
     margin-top: 2%
@@ -52,6 +64,7 @@
     background-color: #FBFFEA;
     border-color: #FBFFEA;
     width: 20%;
+    font-size: 32px;
     height: 5%;
     margin-top: 2%
 }
@@ -66,11 +79,28 @@
     color: #3A3A72;
     background-color: #FBFFEA;
     border-color: #FBFFEA;
+    font-size: 32px;
     width: 20%;
     height: 5%;
     margin-top: 2%
 }
 .child--acc--username--input .errorLabel{
+    color: #FF00FF;
+}
+
+.child--acc--name--input .inputBox{
+    position: absolute;
+    top: 21.5%;
+    left: 55.5%;
+    color: #3A3A72;
+    font-size: 32px;
+    background-color: #FBFFEA;
+    border-color: #FBFFEA;
+    width: 20%;
+    height: 5%;
+    margin-top: 2%
+}
+.child--acc--name--input .errorLabel{
     color: #FF00FF;
 }
 .gh--img {
@@ -79,7 +109,7 @@
     left: 25%;
     transform: translate(-50%, -25%);
     width: 35%;
-    height: auto;
+    height: 80%;
 }
 
 

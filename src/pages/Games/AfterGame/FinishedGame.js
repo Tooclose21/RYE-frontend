@@ -45,7 +45,14 @@ function FinishedGame() {
     }
 
     return (
-        <div style={{backgroundColor: '#FFF9E9'}}>
+        <div style={{
+                     position: 'fixed',
+                     top: 0,
+                     left: 0,
+                     width: '100%',
+                     height: '100%',
+                     backgroundColor: '#FFF9E9'
+                 }}>
             <OrangeNavbar style={{backgroundColor: "#F0BE5E"}} textColor="#FDFEFF"/>
             <h1 className={"finished--game--text1"}>Great job!</h1>
             <h1 className={"finished--game--text2"}>You’ll became a pro soon!</h1>

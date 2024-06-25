@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import LightBlueNavbar from "../../../navbars/LightBlueNavbar.js";
 import blueGhost from "../../../images/blueGhost.png";
 import './ParentStatisticsPage.css';
@@ -8,6 +8,13 @@ import Rectangle from "../../../components/Rectangle";
 
 function ParentStatisticsPage() {
     const AmountOptions = Array.from({ length: 5 }, (_, index) => index + 1);
+        const [selectedValue, setSelectedValue] = useState(AmountOptions[0]);
+
+    const handleChange = (event) => {
+        setSelectedValue(event.target.value);
+    };
+
+
     return (
         <div style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#D2EBFF'}}>
             <LightBlueNavbar/>
@@ -22,7 +29,7 @@ function ParentStatisticsPage() {
                     Account
                 </h1>
             </div>
-            <ComboBox className="comboBox" options={AmountOptions} style={{position:'absolute',top: "35.5%", left: "25%"}}/>
+            <ComboBox className="comboBox" options={AmountOptions} style={{position:'absolute',top: "35.5%", left: "25%"}} value={selectedValue} handleChange={handleChange}/>
             <div className={"general--message"}>
                 <h1 className={"general--statistics--text"}>
                     General

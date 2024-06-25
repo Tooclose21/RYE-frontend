@@ -46,18 +46,18 @@ const ParentLoginPage = (props) => {
                 <h1 className="password--parent--text"> password:</h1>
                 <Input
                     style={{
-                        color: "#3A3A72", backgroundColor: "#CBD8E5", borderColor: "#CBD8E5",
+                        color: "#3A3A72", backgroundColor: "#CBD8E5", borderColor: "#CBD8E5"
                     }}
                     value={password}
                     placeholder=""
                     type={'password'}
                     onChange={(ev) => setPassword(ev.target.value)}
                 />
-                <Button color="#CBD8E5" onClick={handleLogin}>Log in</Button>
+                <Button color="#CBD8E5" onClick={handleLogin} loc={{width: '10%'}}>Log in</Button>
                 <p className='error-msg'>{emailError}</p>
             </div>
 
-            <img src={blueGhost} className="login--img" alt="Blue ghost"/>
+            {/*<img src={blueGhost} className="login--img" alt="Blue ghost"/>*/}
         </div>
     );
 }

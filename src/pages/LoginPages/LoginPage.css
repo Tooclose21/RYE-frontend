@@ -8,6 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     /*margin: auto;*/
+    font-size: 52px;
     align-items: center;
     justify-content: center;
 }
@@ -22,39 +23,46 @@ body {
 
 .welcome--img {
     position: absolute;
-    top: 50%;
-    left: 25%;
+    top: 20%;
+    left: 30%;
     transform: translate(-50%, -25%);
-    width: 35%;
+    width: 50%;
     height: auto;
 }
 .login--text1 {
     color: #88CAFC;
-    /*position: absolute;*/
-    /*top: 20%;*/
-    /*left:  59%;*/
-    font-Size: 2.5vw;
-    /*margin-bottom: 2%;*/
-    /*margin-top: 2%;*/
+    position: absolute;
+    top: 23%;
+    font-size: 52px;
+
+    left:  59%;
+    /*font-Size: 2.5vw;*/
+    margin-bottom: 2%;
+    margin-top: 2%;
 }
 
 .login--text2{
     color: #88CAFC;
     position: absolute;
     width: 20%;
-    top: 53%;
+    top: 58%;
     left:  59%;
-    font-Size: 2.5vw;
+    font-size: 52px;
+    /*font-Size: 2.5vw;*/
     margin-bottom: 2%;
     margin-top: 2%;
 }
 
 .login--as--parent{
     color: #FFFFFF;
+    font-weight: bold;
+
 }
 
 .login-input {
-    font-size: 16px;
+    /*font-size: 16px;*/
+    font-size: 52px;
+
     height: 1.5rem;
 }
 
@@ -67,15 +75,19 @@ body {
 .username--parent--text{
     color: #FFFFFF;
     /*margin-left: 41.5%;*/
-    font-size: 28px;
+    font-size: 52px;
+    font-weight: bold;
+
+    /*font-size: 28px;*/
     /*position: absolute;*/
 }
 
 .password--parent--text{
+
     color: #FFFFFF;
     /*margin-left: 41.5%;*/
-    /*margin-top: 4%;*/
-    font-size: 28px;
+    margin-top: 1%;
+    font-size: 52px;
 
     /*position: absolute;*/
 }

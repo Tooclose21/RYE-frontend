@@ -1,0 +1,30 @@
+.how-to-play {
+    background: #D2EBFF;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.intr-container {
+    background: #D2EBFF;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.intr-container p {
+    font-size: 24px;
+    padding-left: 1rem;
+}
+
+.intr-container p li {
+    padding-left: 1rem;
+}
+
+
+
+.intr-header {
+    font-size: 52px;
+    font-weight: bold;
+    padding-left: 1rem;
+}

@@ -1,5 +1,8 @@
 
 .user--message{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     width: 58%;
     height: 17%;
     transform: translate(-10%, 20%);
@@ -15,10 +18,10 @@
 }
 .ghost--img {
     position: absolute;
-    top: 20%;
+    top: 15%;
     left: 5%;
     width: 11%;
-    height: 17%;
-    transform: translate(-50%, -25%);
+    height: 25%;
+    transform: translate(-50%, -35%);
 
 }

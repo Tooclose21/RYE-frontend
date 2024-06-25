@@ -1,17 +1,30 @@
-import React from "react";
+import React, {useState} from "react";
 import LightBlueNavbar from "../../../navbars/LightBlueNavbar.js";
 import blueGhost from "../../../images/blueGhost.png";
 import './StatsForChild.css';
 import ComboBox from "../../../components/ComboBox";
 import Rectangle from "../../../components/Rectangle";
 import Plot from "react-plotly.js"
+import {useLocation, useNavigate, useNavigation} from "react-router-dom";
+import Button from "../../../components/Button";
 
 
 function StatsForChild() {
-    const AmountOptions = Array.from({length: 5}, (_, index) => index + 1);
-    const modes= ["MIMIC_FROM_NAME",
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const stats = location.state.stats
+    const modes = ["MIMIC_FROM_NAME",
         "MIMIC_FROM_PICTURE",
         "RECOGNIZE_FROM_PICTURE"]
+
+    const [selectedValue, setSelectedValue] = useState(modes[0]);
+
+    const handleChange = (event) => {
+        setSelectedValue(event.target.value);
+    };
+
+
     const dict = {
         '2024-06-06':
             6.5,
@@ -40,17 +53,27 @@ function StatsForChild() {
                 </h1>
             </div>
             <Plot className="stats-child-plot"
-            data = {[{
-                x: Object.keys(dict),
-                y: Object.values(dict),
-                type: "scatter",
-                mode: "lines+markers"
-            }]}
-            layout = {{title: "General statistics",
-                xaxis: { title: "Date" },
-                yaxis: { title: "Points" }}}
-            config={{ displayModeBar: false }}></Plot>
-            <ComboBox className="comboBox-stats" options={modes} style={{position:'absolute',top: "90%", left: "65%"}}/>
+                  data={[{
+                      x: Object.keys(stats[selectedValue]),
+                      y: Object.values(stats[selectedValue]),
+                      type: "bar",
+                      mode: "markers"
+                  }]}
+                  layout={{
+                      title: "General statistics",
+                      font: {
+                          size: 24,
+                      },
+                      xaxis: {title: "Date"},
+                      yaxis: {title: "Points"}
+                  }}
+                  config={{displayModeBar: false, fontSize: '16px'}}></Plot>
+            <ComboBox className="comboBox-stats" options={modes} value={selectedValue} handleChange={handleChange}
+                      style={{position: 'absolute', top: "88%", left: "65%"}}/>
+            <Button loc={{position: 'absolute', top: '85%', left: '82%', width: '10%', height: '7%'}}
+                    color="#88CAFC"  onClick={() => navigate('/child-welcome') }>
+                Back
+            </Button>
 
 
             {/*<Rectangle className="child--rectangle1"/>*/}
